@@ -1,5 +1,10 @@
 # Configure SSO and LCM for Microsoft 365
 
+TODO:
+- tenant, verificare se sono sufficienti
+- ?cambiare password?
+- capire come inserire le credenziali nell'ambiente demo
+
 ## Overview
 
 This guide provides instructions for integrating Okta with Microsoft
@@ -54,15 +59,11 @@ system.
 
 To complete this lab you will need : 
 
-1. Get your Office 365 tenant name available in your admin mail adresse (visible by clicking on the button "Launch")
+1. Get your Office 365 tenant assigned by your instructor.
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/009/image046.png "image_tooltip")
+2. Have users on your tenant (imported from Active Directory or created manually in Okta) in order to assign the application and validate the user flow.
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/009/image047.png "image_tooltip")
-
-2. Have users on your tenant (imported from the HR SI or created manually in Okta) in order to assign the application and validate the user flow.
-
-3. A custom domain has already been configured in the O365 tenant. The domain with the format wiclab**.onmicrosoft.com will be federated in this lab.
+3. A custom domain has already been configured in the O365 tenant. The domain with the format **wiclab##.onmicrosoft.com** will be federated in this lab.
 
 ## Add Microsoft Office 365 Application to Okta
 
@@ -71,7 +72,6 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 1.  If not already opened, launch your Okta Admin console from the dedicated button 
 
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/009/image048.png "image_tooltip")
-
 
 
 2.  Navigate to **Applications \> Applications**.
@@ -105,14 +105,14 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 
 9.  Enter the *username* and *password* for the administrator of your
      Microsoft tenant.
-> Your Microsoft Tenant Admin has this syntax "labadmin@mywiclabxx.onmicrosoft.com" . The password is specified in the top-left launch window.
+> Your Microsoft Tenant Admin has this syntax "labadmin@mywiclabxx.onmicrosoft.com".
 
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/009/image06.png "image_tooltip")
 11. Click **Fetch and Select** next to Office 365 Domains.
 
 
 
-12. Select the custom DNS domain **not starting with "wiclabxx.onmicrosoft.com"**
+12. Select the custom DNS domain **not starting with "wiclab##.onmicrosoft.com"**
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/009/image07.png "image_tooltip")
 13. Click **Select**.
 
@@ -124,7 +124,7 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 
 15. Enter the following for the expression 
 
-> **String.substringBefore(user.login,\"@\") + \"@yourdemodomain.com\"**
+> **String.substringBefore(user.login,\"@\") + \"@wiblab##.onmicrosoft.com\"**
 
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/009/image08.png "image_tooltip")
 16. Click **Done**.
@@ -440,7 +440,7 @@ which, in turn, will trigger provisioning of an account.
 
 1.  If not already there, navigate to **Directory \> Groups**.
 
-
+TODO: Group rule based on Active Directory users
 
 2.  Select the **People** tab.
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/009/image040.png "image_tooltip")
@@ -463,7 +463,7 @@ You can now test single sign-on to Microsoft 365 for your test user.
 
 1.  Open a new browser window that is not signed into Okta or Microsoft
 
-2.  Navigate to your Okta tenant. e.g. ***yourdemoorg*.okta.com**
+2.  Navigate to your Okta tenant.
 
 3.  Authenticate as your test user: e.g.
     > ***alex.anderson@yourcompanydomain.com***

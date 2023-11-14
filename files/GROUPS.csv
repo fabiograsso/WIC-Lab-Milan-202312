@@ -1,0 +1,13 @@
+group_name,group_description,owner_username,owner_email,owner_firstname,owner_lastname,owner_password
+DL_FRANCE_PARIS,Distribution List for Paris Users,alain.dupont@wic-lab.demo,alain.dupont@wic-lab.demo,Alain,Dupont,W1cLa61!
+DL_UK_LONDON,Distribution List for London Users,john.smith@wic-lab.demo,john.smith@wic-lab.demo,John,Smith,W1cLa61!
+DL_GERMANY_BERLIN,Distribution List for Berlin Users,katherine.fischer@wic-lab.demo,katherine.fischer@wic-lab.demo,Katherine,Fischer,W1cLa61!
+DL_NETHERLANDS_AMSTERDAM,Distribution List for Amsterdam Users,frank.baijot@wic-lab.demo,frank.baijot@wic-lab.demo,Frank,Baijot,W1cLa61!
+DL_SPAIN_MADRID,Distribution List for Madrid Users,adelina.rodriguez@wic-lab.demo,adelina.rodriguez@wic-lab.demo,Adelina,Rodriguez,W1cLa61!
+DL_PROJECT_ERP,Distribution List for ERP Project Members,alex.meyer@wic-lab.demo,alex.meyer@wic-lab.demo,Alex,Meyer,W1cLa61!
+DL_PROJECT_CRM,Distribution List for CRM Project Members,audrey.martin@wic-lab.demo,audrey.martin@wic-lab.demo,Audrey,Martin,W1cLa61!
+DL_PROJECT_ERP_SAP,Distribution List for ERP SAP Project Members,alex.meyer@wic-lab.demo,alex.meyer@wic-lab.demo,Alex,Meyer,W1cLa61!
+DL_PROJECT_CRM_SLAESFORCE,Distribution List for CRM Salesforce Project Members,audrey.martin@wic-lab.demo,audrey.martin@wic-lab.demo,Audrey,Martin,W1cLa61!
+DL_PROJECT_ERP_JDE,Distribution List for ERP JDE Project Members,alex.meyer@wic-lab.demo,alex.meyer@wic-lab.demo,Alex,Meyer,W1cLa61!
+DL_ITALY_MILAN,Distribution List for Milan Users,mario.brambilla@wic-lab.demo,mario.brambilla@wic-lab.demo,Mario,Brambilla,W1cLa61!
+DL_ITALY_ROME,Distribution List for Rome Users,francesco.totti@wic-lab.demo,francesco.totti@wic-lab.demo,Francesco,Totti,W1cLa61!
