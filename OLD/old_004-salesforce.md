@@ -544,7 +544,7 @@ This test uses the Okta admin user **your.name@okta.com** as the test user.  Thi
 
 1. Open a new browser window that is not signed into Okta or Salesforce. \
 This could be a private browsing window, a different profile, or a different browser.
-2. Navigate to your Okta tenant. e.g. **_yourdemoorg_.okta.com**
+2. Navigate to your Okta tenant. e.g. **{{idp.name}}.okta.com**
 3. Authenticate as your test user: e.g._ **your.name@okta.com**_ \
 You should end up on your Okta dashboard and see that a tile for Salesforce is now shown:
 
@@ -686,7 +686,7 @@ You can now test single sign-on to Salesforce for your test user.
 
 1. Open a new browser window that is not signed into Okta or Salesforce. \
 This could be a private browsing window, a different profile, or a different browser.
-2. Navigate to your Okta tenant. e.g. **_yourdemoorg_.okta.com**
+2. Navigate to your Okta tenant. e.g. **{{idp.name}}.okta.com**
 3. Authenticate as your test user: e.g. **_alex.anderson@yourdemodomain.com_** \
 You should end up on your Okta dashboard and see that a tile for Salesforce.com is shown:
 

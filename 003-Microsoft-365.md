@@ -345,7 +345,7 @@ You can now test single sign-on to Microsoft 365 for the assigned user.
 
 1.  Open a new browser window that is not signed into Okta or Microsoft
 
-2.  Navigate to your Okta tenant. e.g. ***yourdemoorg*.okta.com**
+2.  Navigate to your Okta tenant. e.g. **{{idp.name}}.okta.com**
 
 3.  Authenticate as your test user: e.g. ***your.name*\@yourcompanydomain.com**
 

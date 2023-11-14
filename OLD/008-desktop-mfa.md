@@ -274,7 +274,7 @@ OktaVerifySetup-4.2.3.0-84302c2.exe SKU=ALL ORGURL=_&lt;org URL>_ CLIENTID=_&lt;
 For example:
 
 
-**OktaVerifySetup-4.2.3.0-84302c2.exe SKU=ALL ORGURL=https://yourtestorg.okta.com CLIENTID=0oa6i420oaAldAoH4697 CLIENTSECRET=hxQLS45RClft3LmAwx2XbQXF9p5s9weJnpXAihRsTA7x3evPw0J_zd3gN-siUt90**
+**OktaVerifySetup-4.2.3.0-84302c2.exe SKU=ALL ORGURL=https://{{idp.name}}.okta.com CLIENTID=0oa6i420oaAldAoH4697 CLIENTSECRET=hxQLS45RClft3LmAwx2XbQXF9p5s9weJnpXAihRsTA7x3evPw0J_zd3gN-siUt90**
 
 
 When you enter this command, the standard Okta Verify install UI will start:

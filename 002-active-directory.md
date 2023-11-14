@@ -466,7 +466,7 @@ Now that you have a user in Okta who has an assigned account in Active Directory
 
 
 1. Start a new browser session.  This could be a private browsing window or a different browser process.
-2. Navigate to your Okta homepage: **https://yourdemoorg.okta.com**.
+2. Navigate to your Okta homepage: **https://{{idp.name}}.okta.com**.
 
 
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image39.png "image_tooltip")

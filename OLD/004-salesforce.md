@@ -18,7 +18,16 @@ Salesforce supports both SAML 2.0 and OpenID Connect (OIDC) for Single Sign-On (
 
 Salesforce provides REST APIs for management of users and groups.  Two different approaches to API security are currently supported.  The latest and recommended approach, supported by OIE,  uses an API Key and Consumer Secret (used in the same way as OAuth 2.0 client credentials).  This approach is used in this guide.
 
-It’s worth noting that Okta Classic implements an older API security approach which uses an administrator password and API Token for access to the Salesforce provisioning APIs. You may see references to this in older documents.  This older integration method can be enabled in OIE, using Feature Flags, but that is not covered here.
+It’s worth noting that Okta Classic implements an older API security approach which uses an administrator password and API Token for access to the Salesforce provisioning APIs. You may see references to this in older documents.
+
+## Prerequirement
+
+Register for a free Salesforce Developer Tenant here: [https://developer.salesforce.com/signup](https://developer.salesforce.com/signup).
+
+**NOTE - IMPORTANT!** Email addresses in Salesforce are unique. That's mean that if you are already registered with your email, you cannot use the same email in another tenant.
+Moreover, if you register for the dev account using your email, that email will be not available if in future you need to access another Salesforce tenant.
+It's warmly reccomended that you use a non work-related email for the registration.
+You can register for a free email address on Google, Yahoo, or Hotmail if you don't have an usable email address.
 
 
 ## Add Salesforce application to Okta
@@ -91,7 +100,7 @@ This integration supports both Secure Web Authentication (SWA), for password inj
     In Salesforce usernames must be globally unique; no two users in Salesforce can have the same username even if they are in different tenants. An easy way to ensure uniqueness is to include a username suffix that is unique to your environment.  In this case you will use a custom expression which replaces the domain part of the Okta username with the unique domain of your demo environment.
 
 11. Set _Application username format_ to **Custom**.
-12. Enter the following for the expression - replacing yourdemodomain.com with your own custom DNS domain:
+12. Enter the following for the expression - replacing yourdemodomain.com with your own custom domain:
 
         **String.substringBefore(user.login,"@") + "@yourdemodomain.com"**
 
@@ -463,7 +472,7 @@ You can now test single sign-on to Salesforce for your test user.
 1. Open a new browser window that is not signed into Okta or Salesforce. \
 This could be a private browsing window, a different profile, or a different browser.
 
-2. Navigate to your Okta tenant. e.g. **_yourdemoorg_.okta.com**
+2. Navigate to your Okta tenant. e.g. **{{idp.name}}.okta.com**
 
 3. Authenticate as your test user: e.g. **_alex.anderson@yourdemodomain.com_** \
 You should end up on your Okta dashboard and see that a tile for Salesforce.com is shown:
