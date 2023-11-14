@@ -7,7 +7,7 @@ Today we are going to learn the following topics:
 - How to customize complex identity requirements with Okta Workflows
 - How to ensure the right people have the right access to the right resources with the least amount of friction
 
-## Workshop structure 
+## Workshop structure
 
 This workshop is broken into the sections listed below. 
 
@@ -44,5 +44,5 @@ At the end of the lab, the accounts will be automatically decommissioned. Only t
 
 A custom domain in O365 is assigned automatically to each user in this lab. This custom domain is a pre-requisite to go through the different integrations afterwards. To get this custom domain, go to section 3 - O365, then click on the button **Launch** in the top left corner under **Office365**. You will be redirected then to the admin console of O365, grab the first first part after **labadmin@** then copy it but without the word **my**. In the example below, your custom domain is **wiclab56**.
 
-![alt_text](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/009/image047.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/009/image047.png "image_tooltip")
 

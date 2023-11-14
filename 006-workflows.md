@@ -4,7 +4,7 @@ Okta Workflows can be used to augment Lifecycle Management and provide custom lo
 
 With out-of-the-box functions for flow control, branching, and data manipulation, Okta offers the power of code without code, and it is finally possible to orchestrate identity tasks that were previously just too hard to automate. By having this capability built-in to your identity architecture, your team will increase agility and decrease costs, all while facilitating constant business change and improving your company’s security posture.
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image6.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image6.png)
 
 Here are a few ways Okta Workflows can automate complex identity scenarios:
 
@@ -40,15 +40,15 @@ For the workflows in the Okta Workflow Pack to work you will need:
 
    * From Okta Admin Console, go to Workflows console under Workflow section
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image7.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image7.png)
 
 1. Go to Connections tab and click New Connection
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image13.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image13.png)
 
 2. Select Okta connection from the list
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image11.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image11.png)
 
 3. Configure you Okta connection, you will need
 
@@ -56,11 +56,11 @@ For the workflows in the Okta Workflow Pack to work you will need:
 
    3.2. Okta Workflows App client ID and Client Secret, to get them, go Okta Workflows OAuth application, under Applications in the Okta Admin console
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image18.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image18.png)
 
    3.3. The configuration will look like this, click on Create button
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image4.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image4.png)
 
 4. Configure Office 365 Admin connector
 
@@ -68,25 +68,25 @@ For the workflows in the Okta Workflow Pack to work you will need:
 
    4.2. Select Office 365 Admin from the list and click Create
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image20.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image20.png)
 
    4.3. Log in with your Microsoft O365 Admin account if you are not already logged in.
 
    4.4. Check the box Consent on behalf of your organization and click on Accept
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image21.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image21.png)
 
 5. Configure Office 365 Mail Connector: follow the same steps to configure it
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image22.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image22.png)
 
 6. Configure Office 365 Calendar Connector: follow the same steps to configure it
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image23.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image23.png)
 
 7. Configure Microsoft Teams Connector: follow the same steps to configure it
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image24.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image24.png)
 
 ### Additional prerequisites
 
@@ -104,51 +104,51 @@ I this lab we will use the manager account **Wes Chang** imported from SAP Succe
 
 **Please download the flowpack below (right click -> Save link as)**
 
-https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/files/o365OnboardingFlow.folder
+https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/files/o365OnboardingFlow.folder
 
 1. Go to the Okta Workflows Console from the Okta Admin Console
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image7.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image7.png)
 
 2. Go to Flow Tab and click on Add new folder (+)
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image16.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image16.png)
 
 3. Create a new folder called Office 365 Onboarding Flow
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image2.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image2.png)
 
 4. Import the office365OnboardingFlow.folder into this newly created folder by clicking on the three dots at the right of the folder name
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image15.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image15.png)
 
 5. The folder structure should look like the following one
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image10.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image10.png)
 
 1. Open the first flow **MAIN FLOW** New Hire Information by clicking on its name
 
 2. Scroll to the right, you will see the card Send Email inside the If/Else Card, click on the Choose Connection
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image9.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image9.png)
 
 8. Select the connection you create in the previous steps
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image12.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image12.png)
 
 9. Activate the flow
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image19.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image19.png)
 
 10. If you have not already done so, authorize the connections to Azure Active Directory, Microsoft Team, Office 365 Mail, Office 365 Calendar and Okta.
 
 11. **Make sure that the following Okta Workflow cards have valid connections assigned: open ALL THE FLOWS and verify that all the connections are correctly setup**
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image25.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image25.png)
 
 12. Toggle all the flows from Off to On
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image5.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image5.png)
 
 ## Testing the Okta Workflow Flow
 
@@ -156,14 +156,14 @@ Create or import a new user with a manager assign (in our case **Wes Chang**) an
 
 In the example below, we have created the user **Elise Dupont** in Okta and assign **Wes Chang** as manager from the user profile.
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image33.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image33.png)
 
 In order to put the manager, go to **Profile**, click **Edit** then scroll down to the manager ID attribute and enter the value **wes.chang@wiclab56.onmicrosoft.com**, enter **Sales** in the **Department** attribute.
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image34.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image34.png)
 
 You will be able to visualise the flow execution in real time by clicking on "Execution History" on the main flow.
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image27.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image27.png)
 
 ### Resultat expected 
 
@@ -171,23 +171,23 @@ On the manager profil (**Wes Chang**) you will see :
 
 - A new email auto generated
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image28.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image28.png)
 
 - A new chat message in Teams
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image29.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image29.png)
 
 
 On the new user (Elise Dupont) profil you will see : 
 
 - A welcome email
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image30.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image30.png)
 
 - A channel in Teams "OKTA EMEA WIC Lab"
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image31.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image31.png)
 
 - A new calendar invitation
 
-![](https://raw.githubusercontent.com/NicolasMiramon/LabGuide/main/images/006-1/image32.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image32.png)

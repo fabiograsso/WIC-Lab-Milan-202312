@@ -22,19 +22,19 @@ Launch the lab AD environment in your browser. The Windows server will have Goog
 
 1. Navigate to **Directory > Directory Integrations** in the Okta admin console
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image1.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image1.png "image_tooltip")
 
 
 2. Click **Add Active Directory**.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image2.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image2.png "image_tooltip")
 
 
 3. Click **Set Up Active Directory**
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image3.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image3.png "image_tooltip")
 
 
 4. Click the **Download Agent** button.
@@ -46,7 +46,7 @@ The AD Agent installer is downloaded to your local machine.
 * Copy the link shown after local download is complete and use it with a browser on the Windows Server instance to download the agent. Authentication is not required.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image4.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image4.png "image_tooltip")
 
 * Log in to your Okta tenant using a browser on the Windows Server instance and use steps 1-4 above to download the installer.
 
@@ -63,13 +63,13 @@ You will now install the AD Agent onto your Windows Server. In this demo environ
 1. Launch the AD Agent installer by double-clicking the executable. It should have a filename of the form:**OktaADAgentSetup-x.xx.x-xxx-xxxxxxx.exe**.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image5.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image5.png "image_tooltip")
 
 
 2. Click **Next**.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image6.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image6.png "image_tooltip")
 
 
 3. Click **Install**.
@@ -83,20 +83,20 @@ You will now install the AD Agent onto your Windows Server. In this demo environ
     When the installation is complete, you will be prompted for configuration information:
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image7.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image7.png "image_tooltip")
 
 
 4. Click **Next**to accept the offered AD Domain.
 You only have one domain in this demonstration environment.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image8.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image8.png "image_tooltip")
 
 
 5. Click **Next**to Create or use the OktaService account (recommended).
 
     
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image9.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image9.png "image_tooltip")
 
 
 6. Enter and confirm a password for the *OktaService* account.
@@ -105,7 +105,7 @@ This password can be whatever you like.  Since this is a demo environment, maybe
 8. Click **Next** on the Proxy Configuration page.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image10.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image10.png "image_tooltip")
 
 
 9. Enter the URL of your Okta org.
@@ -115,7 +115,7 @@ The installer is going to make a connection to this URL so that you can authenti
     At this point the installer launches an embedded browser.  In v3.14 and above, this is always an Edge Web View process - regardless of your default browser settings.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image11.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image11.png "image_tooltip")
 
 
 11. Authenticate to your Okta org as an administrator.
@@ -130,7 +130,7 @@ You may need to complete MFA as part of the login process.
     After login completes, you will see this consent prompt:
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image12.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image12.png "image_tooltip")
 
 
 12. Click **Allow Access** to grant the AD Agent permissions in your Okta org.
@@ -153,13 +153,13 @@ The AD Agent running on your Windows Server is now registered with your Okta org
     You should see that an Active Directory integration has been registered but is showing as *Not yet configured*:
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image13.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image13.png "image_tooltip")
 
 
 2.  Click on the **Active Directory** link of the new integration.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image14.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image14.png "image_tooltip")
 
 
 
@@ -169,14 +169,14 @@ The AD Agent running on your Windows Server is now registered with your Okta org
 4. Check the checkboxes for the OUs containing your demo users.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image15.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image15.png "image_tooltip")
 
 
 5. For groups, uncheck the checkbox at the **dc=oktaice,dc=com** level.
 6. Check the checkboxes for the OUs containing your demo groups.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image16.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image16.png "image_tooltip")
 
 
 
@@ -187,7 +187,7 @@ The AD Agent running on your Windows Server is now registered with your Okta org
     The agent is configured with the configuration you have provided.  When complete, a confirmation is shown:
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image17.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image17.png "image_tooltip")
 
 
 8. Click **Next**.
@@ -195,7 +195,7 @@ The AD Agent running on your Windows Server is now registered with your Okta org
     The *Build User Profile* page is loaded.  This loads the attribute schema from your Active Directory so you can specify which attributes should be synced into Okta.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image18.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image18.png "image_tooltip")
 
 
 
@@ -204,7 +204,7 @@ The AD Agent running on your Windows Server is now registered with your Okta org
 9. Click **Next**.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image19.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image19.png "image_tooltip")
 
 
 10. Click **Done**.
@@ -212,7 +212,7 @@ The AD Agent running on your Windows Server is now registered with your Okta org
     The AD integration settings are shown:
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image20.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image20.png "image_tooltip")
 
 
 
@@ -235,7 +235,7 @@ Your Active Directory is now integrated with your Okta org.  The Active Director
 1. If not already there, navigate to **Directory > Directory Integrations** in the Okta Admin console and select the **Active Directory** integration.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image21.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image21.png "image_tooltip")
 
 
 2. Select the **Agents** tab.
@@ -253,7 +253,7 @@ At this point, you can’t login to Okta as a user from Active Directory because
 1. If not already there, navigate to**Directory > Directory Integrations** in the Okta Admin console and select the**Active Directory** integration.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image22.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image22.png "image_tooltip")
 
 
 2. Select the **Provisioning** tab.
@@ -265,7 +265,7 @@ At this point, you can’t login to Okta as a user from Active Directory because
 A pop-up window is shown:
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image23.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image23.png "image_tooltip")
 
 
 5. Enter the *AD Username* and *AD Password* for a user in your Active Directory.
@@ -275,7 +275,7 @@ The username must be the User Principal Name (UPN), e.g. emily.boone@oktaice.loc
     At this point Okta asks the AD Agent to check the credentials against AD.  The response from AD (success or failure) is returned to Okta.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image24.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image24.png "image_tooltip")
 
 
 7. Click **Close**.
@@ -297,7 +297,7 @@ Before running an import, you should configure provisioning so that users are cr
 1. If not already there, navigate to **Directory > Directory Integrations** in the Okta Admin console and select the**Active Directory** integration.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image25.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image25.png "image_tooltip")
 
 
 2. Select the **Provisioning** tab.
@@ -305,7 +305,7 @@ Before running an import, you should configure provisioning so that users are cr
 4. Click **Edit** in the *User Creation & Matching* section.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image26.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image26.png "image_tooltip")
 
 
 
@@ -328,7 +328,7 @@ The group information is used to create AD-sourced group definitions in Okta and
 1. If not already there, navigate to **Directory > Directory Integrations** in the Okta Admin console and select the**Active Directory** integration.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image27.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image27.png "image_tooltip")
 
 
 2. Select the **Import** tab.
@@ -337,7 +337,7 @@ The group information is used to create AD-sourced group definitions in Okta and
     You are given the choice of performing an incremental or full import.  An incremental import will only process changes made in AD since the last import.  This is the first import so all users and groups will be processed either way.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image28.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image28.png "image_tooltip")
 
 
 4. Click **Import**.
@@ -345,7 +345,7 @@ The group information is used to create AD-sourced group definitions in Okta and
     The import is performed. A progress bar is shown on the screen.  When the import is complete, a summary is shown:
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image29.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image29.png "image_tooltip")
 
 
 
@@ -362,19 +362,19 @@ The group information is used to create AD-sourced group definitions in Okta and
     If an imported user is matched (or partially matched) to a user in Okta, the suggested action will be to assign the AD user to the Okta user. Otherwise, as is the case here, the suggested action is to create a new Okta user.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image30.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image30.png "image_tooltip")
 
 
 6. Check the checkbox that corresponds to one of your AD users (e.g.**Emily Boone**).
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image31.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image31.png "image_tooltip")
 
 
 7. Click **Confirm Assignments**.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image32.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image32.png "image_tooltip")
 
 
 8. Check the checkbox to**Auto-activate users after confirmation**.
@@ -397,7 +397,7 @@ You will now check that the imported groups have been created as groups in Okta.
 1. In the Okta admin console, navigate to **Directory > Groups**.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image33.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image33.png "image_tooltip")
 
 
 
@@ -406,7 +406,7 @@ You will now check that the imported groups have been created as groups in Okta.
 2. Click the link for one of the AD-sourced groups (e.g.**US West**).
 
     
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image34.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image34.png "image_tooltip")
 
 
 
@@ -426,13 +426,13 @@ You will now view the user that you imported from Active Directory in Okta.
 1. In the Okta admin console, navigate to **Directory > People**.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image35.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image35.png "image_tooltip")
 
 
 2. Click on the link for the user you just imported.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image36.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image36.png "image_tooltip")
 
 
 3. Click **Profile**.
@@ -442,7 +442,7 @@ You will now view the user that you imported from Active Directory in Okta.
 4. Scroll down to the *Additional Active Directory Attributes* section.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image37.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image37.png "image_tooltip")
 
 
 5. Click **Show Attribute Names**.
@@ -451,7 +451,7 @@ This will allow you to see the Okta attribute names as well as the display names
     Here you can see Directory-specific AD attributes that have been synced to Okta.  These can be referenced from Expressions to control things like application attribute mapping or group rules.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image38.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image38.png "image_tooltip")
 
 
 
@@ -469,7 +469,7 @@ Now that you have a user in Okta who has an assigned account in Active Directory
 2. Navigate to your Okta homepage: **https://yourdemoorg.okta.com**.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image39.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image39.png "image_tooltip")
 
 
 3. Enter the UPN of the user that you imported to Okta. \
@@ -477,7 +477,7 @@ e.g. **emily.boone@oktaice.local**.
 4. Click **Next**.
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image40.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image40.png "image_tooltip")
 
 
 5. Enter the Active Directory password for your AD user.
@@ -490,7 +490,7 @@ e.g. **emily.boone@oktaice.local**.
     When login is complete, you will the user launchpad:
 
 
-![alt_text](https://raw.githubusercontent.com/MarcoBlaesing/LabGuide/main/images/002/image41.png "image_tooltip")
+![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image41.png "image_tooltip")
 
 
 
