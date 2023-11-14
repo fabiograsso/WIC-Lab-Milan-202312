@@ -1,6 +1,6 @@
 # Okta **WIC-Labs**
 
-![Overview](https://github.com/NicolasMiramon/LabGuide/blob/main/images/01_home_design.jpg?raw=true)
+![Overview](https://github.com/fabiograsso/WIC-Lab-Milan-202312/blob/main/images/01_home_design.jpg?raw=true)
 
 In this Workshop, you will learn how to integrate Okta with with different indentity directories and applications.
 

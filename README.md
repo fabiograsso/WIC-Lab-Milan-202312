@@ -1,2 +1,2 @@
 # LabGuide
- LabGuide French Event
+LabGuide Italian Event
