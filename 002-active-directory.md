@@ -86,14 +86,14 @@ You will now install the AD Agent onto your Windows Server. In this demo environ
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image7.png "image_tooltip")
 
 
-4. Click **Next**to accept the offered AD Domain.
+4. Click **Next** to accept the offered AD Domain.
 You only have one domain in this demonstration environment.
 
 
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image8.png "image_tooltip")
 
 
-5. Click **Next**to Create or use the OktaService account (recommended).
+5. Click **Next** to Create or use the OktaService account (recommended).
 
     
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image9.png "image_tooltip")
@@ -250,7 +250,7 @@ At this point, you can’t login to Okta as a user from Active Directory because
 
 
 
-1. If not already there, navigate to**Directory > Directory Integrations** in the Okta Admin console and select the**Active Directory** integration.
+1. If not already there, navigate to **Directory > Directory Integrations** in the Okta Admin console and select the **Active Directory** integration.
 
 
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image22.png "image_tooltip")
@@ -260,6 +260,7 @@ At this point, you can’t login to Okta as a user from Active Directory because
 3. Select **Integration** under *Settings*.
 
     Notice that *Enable delegated authentication to Active Directory* is enabled.  This means that Okta can delegate authentication of user credentials (username and password) to Active Directory via the AD Agent.
+
 
 4. Click **Test Delegated Authentication**.
 A pop-up window is shown:
@@ -294,7 +295,7 @@ Before running an import, you should configure provisioning so that users are cr
 
 
 
-1. If not already there, navigate to **Directory > Directory Integrations** in the Okta Admin console and select the**Active Directory** integration.
+1. If not already there, navigate to **Directory > Directory Integrations** in the Okta Admin console and select the **Active Directory** integration.
 
 
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image25.png "image_tooltip")
@@ -312,6 +313,7 @@ Before running an import, you should configure provisioning so that users are cr
     The default is to match on Email address but, for the demo environment where UPN in AD will be used as the username format in Okta, it makes more sense to match on username format.
 
 5. Select radio-button for **Okta username format matches**.
+
 6. Click **Save**.
 
 
@@ -325,7 +327,7 @@ The group information is used to create AD-sourced group definitions in Okta and
 
 
 
-1. If not already there, navigate to **Directory > Directory Integrations** in the Okta Admin console and select the**Active Directory** integration.
+1. If not already there, navigate to **Directory > Directory Integrations** in the Okta Admin console and select the **Active Directory** integration.
 
 
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image27.png "image_tooltip")
@@ -377,8 +379,9 @@ The group information is used to create AD-sourced group definitions in Okta and
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image32.png "image_tooltip")
 
 
-8. Check the checkbox to**Auto-activate users after confirmation**.
+8. Check the checkbox to **Auto-activate users after confirmation**.
 This will activate the new user account so that it can be used.
+
 9. Click **Confirm**.
 
     A new Okta user is created based on the imported AD user.  The imported AD account is assigned to the new Okta user.  This assignment would allow Delegated Authentication to work even if the account names didn’t match.
@@ -455,7 +458,7 @@ This will allow you to see the Okta attribute names as well as the display names
 
 
 
-    These attributes are controlled by the *active_directory* profile for your directory under **Directory > Profile Sources**.
+    These attributes are controlled by the active_directory profile for your directory under Directory > Profile Sources.
 
 
 
@@ -473,7 +476,8 @@ Now that you have a user in Okta who has an assigned account in Active Directory
 
 
 3. Enter the UPN of the user that you imported to Okta. \
-e.g. **emily.boone@oktaice.local**.
+e.g. **emily.boone@oktaice.com**
+
 4. Click **Next**.
 
 

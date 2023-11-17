@@ -16,17 +16,21 @@ This workshop is broken into the sections listed below.
 - IDENTITY SOURCES
     - Integrate Active Directory
 
+
 - INTEGRATING APPLICATIONS for secure Single-Sign-On and Lifecycle management
     - Office 365
+
 
 - OKTA IDENTITY GOVERNANCE (OIG)
     - Prepare your Environment
     - Access Requests
     - Access Certifications
 
+
 - OKTA WORKFLOWS
     - Learn how to automate identity processes
     - Extend the onboarding experience
+
 
 The section **Additional Use Cases** is optional and will extend the demo environment or describe more advanced topics. Please find the ones relevant for you and try them out.
 
