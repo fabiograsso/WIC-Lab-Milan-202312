@@ -94,7 +94,7 @@ For the workflows in the Okta Workflow Pack to work you will need:
 The manager user’s email address needs to point to a valid email address and have the appropriate Office 365 licenses so that the manager can get the email notifications as part of the flow.
 In this lab we will use the manager account **Giorgia Meloni** created in Okta.
 
-2. An existing target user (that will represent the target user) in Okta where the **Okta Primary Email Address for that user is the same as the user’s Office 365 username**. The manager attribute in Okta Universal Directory will need to be the username of the Okta user that represents the manager and you created in the step above (e.g. Sarah James).
+2. An existing target user (that will represent the target user) in Okta where the **Okta Primary Email Address for that user is the same as the user’s Office 365 username**. The manager attribute in Okta Universal Directory will need to be the username of the Okta user that represents the manager and you created in the step above (e.g. Giorgia Meloni).
 
 
 ## Okta Workflows - Flow Pack Setup Steps
