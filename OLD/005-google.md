@@ -417,7 +417,7 @@ This will make sure your Google admin user is not suspended if the account is ev
 
 You will now test single sign-on from Okta to Google Workspace.
 
-This test uses the Okta admin user **your.name@okta.com** as the test user.  This user was assigned the Google super admin account, **your.name@ws.yourdemodomain.com**,**  **using an import operation.
+This test uses the Okta admin user **your.name@domain.com** as the test user.  This user was assigned the Google super admin account, **your.name@ws.yourdemodomain.com**,**  **using an import operation.
 
 
 

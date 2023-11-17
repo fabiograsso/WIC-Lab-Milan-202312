@@ -97,7 +97,7 @@ This integration supports both Secure Web Authentication (SWA), for password inj
 
 
     This will create the Salesforce username by taking the part of the Okta username attribute (okta.login) before the @ sign and then adding @yourdemodomain.com. \
-For example, _your.name**@okta.com**_ would become _your.name**@yourdemodomain.com**_.
+For example, _your.name**@domain.com**_ would become _your.name**@yourdemodomain.com**_.
 
 13. Click **Done**.
 
@@ -538,14 +538,14 @@ The account assignment is complete.
 
 You will now test single sign-on from Okta to Salesforce.
 
-This test uses the Okta admin user **your.name@okta.com** as the test user.  This user was assigned the Salesforce admin account, **your.name@yourdemodomain.com**,  using an import operation.
+This test uses the Okta admin user **your.name@domain.com** as the test user.  This user was assigned the Salesforce admin account, **your.name@yourdemodomain.com**,  using an import operation.
 
 
 
 1. Open a new browser window that is not signed into Okta or Salesforce. \
 This could be a private browsing window, a different profile, or a different browser.
 2. Navigate to your Okta tenant. e.g. **{{idp.name}}.okta.com**
-3. Authenticate as your test user: e.g._ **your.name@okta.com**_ \
+3. Authenticate as your test user: e.g._ **your.name@domain.com**_ \
 You should end up on your Okta dashboard and see that a tile for Salesforce is now shown:
 
 
