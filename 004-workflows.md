@@ -98,7 +98,8 @@ For the workflows in the Okta Workflow Pack to work you will need:
 The manager user’s email address needs to point to a valid email address and have the appropriate Office 365 licenses so that the manager can get the email notifications as part of the flow.
 In this lab we will use the manager account **Giorgia Meloni** created in Okta.
 
-2. An existing target user (that will represent the target user) in Okta where the **Okta Primary Email Address for that user is the same as the user’s Office 365 username**. The manager attribute in Okta Universal Directory will need to be the username of the Okta user that represents the manager and you created in the step above (e.g. Sarah James).
+2. An existing target user (that will represent the target user) in Okta where the **Okta Primary Email Address for that user is the same as the user’s Office 365 username**. The manager attribute in Okta Universal Directory will need to be the username of the Okta user that represents the manager and you created in the step above.
+**This target user must be assign to Office 365 application.**
 
 
 ## Okta Workflows - Flow Pack Setup Steps
@@ -155,29 +156,13 @@ https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/files/o3
 
 ## Testing the Okta Workflow Flow
 
-Create or import a new user with a manager assign (in our case **Wes Chang**) and assign Office 365 application.
-
 Create or import a new user with a manager assign (in our case **Giorgia Meloni**) and assign her **Office 365 application**.
 
-To complete the above task, go to Okta Admin console and 
-   2.1 select Directory > People > Add person 
-   2.2 select as primary email **giorgia.meloni*\@wiclab##.onmicrosoft.com** 
-   2.3 assign the group **O365Users**
-   2.3 select activate now and configure a password
-
-In addition, create the user **Valentino Rossi** in Okta and assign **Giorgia Meloni** as manager from the user profile.
-To complete this task, go to Okta Admin console and 
-
-   2.1 select Directory > People > Add person 
-   2.2 select as primary email **something*\@wiclab##.onmicrosoft.com** 
-   2.3 assign the group **O365Users**
-   2.3 select activate now and configure a password
-   2.4 Once created, go to his profile and edit it in order to add into **Manager** attribute + **ManagerID** attribute the value e.g. *giorgia.meloni@wiclab##.onmicrosoft.com* and add into **Department** attribute the value e.g. *Sales*
+In the example below, we have created the user **Elise Dupont** in Okta and assign **Wes Chang** as manager from the user profile.
 
 ![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image62.png)
 
-In order to put the manager, go to **Profile**, click **Edit** then scroll down to the manager ID attribute and enter the value **sarah.james@wiclab##.onmicrosoft.com**, enter **Sales** in the **Department** attribute.
-
+In order to put the manager, go to **Profile**, click **Edit** then scroll down to the manager ID attribute and enter the value **wes.chang@wiclab56.onmicrosoft.com**, enter **Sales** in the **Department** attribute.
 ![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image34.png)
 
 You will be able to visualise the flow execution in real time by clicking on "Execution History" on the main flow.
@@ -186,7 +171,7 @@ You will be able to visualise the flow execution in real time by clicking on "Ex
 
 ### Resultat expected 
 
-On the manager profile (**Sarah James**) you will see : 
+On the manager profil (**Wes Chang**) you will see : 
 
 - A new email auto generated
 

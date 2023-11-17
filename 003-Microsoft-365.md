@@ -1,10 +1,5 @@
 # Configure SSO and LCM for Microsoft 365
 
-TODO:
-- tenant, verificare se sono sufficienti
-- ?cambiare password?
-- capire come inserire le credenziali nell'ambiente demo
-
 ## Overview
 
 This guide provides instructions for integrating Okta with Microsoft
@@ -124,7 +119,7 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 
 15. Enter the following for the expression 
 
-> **String.substringBefore(user.login,\"@\") + \"@wiblab##.onmicrosoft.com\"**
+> **String.substringBefore(user.login,\"@\") + \"@wiclab##.onmicrosoft.com\"**
 
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/009/image08.png "image_tooltip")
 16. Click **Done**.
@@ -241,8 +236,7 @@ Follow these steps:
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/009/image017.png "image_tooltip")
 
 
-    > The available options are shown. These have been pulled via API
-    > and so reflect the options relevant for your Microsoft tenant:
+    > The available options are shown.
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/009/image018.png "image_tooltip")
 
 
@@ -345,7 +339,7 @@ You can now test single sign-on to Microsoft 365 for the assigned user.
 
 1.  Open a new browser window that is not signed into Okta or Microsoft
 
-2.  Navigate to your Okta tenant. e.g. **{{idp.name}}.okta.com**
+2.  Navigate to your Okta tenant. e.g. **https://{{idp.name}}.okta.com**
 
 3.  Authenticate as your test user: e.g. ***your.name*\@yourcompanydomain.com**
 
@@ -426,6 +420,22 @@ group definition.
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/009/image036.png "image_tooltip")
 
 
+and select the checkboxes for the following licenses:
+
+    -   Sharepoint Online (Plan 2)
+
+    -   Office Online
+
+    -   Office 365 ProPlus
+
+    -   Exchange Online (Plan 2)
+
+    -   Exchange Online Advanced Threat Protection
+
+    -   Microsoft Teams
+
+
+
 6.  Scroll to the bottom of the page and click **Save and Go Back**.
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/009/image038.png "image_tooltip")
 
@@ -438,9 +448,11 @@ You will now assign a test user to the *O365Users* group. This will
 cause the user to be assigned the Microsoft Office 365 application
 which, in turn, will trigger provisioning of an account.
 
-1.  If not already there, navigate to **Directory \> Groups**.
+*Be aware that Okta can automatically assign people to a group based on an attribute or group membership.*
 
-TODO: Group rule based on Active Directory users
+1.  If not already there, navigate to **Directory \> Groups**.
+and select the Okta group called *O365Users* (different from the one that is AD sourced)
+
 
 2.  Select the **People** tab.
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/009/image040.png "image_tooltip")
@@ -451,6 +463,7 @@ TODO: Group rule based on Active Directory users
 4.  Click the **+ icon** for a test user in your Okta org.\
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/009/image041.png "image_tooltip")
 
+5.  Click the **Done** button to save the configuration.
 
 
 The user is now assigned to the group and will be assigned to the
@@ -466,7 +479,7 @@ You can now test single sign-on to Microsoft 365 for your test user.
 2.  Navigate to your Okta tenant.
 
 3.  Authenticate as your test user: e.g.
-    > ***alex.anderson@yourcompanydomain.com***
+    > ***youruser@yourcompanydomain.com***
 
 4.  Click the tile for **Microsoft Office 365 Word Online**.
   ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/009/image043.png "image_tooltip")
