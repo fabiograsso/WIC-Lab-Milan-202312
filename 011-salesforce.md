@@ -4,8 +4,6 @@
 
 This guide provides instructions for integrating Okta with Salesforce so that the following use cases can be demonstrated:
 
-
-
 * Single Sign-on (SSO) from Okta to Salesforce
 * Lifecycle Management (LCM) for Salesforce
 
@@ -24,16 +22,15 @@ It’s worth noting that Okta Classic implements an older API security approach 
 
 Register for a free Salesforce Developer Tenant here: [https://developer.salesforce.com/signup](https://developer.salesforce.com/signup).
 
-**NOTE - IMPORTANT!** Email addresses in Salesforce are unique. That's mean that if you are already registered with your email, you cannot use the same email in another tenant.
-Moreover, if you register for the dev account using your email, that email will be not available if in future you need to access another Salesforce tenant.
-It's warmly reccomended that you use a non work-related email for the registration.
-You can register for a free email address on Google, Yahoo, or Hotmail if you don't have an usable email address.
+        NOTE - IMPORTANT! Email addresses in Salesforce are unique. That's mean that if you are already registered with your email, you cannot use the same email in another tenant.
+        Moreover, if you register for the dev account using your email, that email will be not available if in future you need to access another Salesforce tenant.
+        It's warmly reccomended that you use a non work-related email for the registration.
+        You can register for a free email address on Google, Yahoo, or Hotmail if you don't have an usable email address.
 
 
 ## Add Salesforce application to Okta
 
 Okta maintains a specific integration for Salesforce in the Okta Integration Network (OIN).  To add this to your Okta org, follow these steps:
-
 
 
 1. Use a browser to open the administration UI of your Okta demo org and sign in as an administrator.
@@ -43,6 +40,7 @@ Okta maintains a specific integration for Salesforce in the Okta Integration Net
 
 
 2. Navigate to **Applications > Applications**.
+
 3. Click **Browse App Catalog **to open the Okta Integration Network browser.
 
 
@@ -56,6 +54,7 @@ Okta maintains a specific integration for Salesforce in the Okta Integration Net
 
 
 5. Click **Add integration**.
+
 6. The _Add Salesforce.com_ wizard opens on the _General Settings_ page:
 
 
@@ -100,6 +99,7 @@ This integration supports both Secure Web Authentication (SWA), for password inj
     In Salesforce usernames must be globally unique; no two users in Salesforce can have the same username even if they are in different tenants. An easy way to ensure uniqueness is to include a username suffix that is unique to your environment.  In this case you will use a custom expression which replaces the domain part of the Okta username with the unique domain of your demo environment.
 
 11. Set _Application username format_ to **Custom**.
+
 12. Enter the following for the expression - replacing yourdemodomain.com with your own custom domain:
 
         **String.substringBefore(user.login,"@") + "@yourdemodomain.com"**
@@ -260,7 +260,7 @@ To make the lab run smoothly, all the Salesforce configuration tasks involved in
 ### Configure provisioning in Okta
 
 
-1. If you are not already there, open your Okta administration UI, navigate to **Applications > Applications**, and select the **Salesforce.com **application definition.
+1. If you are not already there, open your Okta administration UI, navigate to **Applications > Applications**, and select the **Salesforce.com** application.
 
 
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/004/image31.png "image_tooltip")
@@ -268,7 +268,7 @@ To make the lab run smoothly, all the Salesforce configuration tasks involved in
 
 2. Click on the **Provisioning** tab and click the **Configure API integration **button.
 
-To find the Consumer Key and Consumer Secret please consult the attached document with information about your SalesForce tenant.  
+TODO: ISTRUZIONI PER OTTENERE KEY E SECRET
 
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/004/image32.png "image_tooltip")
 
@@ -284,7 +284,6 @@ To find the Consumer Key and Consumer Secret please consult the attached documen
 
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/004/image33.png "image_tooltip")
 
-    If SalesForce ask for an OTP code sent by email, please contact your Okta animator for the access
 
 6. Authenticate to your Salesforce tenant the administrative user. \
 A consent page is displayed asking you to grant permissions to your Okta org (which is connecting as the Connected App you created in the previous section):

@@ -456,8 +456,6 @@ This will allow you to see the Okta attribute names as well as the display names
 
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/002/image38.png "image_tooltip")
 
-
-
     These attributes are controlled by the active_directory profile for your directory under Directory > Profile Sources.
 
 
