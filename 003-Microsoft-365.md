@@ -54,11 +54,64 @@ system.
 
 To complete this lab you will need : 
 
-1. Get your Office 365 tenant assigned by your instructor.
+1. Get your Office 365 tenant (see instructions bellow)
 
 2. Have users on your tenant (imported from Active Directory or created manually in Okta) in order to assign the application and validate the user flow.
 
 3. A custom domain has already been configured in the O365 tenant. The domain with the format **wiclab##.onmicrosoft.com** will be federated in this lab.
+
+## Creat an Office 365 Dev (Free) Tenant
+
+1. Register for a free Microsoft Dev Account
+
+    1. Open the website https://developer.microsoft.com/en-us/microsoft-365/dev-program
+
+    2. Click on "Join Now"
+    ![alt_text](images/009/o365setup-001.png "image_tooltip")
+
+    3. Create a new account by clicking on "Create One!"
+    ![alt_text](images/009/o365setup-002.png "image_tooltip")
+
+    4. Click on "Get a new email address"
+    ![alt_text](images/009/o365setup-003.png "image_tooltip")
+
+    5. Register for a new email address. Use as name convention `wiclabnamesurname`. So your email will be `wiclabnamesurname@outlook.com`.
+
+        **Remember to save the password in a secure place, as you will need it later.**
+
+        ![alt_text](images/009/o365setup-004.png "image_tooltip")
+
+    6. Complete the registration form by putting your information. We suggest to keep English as language.
+       ![alt_text](images/009/o365setup-005.png "image_tooltip")
+
+    7. Click on "Set up E5 subscription"
+      ![alt_text](images/009/o365setup-006.png "image_tooltip")
+
+    8. Select "Configurable Sandbox"
+      ![alt_text](images/009/o365setup-007.png "image_tooltip")
+
+    9. Complete the Microsoft 365 E5 sandbox form.
+    Just as convention use `admin` as username and `wiclabnamesurname` as domain.
+        
+        **Remember to save the password in a secure place, as you will need it later.**
+      ![alt_text](images/009/o365setup-008.png "image_tooltip")
+
+    10. Complete the registration by inserting your phone number and complete the validation challenge using the OTP that you receive by SMS
+          ![alt_text](images/009/o365setup-009.png "image_tooltip")
+
+
+    > To resume:
+    > - Your Office 365 Tenant:  ` wiclabnamesurname.onmicrosoft.com`
+    > - Your Admin Account:  ` admin@wiclabnamesurname.onmicrosoft.com`
+    > - Your Email Address:  ` wiclabnamesurname@outlook.com`
+
+2. Configure you Microsof 365 Tenant
+    1. Open the website https://www.office.com/login?login_hint=admin@wiclabnamesurnname.onmicrosoft.com and login using your password
+
+
+
+
+
 
 ## Add Microsoft Office 365 Application to Okta
 
