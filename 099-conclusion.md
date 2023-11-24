@@ -10,4 +10,7 @@ We hope you enjoyed this workshop and look forward to seeing you again soon for 
 
 ## 🎉Congratulations🍾 You made it
 
-![Milano](images/milano.jpg)
+![Milano](images/milano-okta.jpg)
+
+---
+
