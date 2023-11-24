@@ -1,3 +1,65 @@
+# Initial Setup
+
+## Add a user, a group, and an app
+
+In this lab you will add a user, add a group, and then add the user to the group. You will also create a bookmark app in your Okta org.
+
+### Add a user
+
+In this task, you will add a test user.
+
+1. In the Admin Console select **Directory** > **People**.
+1. Click **Add person**.
+![Displays the Add person button](images/013/add-person.png)
+1. Set **First name** to **Work**.
+1. Set **Last name** to **Shop**
+1. Set **Username** to an email address that you can access during the workshop.
+1. For **Activation**, select **Activate now**.
+1. Select **I will set password**, and then enter a password.
+1. Clear **User must change password on first login**.
+1. Click **Save**.
+![Displays the Add Person dialog](images/013/add-person-dialog.png)
+1. Optional. Refresh your browser to see the new user.
+
+### Add a group
+
+In this task you will add a new group.
+
+1. In the Admin Console select **Directory** > **Groups**.
+1. Click **Add group**.
+1. Set the **Name** to **High Assurance**.
+1. Optional. Set a **Description**.
+1. Click **Save**.
+
+![Displays the Add group dialog](images/013/add-group.png)
+
+1. To view the new group, refresh the browser.
+1. Select the **High Assurance** group, and then click **Assign people**.
+1. Search for your new user, and then click the **+** sign to add the user to the group.
+1. Click **Done**.
+
+### Add an app
+
+In this task you will add a bookmark app for testing authentication policies.
+
+1. In the Admin Console select **Applications** > **Applications**
+1. Click **Browse App Catalog**
+1. In the search bar, enter **bookmark**, and then click **Bookmark App**.
+![image](images/013/app-catalog.png)
+1. Click **Add Integration**.
+![image](images/013/add-integration.png)
+1. Set the **Application label** to **High**.
+1. Set the **URL** to  <https://www.okta.com/workforce-identity/#device-assurance>
+1. Click **Done**.
+![image](images/013/bookmark-app.png)
+1. On the **Assignments** tab, click **Assign** and then select **Assign to Groups**.
+1. Search for the **High Assurance** group and then click **Assign**.
+1. Click **Done**.
+![image](images/013/app-assignment.png)
+
+
+
+---
 # Security and Authenticators
 
 In this lab we dive into the Security Section of the Administration portal including general setup and authenticators.
@@ -85,7 +147,6 @@ Within policy, you can create Authenticator Enrollment rules which specify enrol
 
 ## Device Assurance Policies
 
-**TODO - rewrite text**
 Device Assurance Policies leverage Okta Verify to capture device signals, such as OS version, that can be leveraged in Authentication policy decisions.
 
 In this lab, you will create a device assurance policy that will fail for a computer with Okta Verify installed. The simplest way to do this is pick a OS Version one higher than your current device is using. The policy requires an iOS device to has an iOS version one higher than the current release. We have also require a Passcode and biometrics, either TouchID or FaceID, must be enabled.
