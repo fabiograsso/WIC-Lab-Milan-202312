@@ -2,7 +2,7 @@
 
 ## Add a user, a group, and an app
 
-In this lab you will add a user, add a group, and then add the user to the group. You will also create a bookmark app in your Okta org.
+In this section you will add a user, add a group, and then add the user to the group. You will also create a bookmark app in your Okta org.
 
 ### Add a user
 
@@ -62,7 +62,7 @@ In this task you will add a bookmark app for testing authentication policies.
 ---
 # Security and Authenticators
 
-In this lab we dive into the Security Section of the Administration portal including general setup and authenticators.
+In this section we dive into the Security Section of the Administration portal including general setup and authenticators.
 
 ## Security Configuration
 
@@ -122,7 +122,7 @@ For the **Email** authenticator, click **Actions**, and then select **Edit**.
 
 ## Enrollment Policies
 
-Within policy, you can create Authenticator Enrollment rules which specify enrollment as optional or required for end users. In this lab you will create an enrollment policy that specifies email and Okta Verify as required and password as optional.
+Within policy, you can create Authenticator Enrollment rules which specify enrollment as optional or required for end users. In this section you will create an enrollment policy that specifies email and Okta Verify as required and password as optional.
 
 1. Navigate to **Security** > **Authenticators**, and then select  **Enrollment** tab.
 ![image](images/013/enrollment-policy.png)
@@ -149,7 +149,7 @@ Within policy, you can create Authenticator Enrollment rules which specify enrol
 
 Device Assurance Policies leverage Okta Verify to capture device signals, such as OS version, that can be leveraged in Authentication policy decisions.
 
-In this lab, you will create a device assurance policy that will fail for a computer with Okta Verify installed. The simplest way to do this is pick a OS Version one higher than your current device is using. The policy requires an iOS device to has an iOS version one higher than the current release. We have also require a Passcode and biometrics, either TouchID or FaceID, must be enabled.
+In this section, you will create a device assurance policy that will fail for a computer with Okta Verify installed. The simplest way to do this is pick a OS Version one higher than your current device is using. The policy requires an iOS device to has an iOS version one higher than the current release. We have also require a Passcode and biometrics, either TouchID or FaceID, must be enabled.
 
 1. In the Admin Console select **Security** > **Device Assurance Policies**.
 1. Click **Add a policy**.
@@ -173,7 +173,7 @@ This will provide stronger feedback to us later in our labs.
 ---
 # Authentication Policies
 
-In this lab we will look at Contextual Access options and device Management
+In this section we will look at Contextual Access options and device Management
 
 ## Global Authentication & Session Policy
 
@@ -199,7 +199,7 @@ In this lab we will look at Contextual Access options and device Management
 
 Okta provides pre-defined authentication policies with options for any two factors or seamless access based on risk context. There are also pre-defined policies for the Okta Dashboard and the Okta Admin Console.
 
-In this lab you will review the default authentication policy, and review what apps have this policy assigned.
+In this section you will review the default authentication policy, and review what apps have this policy assigned.
 
 1. In the Admin Console select **Security** > **Authentication Policies**.
 
@@ -316,7 +316,7 @@ In this section we will look at the Devices section of the directory.
 ---
 # Passwordless Users
 
-In this lab we will show how to add Passwordless users. For detailed information refer to the documentation.
+In this section we will show how to add Passwordless users. For detailed information refer to the documentation.
 
 ## Enable Self Service Enrollment
 1. Add a new group called Passwordless following the instructions in Lab 1. 

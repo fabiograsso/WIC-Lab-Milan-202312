@@ -1,4 +1,4 @@
-### Configure Desktop MFA for Windows
+# Configure Desktop MFA for Windows
 
 ## Overview
 

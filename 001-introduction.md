@@ -20,6 +20,7 @@ This workshop is broken into the sections listed below.
 - INTEGRATING APPLICATIONS for secure Single-Sign-On and Lifecycle management
     - Office 365
 
+- SECURITY POLICIES
 
 - OKTA IDENTITY GOVERNANCE (OIG)
     - Prepare your Environment
