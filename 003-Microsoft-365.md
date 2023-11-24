@@ -58,8 +58,6 @@ To complete this lab you will need :
 
 2. Have users on your tenant (imported from Active Directory or created manually in Okta) in order to assign the application and validate the user flow.
 
-3. A custom domain has already been configured in the O365 tenant. The domain with the format **wiclab##.onmicrosoft.com** will be federated in this lab.
-
 ## Creat an Office 365 Dev (Free) Tenant
 
 1. Register for a free Microsoft Dev Account
@@ -99,11 +97,10 @@ To complete this lab you will need :
     10. Complete the registration by inserting your phone number and complete the validation challenge using the OTP that you receive by SMS
           ![alt_text](images/009/o365setup-009.png "image_tooltip")
 
-
-    > To resume:
-    > - Your Office 365 Tenant:  ` my{{idp.name}}.onmicrosoft.com`
-    > - Your Admin Account:  ` admin@my{{idp.name}}.onmicrosoft.com`
-    > - Your Email Address:  ` my{{idp.name}}@outlook.com`
+            To resume:
+            - Your Office 365 Tenant:  my{{idp.name}}.onmicrosoft.com
+            - Your Admin Account:      admin@my{{idp.name}}.onmicrosoft.com
+            - Your Email Address:      my{{idp.name}}@outlook.com
 
 2. Configure you Microsof 365 Tenant
     1. Open the website https://www.office.com/login?login_hint=admin@my{{idp.name}}.onmicrosoft.com and login using your password
@@ -113,6 +110,10 @@ To complete this lab you will need :
     TODO: COMPLETE
 
 
+            To resume:
+            - Your Office 365 Tenant: my{{idp.name}}.onmicrosoft.com
+            - Your Admin Account:     admin@my{{idp.name}}.onmicrosoft.com
+            - Your Custom DNS Domain: {{idp.name}}.onmicrosoft.com
 
 
 
@@ -142,8 +143,8 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 
 6.  Complete the *Microsoft Tenant Name* field. 
     > This must match the tenant name you chose when setting up your Microsoft tenant. If
-    > your Microsoft tenant is **`{{idp.name}}.onmicrosoft.com`** then
-    > your Microsoft tenant name is **`{{idp.name}}`**.
+    > your Microsoft tenant is **`my{{idp.name}}.onmicrosoft.com`** then
+    > your Microsoft tenant name is **`my{{idp.name}}`**.
 
 7.  Click **Next**.
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/009/image04.png "image_tooltip")
@@ -156,7 +157,7 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 
 9.  Enter the *username* and *password* for the administrator of your
      Microsoft tenant.
-> Your Microsoft Tenant Admin has this syntax "admin@{{idp.name}}.onmicrosoft.com".
+> Your Microsoft Tenant Admin has this syntax "admin@my{{idp.name}}.onmicrosoft.com".
 
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/009/image06.png "image_tooltip")
 11. Click **Fetch and Select** next to Office 365 Domains.
@@ -402,7 +403,7 @@ You can now test single sign-on to Microsoft 365 for the assigned user.
 
 2.  Navigate to your Okta tenant. e.g. **https://{{idp.name}}.okta.com**
 
-3.  Authenticate as your test user: e.g. ***your.name*\@yourcompanydomain.com**
+3.  Authenticate as your test user: e.g. **your.name\@yourcompanydomain.com**
 
 
 
