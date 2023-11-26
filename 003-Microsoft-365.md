@@ -98,22 +98,24 @@ To complete this lab you will need :
           ![alt_text](images/009/o365setup-009.png "image_tooltip")
 
             To resume:
-            - Your Office 365 Tenant:  my{{idp.name}}.onmicrosoft.com
-            - Your Admin Account:      admin@my{{idp.name}}.onmicrosoft.com
+            - Your Office 365 Tenant:  mywiclabNAMESURNAME.onmicrosoft.com
+            - Your Admin Account:      admin@mywiclabNAMESURNAME.onmicrosoft.com
             - Your Email Address:      my{{idp.name}}@outlook.com
 
 2. Configure you Microsof 365 Tenant
-    1. Open the website https://www.office.com/login?login_hint=admin@my{{idp.name}}.onmicrosoft.com and login using your password
+    1. Open the website https://www.office.com/login?login_hint=admin@mywiclabNAMESURNAME.onmicrosoft.com and login using your password
 
-    2. Create a new domain **`{{idp.name}}.onmicrosoft.com`**
+    2. Create a new domain **`wiclabNAMESURNAME.onmicrosoft.com`**
+    
+            NOTE: the name is the same of the O365 tenant, without the work `my` at the beginning.
 
-    TODO: COMPLETE
+    TODO: COMPLETE - subdomain registration
 
 
             To resume:
-            - Your Office 365 Tenant: my{{idp.name}}.onmicrosoft.com
-            - Your Admin Account:     admin@my{{idp.name}}.onmicrosoft.com
-            - Your Custom DNS Domain: {{idp.name}}.onmicrosoft.com
+            - Your Office 365 Tenant: mywiclabNAMESURNAME.onmicrosoft.com
+            - Your Admin Account:     admin@mywiclabNAMESURNAME.onmicrosoft.com
+            - Your Custom DNS Domain: wiclabNAMESURNAME.onmicrosoft.com
 
 
 
@@ -143,7 +145,7 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 
 6.  Complete the *Microsoft Tenant Name* field. 
     > This must match the tenant name you chose when setting up your Microsoft tenant. If
-    > your Microsoft tenant is **`my{{idp.name}}.onmicrosoft.com`** then
+    > your Microsoft tenant is **`mywiclabNAMESURNAME.onmicrosoft.com`** then
     > your Microsoft tenant name is **`my{{idp.name}}`**.
 
 7.  Click **Next**.
@@ -157,7 +159,7 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 
 9.  Enter the *username* and *password* for the administrator of your
      Microsoft tenant.
-> Your Microsoft Tenant Admin has this syntax "admin@my{{idp.name}}.onmicrosoft.com".
+> Your Microsoft Tenant Admin has this syntax "admin@mywiclabNAMESURNAME.onmicrosoft.com".
 
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/009/image06.png "image_tooltip")
 11. Click **Fetch and Select** next to Office 365 Domains.
@@ -168,7 +170,7 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 
 **IMPORTANT: you have to choose the domain that we added in the previous step. If you use the default one (the one that is created automaticaly with the tenant) it will not work!
 This is because default domain cannot be federated, due to a limitation imposed by Microsoft.
-If you followed the name convention, your domain should be **`{{idp.name}}.onmicrosoft.com`**
+If you followed the name convention, your domain should be **`wiclabNAMESURNAME.onmicrosoft.com`**
 
 ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/009/image07.png "image_tooltip")
 13. Click **Select**.

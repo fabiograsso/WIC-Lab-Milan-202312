@@ -11,24 +11,28 @@ Today we are going to learn the following topics:
 
 This workshop is broken into the sections listed below. 
 
-- Platform Review and Preparation
+- **Platform Review and Preparation**
 
-- IDENTITY SOURCES
+- **IDENTITY SOURCES**
+   
     - Integrate Active Directory
 
 
-- INTEGRATING APPLICATIONS for secure Single-Sign-On and Lifecycle management
+- **INTEGRATING APPLICATIONS for secure Single-Sign-On and Lifecycle management**
+    
     - Office 365
 
-- SECURITY POLICIES
+- **SECURITY POLICIES**
 
-- OKTA IDENTITY GOVERNANCE (OIG)
+- **OKTA IDENTITY GOVERNANCE (OIG)**
+    
     - Prepare your Environment
     - Access Requests
     - Access Certifications
 
 
-- OKTA WORKFLOWS
+- **OKTA WORKFLOWS**
+    
     - Learn how to automate identity processes
     - Extend the onboarding experience
 
@@ -42,10 +46,4 @@ The credentials and token for the target applications will be supplied to you wh
 At the end of the lab, the accounts will be automatically decommissioned. Only the Okta tenant generated for this event will remain active for your use.
 
 **To ensure that the lab works properly and to access to Okta tenant, you will need to install Okta Verify on one of your devices.**
-
-## Your domain
-
-A custom domain in O365 is assigned automatically to each user in this lab. This custom domain is a pre-requisite to go through the different integrations afterwards. To get this custom domain, go to section 3 - O365, then click on the button **Launch** in the top left corner under **Office365**. You will be redirected then to the admin console of O365, grab the first first part after **labadmin@** then copy it but without the word **my**. In the example below, your custom domain is **wiclab56**.
-
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/009/image047.png "image_tooltip")
 

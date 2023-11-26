@@ -142,8 +142,6 @@ Within policy, you can create Authenticator Enrollment rules which specify enrol
 1. For the policy rule, set **Rule name** to **Default Rule**, and then click **Create Rule**.
 ![image](images/013/add-policy-rule.png)
 
->**TODO:** Need updated images
->
 
 ## Device Assurance Policies
 
@@ -227,7 +225,7 @@ You will see more detail regarding the event.
 In this case that Bart Simson is trying to sign-on to the Bookmark App and has triggered the Catch All policy.
 ![image](images/013/syslog-detail.png)
 1. To view the geographical context captured by Okta, click the expand **>** icon for the **Request**  .
-1. To view the debug data captured by Okta including the device context this expand the following **System** > **DebugContext** > **DebugData**. You will see details including: **AuthnRequestId**, **TODO** add more based on explicit run.
+1. To view the debug data captured by Okta including the device context this expand the following **System** > **DebugContext** > **DebugData**. You will see details including: **AuthnRequestId**
 ![image](images/013/debug-data.png)
 1. Verify that this event is low risk. Compare this with the other log events for this new user and you’ll see that the initial login and enrolment events are high risk.
 

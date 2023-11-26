@@ -190,8 +190,9 @@ On the new user (Elise Dupont) profil you will see :
 
 - A channel in Teams "OKTA EMEA WIC Lab"
 
-![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image31.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image32.png)
 
 - A new calendar invitation
 
-![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image32.png)
+![](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/006-1/image31.png)
+
