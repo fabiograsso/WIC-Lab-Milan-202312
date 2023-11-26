@@ -13,7 +13,7 @@
 
 6.  Search for Okta, click on it and insert the required details:
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/Workflows_2/image7-25.png "image_tooltip")
+![alt_text](images/Workflows_2/image7-25.png "image_tooltip")
 
 7.  Lastly click **Create**
 
@@ -24,35 +24,35 @@ the **template**.
     Memberships Temporarily Based on Time**"
 
 2.  Click on it and then on **Add Template** and again **Add Template**\
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/Workflows_2/image2-27.png "image_tooltip") ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/Workflows_2/image8-28.png "image_tooltip")
+![alt_text](images/Workflows_2/image2-27.png "image_tooltip") ![alt_text](images/Workflows_2/image8-28.png "image_tooltip")
 
 3.  Open up the **Determine if user added to temporary group** and the
     **SUB - Remove User from Group** flows and make sure you **choose
     your Okta Connection** and Save the workflows.\
-   ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/Workflows_2/image3-30.png "image_tooltip")
+   ![alt_text](images/Workflows_2/image3-30.png "image_tooltip")
 
 4.  Create a group in Okta called "**Temp Group**"
 
 5.  Go back to your flows and go to the **Tables** tab and open the
     **Temporary Groups** table\
-   ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/Workflows_2/image5-31.png "image_tooltip")
+   ![alt_text](images/Workflows_2/image5-31.png "image_tooltip")
 
 6.  Add the **group name** and the **duration in minutes** and click
     **Create**. The duration will reflect how long a user should stay
     in that group. For testing purposes we'll put in **3
     minutes**.
-  ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/Workflows_2/image9-33.png "image_tooltip")
+  ![alt_text](images/Workflows_2/image9-33.png "image_tooltip")
 
 7.  Now go back to your **Flows**, **turn ON** the **App
    Event** and **Helper** flows and open up the
     <ins>Schedule</ins> one.\
-   ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/Workflows_2/image6-35.png "image_tooltip")
+   ![alt_text](images/Workflows_2/image6-35.png "image_tooltip")
 
 8.  Once you\'re in, click on the clock icon on the bottom right hand
     corner of the **Scheduled Flow** event. Now schedule the flow to
     run every **5 minutes** (lowest it can go). **Save** it and turn
     the flow **ON**.\
-   ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/Workflows_2/image1-37.png "image_tooltip")    ![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/Workflows_2/image4-39.png "image_tooltip")
+   ![alt_text](images/Workflows_2/image1-37.png "image_tooltip")    ![alt_text](images/Workflows_2/image4-39.png "image_tooltip")
 
 9.  Once all 3 flows are on, go back to the **Okta Admin Dashboard** and
     assign a user (create one if needed) to the **Temp Group**.

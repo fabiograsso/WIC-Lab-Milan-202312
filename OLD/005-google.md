@@ -29,7 +29,7 @@ Google Workspace allows management of users and groups via its REST APIs which a
 During integration, you will be asked for your Google company domain.  If you don’t know what this is, you can find it in your Google Workspace Admin UI under **Account > Domains > Manage domains**:
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image1.png "image_tooltip")
+![alt_text](images/005/image1.png "image_tooltip")
 
 
 Note that in this example the domain is a subdomain (**ws**.yourdemodomain.com) in order to allow Google to share the domain with Microsoft 365.
@@ -47,27 +47,27 @@ Okta maintains a specific integration for Google Workspace in the Okta Integrati
 1. Use a browser to open the administration UI of your Okta demo org and sign in as an administrator.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image2.png "image_tooltip")
+![alt_text](images/005/image2.png "image_tooltip")
 
 
 2. Navigate to **Applications > Applications**
 3. Click **Browse App Catalog** to open the Okta Integration Network browser.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image3.png "image_tooltip")
+![alt_text](images/005/image3.png "image_tooltip")
 
 
 4. Search for and select the **Google Workspace **integration.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image4.png "image_tooltip")
+![alt_text](images/005/image4.png "image_tooltip")
 
 
 5. Click **Add integration**. \
 The _Add Google Workspace _wizard opens on the _General Settings _page:
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image5.png "image_tooltip")
+![alt_text](images/005/image5.png "image_tooltip")
 
 
 6. Complete the **Your Google Apps company domain **field.  This must match the DNS domain you used when setting up your Google Workspace account.  If you are sharing this DNS domain with Microsoft 365, you will likely be using a sub-domain here (e.g. **ws.**yourdemodomain.com).
@@ -78,7 +78,7 @@ You are taken to the _Sign-On Options _page of the wizard.
 ## Configure SSO in Okta
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image6.png "image_tooltip")
+![alt_text](images/005/image6.png "image_tooltip")
  \
 This integration supports both Secure Web Authentication (SWA), for password injection, and SAML 2.0, for federated single sign-on.
 
@@ -89,14 +89,14 @@ This integration supports both Secure Web Authentication (SWA), for password inj
     Note the options to set a default relay state and to add attributes to the attribute statement or group statement within SAML 2.0 messages. You don’t need these for the demo setup.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image7.png "image_tooltip")
+![alt_text](images/005/image7.png "image_tooltip")
 
 
 9. While you’re here, click the **View Setup Instructions** button.  This will open org-specific instructions for setting up Google Workspace to receive SAML 2.0 assertions from your Okta org.  It will open in a new tab which you’ll refer to later on.
 10. Go back to the tab where the Okta administration UI is open:
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image8.png "image_tooltip")
+![alt_text](images/005/image8.png "image_tooltip")
 
 
 
@@ -129,7 +129,7 @@ During the configuration of Google Workspace, you will need several pieces of in
 1. Go to the browser tab that includes the setup instructions for Google Workspace and scroll down to find the dynamic information fields:
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image9.png "image_tooltip")
+![alt_text](images/005/image9.png "image_tooltip")
 
 
 
@@ -150,28 +150,28 @@ You will now use the information gathered above to configure Google Workspace fo
 2. Login to Google using the Google Workspace credentials of your administrator account.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image10.png "image_tooltip")
+![alt_text](images/005/image10.png "image_tooltip")
 
 
 3. Click the applications icon and select the **Admin** application. \
 The Admin UI for Google Workspace is opened:
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image11.png "image_tooltip")
+![alt_text](images/005/image11.png "image_tooltip")
 
 
 4. Navigate to **Security > Authentication > SSO with third party IdP.**
 5. Click the **Edit icon** for _Third-party SSO profile for your organization_.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image12.png "image_tooltip")
+![alt_text](images/005/image12.png "image_tooltip")
 
 
 6. Copy and paste the _Sign-in page URL_ and _Sign-out page URL_ from the setup instructions.
 7. Click UPLOAD CERTIFICATE and upload the certificate file that you download from the setup instructions.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image13.png "image_tooltip")
+![alt_text](images/005/image13.png "image_tooltip")
 
 
 8. Select the checkbox for **Use a domain specific issuer**. \
@@ -200,13 +200,13 @@ Accounts in Google Workspace can be managed via Google REST APIs.  To enable pro
 1. If you are not already there, open your Okta administration UI, navigate to **Applications > Applications**, and select the **Google Workspace** application definition.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image14.png "image_tooltip")
+![alt_text](images/005/image14.png "image_tooltip")
 
 
 2. Click on the **Provisioning **tab and click the **Configure API integration** button.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image15.png "image_tooltip")
+![alt_text](images/005/image15.png "image_tooltip")
 
 
 3. Check the checkbox for **Enable API integration**.
@@ -215,7 +215,7 @@ Accounts in Google Workspace can be managed via Google REST APIs.  To enable pro
 A consent box is shown requesting that you grant permissions to Okta:
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image16.png "image_tooltip")
+![alt_text](images/005/image16.png "image_tooltip")
 
 
 6. Click **Allow** to allow your Okta org to manage users in Google Workspace.
@@ -223,13 +223,13 @@ A consent box is shown requesting that you grant permissions to Okta:
     Back in the Okta administration UI, you will see success messages:
    
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image17.png "image_tooltip")
+![alt_text](images/005/image17.png "image_tooltip")
 
 
 7. Click **Save**.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image18.png "image_tooltip")
+![alt_text](images/005/image18.png "image_tooltip")
 
 
 
@@ -255,7 +255,7 @@ Note: In general, Okta does not delete accounts from applications - it only deac
 Follow these steps to enable provisioning:
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image19.png "image_tooltip")
+![alt_text](images/005/image19.png "image_tooltip")
 
 
 
@@ -266,7 +266,7 @@ Follow these steps to enable provisioning:
 1. Click **Edit** to set the options for Okta provisioning to Google Workspace.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image20.png "image_tooltip")
+![alt_text](images/005/image20.png "image_tooltip")
 
 
 2. Click the **Enable **checkbox for **Create Users**.
@@ -292,7 +292,7 @@ In this section you will configure inbound provisioning from Google Workspace to
 In fact, you could perform this one-time import without doing any configuration, and manually match the account, but it makes sense to set up account matching for completeness.  Follow these steps:
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image21.png "image_tooltip")
+![alt_text](images/005/image21.png "image_tooltip")
 
 
 
@@ -302,7 +302,7 @@ In fact, you could perform this one-time import without doing any configuration,
 3. Click **Edit** to edit the import settings.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image22.png "image_tooltip")
+![alt_text](images/005/image22.png "image_tooltip")
 
 
 
@@ -316,7 +316,7 @@ In fact, you could perform this one-time import without doing any configuration,
 6. Click **Save**.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image23.png "image_tooltip")
+![alt_text](images/005/image23.png "image_tooltip")
 
 
 
@@ -325,7 +325,7 @@ In fact, you could perform this one-time import without doing any configuration,
 7. Click **Edit **in the _User Creation & Matching_ section.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image24.png "image_tooltip")
+![alt_text](images/005/image24.png "image_tooltip")
 
 
 8. For _Imported user is an exact match to Okta user if_, select radio button for **Okta username format matches**.
@@ -339,7 +339,7 @@ You will now perform a one-time import from Google Workspace.  This will import 
 Follow these steps:
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image25.png "image_tooltip")
+![alt_text](images/005/image25.png "image_tooltip")
 
 
 
@@ -349,13 +349,13 @@ Follow these steps:
 This initiates a one time import operation.  When complete you will see a status pop-up:
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image26.png "image_tooltip")
+![alt_text](images/005/image26.png "image_tooltip")
 
 
 3. Click **OK**.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image27.png "image_tooltip")
+![alt_text](images/005/image27.png "image_tooltip")
 
 
 
@@ -372,7 +372,7 @@ This initiates a one time import operation.  When complete you will see a status
 5. Click the **arrow icon** again to close the options.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image28.png "image_tooltip")
+![alt_text](images/005/image28.png "image_tooltip")
 
 
 
@@ -382,7 +382,7 @@ This initiates a one time import operation.  When complete you will see a status
 7. Click **Confirm Assignments**.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image29.png "image_tooltip")
+![alt_text](images/005/image29.png "image_tooltip")
 
 
 8. Click **Confirm**.
@@ -391,7 +391,7 @@ This initiates a one time import operation.  When complete you will see a status
 ## Edit application attributes
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image30.png "image_tooltip")
+![alt_text](images/005/image30.png "image_tooltip")
 
 
 
@@ -400,14 +400,14 @@ This initiates a one time import operation.  When complete you will see a status
 10. Click the **Edit icon **for your admin user assignment.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image31.png "image_tooltip")
+![alt_text](images/005/image31.png "image_tooltip")
 
 
 11. Locate and check the **Do not suspend user** checkbox under _Deactivation options_. \
 This will make sure your Google admin user is not suspended if the account is ever unassigned.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image32.png "image_tooltip")
+![alt_text](images/005/image32.png "image_tooltip")
 
 
 12. Scroll to the bottom of the window and click **Save**.
@@ -428,14 +428,14 @@ This could be a private browsing window, a different profile, or a different bro
 You should end up on your Okta dashboard and see that tiles for Google apps are now shown:
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image33.png "image_tooltip")
+![alt_text](images/005/image33.png "image_tooltip")
 
 
 4. Click the tile for **Google Workspace Account**. \
 If single sign-on is successful you will see the Google Workspace home page:
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image34.png "image_tooltip")
+![alt_text](images/005/image34.png "image_tooltip")
 
 
 5. Click the identity icon in the top-right of the page.
@@ -459,7 +459,7 @@ Note: The _Cloud Identity _license gives access to Google docs, sheets, and slid
 You will now create a group that will be assigned to the Google Workspace application.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image35.png "image_tooltip")
+![alt_text](images/005/image35.png "image_tooltip")
 
 
 
@@ -468,7 +468,7 @@ You will now create a group that will be assigned to the Google Workspace applic
 2. Click the **Add group** button.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image36.png "image_tooltip")
+![alt_text](images/005/image36.png "image_tooltip")
 
 
 3. Enter **GoogleUsers-Free **as the _Name_ of the group.
@@ -488,26 +488,26 @@ You can assign a group to an application by either assigning the group within th
 1. If not already there, navigate to **Directory > Groups**.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image37.png "image_tooltip")
+![alt_text](images/005/image37.png "image_tooltip")
 
 
 2. Click on the link for the **GoogleUsers-Free** group.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image38.png "image_tooltip")
+![alt_text](images/005/image38.png "image_tooltip")
 
 
 3. Select the **Applications** tab in the group properties.
 4. Click **Assign applications**.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image39.png "image_tooltip")
+![alt_text](images/005/image39.png "image_tooltip")
 
 
 5. Click the **Assign **button next to the _Google Workspace_ application.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image40.png "image_tooltip")
+![alt_text](images/005/image40.png "image_tooltip")
 
 
 6. Under _Licenses, _check the checkbox for **Cloud Identity**. \
@@ -515,7 +515,7 @@ This is the free license for Google Workspace.  If you don’t see it, you will 
 7. Click **Save and Go Back**.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image41.png "image_tooltip")
+![alt_text](images/005/image41.png "image_tooltip")
 
 
 8. Click **Done**.
@@ -532,14 +532,14 @@ You will now assign a test user to the **GoogleUsers-Free** group.  This will ca
 1. If not already there, navigate to **Directory > Groups**.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image42.png "image_tooltip")
+![alt_text](images/005/image42.png "image_tooltip")
 
 
 2. Select the **People **tab.
 3. Click **Assign people**.
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image43.png "image_tooltip")
+![alt_text](images/005/image43.png "image_tooltip")
 
 
 4. Click the **+ icon **for a test user in your Okta org. \
@@ -548,7 +548,7 @@ This should not be the admin user (which is already directly assigned to the app
     The user is now shown as assigned:
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image44.png "image_tooltip")
+![alt_text](images/005/image44.png "image_tooltip")
 
 
 
@@ -568,21 +568,21 @@ This could be a private browsing window, a different profile, or a different bro
 You should end up on your Okta dashboard and see that tiles for Google Workspace apps are shown:
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image45.png "image_tooltip")
+![alt_text](images/005/image45.png "image_tooltip")
 
 
 4. Click the tile for **Google Workspace Account**. \
 If single sign-on is successful you will see this pop-up:
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image46.png "image_tooltip")
+![alt_text](images/005/image46.png "image_tooltip")
 
 
 5. Click **I understand**. \
 You are taken to the Google Workspace homepage:
 
 
-![alt_text](https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/images/005/image47.png "image_tooltip")
+![alt_text](images/005/image47.png "image_tooltip")
 
 
 6. Click the identity icon in the top-right of the page.
