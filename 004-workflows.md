@@ -1,6 +1,6 @@
 # Okta Workflows
 
-TODO: "An existing user (that will represent the manager user) in Okta and Office 365 where the username in Okta and in O365 are the same (the user’s email address). The manager user’s email address needs to point to a valid email address and have the appropriate Office 365 licenses so that the manager can get the email notifications as part of the flow. I this lab we will use the manager account Wes Chang imported from SAP SuccessFactor." > modificare togliendo i riferimenti a SuccessFactors, usare invece un utenza Active Directory esistente
+TODO: "An existing user (that will represent the manager user) in Okta and Office 365 where the username in Okta and in O365 are the same (the user’s email address). The manager user’s email address needs to point to a valid email address and have the appropriate Office 365 licenses so that the manager can get the email notifications as part of the flow. In this lab we will use the manager account Wes Chang imported from SAP SuccessFactor." > modificare togliendo i riferimenti a SuccessFactors, usare invece un utenza Active Directory esistente
 
 
 
@@ -96,7 +96,7 @@ For the workflows in the Okta Workflow Pack to work you will need:
 
 1. An existing user (that will represent the manager user) in Okta and Office 365 **where the username in Okta and in O365 are the same (the user’s email address)**. 
 The manager user’s email address needs to point to a valid email address and have the appropriate Office 365 licenses so that the manager can get the email notifications as part of the flow.
-In this lab we will use the manager account **Giorgia Meloni** created in Okta.
+In this lab we will use the manager account **Giorgia Rossi** created in Okta.
 
 2. An existing target user (that will represent the target user) in Okta where the **Okta Primary Email Address for that user is the same as the user’s Office 365 username**. The manager attribute in Okta Universal Directory will need to be the username of the Okta user that represents the manager and you created in the step above.
 **This target user must be assign to Office 365 application.**
@@ -140,7 +140,12 @@ https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/files/o3
 
 ![](images/006-1/image12.png)
 
-9. Activate the flow
+9. Change the `personal_email` value. This email will be used to send an introduction email to the user and also as a 'cc' for the message to be sent to the manager.
+You can use your email address, or you can use a temporary one using services like [Mailinator](https://www.mailinator.com/) or [Maildrop](https://maildrop.cc/).
+
+![](images/006-1/image35.png)
+
+10. Activate the flow
 
 ![](images/006-1/image19.png)
 
@@ -156,7 +161,7 @@ https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/files/o3
 
 ## Testing the Okta Workflow Flow
 
-Create or import a new user with a manager assign (in our case **Giorgia Meloni**) and assign her **Office 365 application**.
+Create or import a new user with a manager assign (in our case **Giorgia Rossi**) and assign her **Office 365 application**.
 
 In the example below, we have created the user **Elise Dupont** in Okta and assign **Wes Chang** as manager from the user profile.
 
