@@ -50,6 +50,10 @@ on-premises AD with Azure AD in the cloud.
 This document covers the simplest integration you need to build a demo
 system.
 
+
+---
+
+
 ## Prerequisites
 
 To complete this lab you will need : 
@@ -58,65 +62,82 @@ To complete this lab you will need :
 
 2. Have users on your tenant (imported from Active Directory or created manually in Okta) in order to assign the application and validate the user flow.
 
-## Creat an Office 365 Dev (Free) Tenant
+
+---
+
+
+## Create an Office 365 Dev (Free) Tenant
 
 1. Register for a free Microsoft Dev Account
 
     1. Open the website https://developer.microsoft.com/en-us/microsoft-365/dev-program
 
+
     2. Click on "Join Now"
     ![](images/009/o365setup-001.png)
+
 
     3. Create a new account by clicking on "Create One!"
     ![](images/009/o365setup-002.png)
 
+
     4. Click on "Get a new email address"
     ![](images/009/o365setup-003.png)
 
+
     5. Register for a new email address. Use as name convention `{{idp.name}}`. So your email will be `{{idp.name}}@outlook.com`.
 
-        **Remember to save the password in a secure place, as you will need it later.**
+        > **Remember to save the password in a secure place, as you will need it later.**
 
         ![](images/009/o365setup-004.png)
+
 
     6. Complete the registration form by putting your information. We suggest to keep English as language.
        ![](images/009/o365setup-005.png)
 
+
     7. Click on "Set up E5 subscription"
       ![](images/009/o365setup-006.png)
+
 
     8. Select "Configurable Sandbox"
       ![](images/009/o365setup-007.png)
 
+
     9. Complete the Microsoft 365 E5 sandbox form.
-    Just as convention use `admin` as username and `{{idp.name}}` as domain.
         
-        **Remember to save the password in a secure place, as you will need it later.**
-      ![](images/009/o365setup-008.png)
+        Use `admin` as username and `mywiclabNAMESURNAME` as domain.
+        
+        > **Remember to save the password in a secure place, as you will need it later.**
+     
+
+        ![](images/009/o365setup-008.png)
+
 
     10. Complete the registration by inserting your phone number and complete the validation challenge using the OTP that you receive by SMS
           ![](images/009/o365setup-009.png)
 
-            To resume:
-            - Your Office 365 Tenant:  mywiclabNAMESURNAME.onmicrosoft.com
-            - Your Admin Account:      admin@mywiclabNAMESURNAME.onmicrosoft.com
-            - Your Email Address:      my{{idp.name}}@outlook.com
+          >  To resume:
+          >  - Your Office 365 Tenant:  mywiclabNAMESURNAME.onmicrosoft.com
+          >  - Your Admin Account:      admin@mywiclabNAMESURNAME.onmicrosoft.com
+          >  - Your Email Address:      my{{idp.name}}@outlook.com
 
 2. Configure you Microsof 365 Tenant
     1. Open the website https://www.office.com/login?login_hint=admin@mywiclabNAMESURNAME.onmicrosoft.com and login using your password
 
     2. Create a new domain **`wiclabNAMESURNAME.onmicrosoft.com`**
     
-            NOTE: the name is the same of the O365 tenant, without the work `my` at the beginning.
+          > **NOTE: the name is the same of the O365 tenant, without the word `my` at the beginning.**
 
-    TODO: COMPLETE - subdomain registration
+           TODO: COMPLETE - subdomain registration
+
+        > To resume:
+        >  - Your Office 365 Tenant: mywiclabNAMESURNAME.onmicrosoft.com
+        >  - Your Admin Account:     admin@mywiclabNAMESURNAME.onmicrosoft.com
+        >  - Your Custom DNS Domain: wiclabNAMESURNAME.onmicrosoft.com
 
 
-            To resume:
-            - Your Office 365 Tenant: mywiclabNAMESURNAME.onmicrosoft.com
-            - Your Admin Account:     admin@mywiclabNAMESURNAME.onmicrosoft.com
-            - Your Custom DNS Domain: wiclabNAMESURNAME.onmicrosoft.com
-
+---
 
 
 ## Add Microsoft Office 365 Application to Okta
@@ -209,6 +230,8 @@ accounts in Azure AD. It will create accounts when users are assigned to
 the Office 365 application and deactivate these accounts when users are
 unassigned. It will also manage user attributes and licenses.
 
+---
+
 ## Enable integration
 
 Accounts in Azure AD can be managed via Microsoft APIs. To enable
@@ -240,6 +263,10 @@ the steps below to grant this access and enable integration:
 The API connection for provisioning is now in place. Provisioning
 configuration is now shown under the Provisioning tab. The integration
 configuration you just created is under the Integration tab.
+
+
+---
+
 
 ## Enable provisioning to app
 
@@ -336,6 +363,10 @@ test user. This user will be mapped to
 ***your.name*\@yourdemodomain.com** by the custom username mapping you
 set up when configuring single sign-on.
 
+
+---
+
+
 ## Assign user to Microsoft Office 365 application
 
 For this test you will directly assign your Okta admin user to the
@@ -394,6 +425,7 @@ via group membership - you'll set that up later.
 
 
 
+---
 
 
 
@@ -439,6 +471,10 @@ attributes in the application definition. If you don't specify any value
 for an attribute, the mapping in the application definition will be
 applied instead.
 
+
+---
+
+
 ## Create a group
 
 You will now create a group that will be assigned to the Microsoft
@@ -458,6 +494,8 @@ Office 365 application.
 5.  Click **Save**.
 ![](images/009/image033.png)
 
+
+---
 
 
 ## Assign group to application
@@ -506,6 +544,11 @@ and select the checkboxes for the following licenses:
 
 7.  Click **Done**.
 ![](images/009/image039.png)
+
+
+---
+
+
 ## Assign user to group
 
 You will now assign a test user to the *O365Users* group. This will
@@ -534,6 +577,11 @@ The user is now assigned to the group and will be assigned to the
 Microsoft Office 365 application using the attribute mapping associated
 with the group assignment.
 ![](images/009/image042.png)
+
+
+---
+
+
 ## Test single sign-on
 
 You can now test single sign-on to Microsoft 365 for your test user.
