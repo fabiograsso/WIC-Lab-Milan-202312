@@ -36,7 +36,7 @@ Okta maintains a specific integration for Salesforce in the Okta Integration Net
 1. Use a browser to open the administration UI of your Okta demo org and sign in as an administrator.
 
 
-![alt_text](images/004/image1.png "image_tooltip")
+![](images/004/image1.png)
 
 
 2. Navigate to **Applications > Applications**.
@@ -44,13 +44,13 @@ Okta maintains a specific integration for Salesforce in the Okta Integration Net
 3. Click **Browse App Catalog **to open the Okta Integration Network browser.
 
 
-![alt_text](images/004/image2.png "image_tooltip")
+![](images/004/image2.png)
 
 
 4. Search for and select the **Salesforce.com** integration.
 
 
-![alt_text](images/004/image3.png "image_tooltip")
+![](images/004/image3.png)
 
 
 5. Click **Add integration**.
@@ -58,7 +58,7 @@ Okta maintains a specific integration for Salesforce in the Okta Integration Net
 6. The _Add Salesforce.com_ wizard opens on the _General Settings_ page:
 
 
-![alt_text](images/004/image4.png "image_tooltip")
+![](images/004/image4.png)
 
 
 
@@ -71,7 +71,7 @@ You are taken to the _Sign-On Options_ page of the wizard.
 ### Configure SSO in Okta
 
 
-![alt_text](images/004/image5.png "image_tooltip")
+![](images/004/image5.png)
  \
 This integration supports both Secure Web Authentication (SWA), for password injection, and SAML 2.0, for federated single sign-on.
 
@@ -82,14 +82,14 @@ This integration supports both Secure Web Authentication (SWA), for password inj
     Note the options to set a default relay state and to add attributes to the attribute statement or group statement within SAML 2.0 messages. You don’t need these for the demo setup.
 
 
-![alt_text](images/004/image6.png "image_tooltip")
+![](images/004/image6.png)
 
 
 9. While you’re here, click the **View Setup Instructions **button.  This will open org-specific instructions for setting up Salesforce to receive SAML 2.0 assertions from your Okta org.  It will open in a new tab which you’ll refer to later on.
 10. Go back to the tab where the Okta administration UI is open:
 
 
-![alt_text](images/004/image7.png "image_tooltip")
+![](images/004/image7.png)
 
 
 
@@ -125,7 +125,7 @@ During the configuration of Salesforce, you will need several pieces of informat
 1. Go to the browser tab that contains the setup instructions for Salesforce and scroll down to find the dynamic information fields:
 
 
-![alt_text](images/004/image8.png "image_tooltip")
+![](images/004/image8.png)
 
 
 
@@ -146,7 +146,7 @@ You will now use the information gathered above to configure Salesforce for sing
 Use a browser that is not logged into your Okta Salesforce.  If using Chrome, you could create a new profile or use the _Guest _profile.  You could also use a different browser (Firefox vs Chrome).
 
 
-![alt_text](images/004/image9.png "image_tooltip")
+![](images/004/image9.png)
 
     If SalesForce ask for an OTP code sent by email, please contact your Okta animator for the access
 
@@ -155,24 +155,24 @@ Use a browser that is not logged into your Okta Salesforce.  If using Chrome, yo
         If you see this message at the top of the page:
 
 
-![alt_text](images/004/image10.png "image_tooltip")
+![](images/004/image10.png)
  \
 Click **Switch to Lightning Experience** to go to the latest Salesforce UI.  The instructions below assume you are using this
 
 
-![alt_text](images/004/image11.png "image_tooltip")
+![](images/004/image11.png)
 
 
 3. Navigate to **Identity > Single Sign-On Settings**.
 
 
-![alt_text](images/004/image12.png "image_tooltip")
+![](images/004/image12.png)
 
 
 4. Click **New **under **SAML Single Sign-On Settings**.
 
 
-![alt_text](images/004/image13.png "image_tooltip")
+![](images/004/image13.png)
 
 
 5. Enter a _Name_.  It can be whatever you like.
@@ -181,25 +181,25 @@ Click **Switch to Lightning Experience** to go to the latest Salesforce UI.  The
 8. Click **Choose File **for _Identity Provider Certificate_ and upload the file you downloaded from setup instructions.
 
 
-![alt_text](images/004/image14.png "image_tooltip")
+![](images/004/image14.png)
 
 
 9. Click **Save**.
 
 
-![alt_text](images/004/image15.png "image_tooltip")
+![](images/004/image15.png)
 
 
 10. Click **Back to Single Sign-On Settings**.
 
 
-![alt_text](images/004/image16.png "image_tooltip")
+![](images/004/image16.png)
 
 
 11. Click **Edit** under **Single Sign-On Settings**.
 
 
-![alt_text](images/004/image17.png "image_tooltip")
+![](images/004/image17.png)
 
 
 12. Check the **SAML Enabled **checkbox.
@@ -215,26 +215,26 @@ The final part of Single Sign-On configuration is to configure Okta with the Log
 1. If not already there, navigate to your SSO settings in Salesforce admin UI:
 
 
-![alt_text](images/004/image18.png "image_tooltip")
+![](images/004/image18.png)
 
 
 2. Note the values for _Login URL_ and _Logout URL _under _Endpoints. \
 _These are the values you need to configure in Okta.
 
 
-![alt_text](images/004/image19.png "image_tooltip")
+![](images/004/image19.png)
 
 
 3. In your Okta admin UI, click **Edit** for _Settings_ in the _Sign On _tab of the Salesforce.com application definition.
 
 
-![alt_text](images/004/image20.png "image_tooltip")
+![](images/004/image20.png)
 
 
 4. Copy and paste the values for _Login URL _and _Logout URL_ from Salesforce UI.
 
 
-![alt_text](images/004/image21.png "image_tooltip")
+![](images/004/image21.png)
 
 
 5. Scroll to the bottom of the page and click **Save**.
@@ -263,14 +263,14 @@ To make the lab run smoothly, all the Salesforce configuration tasks involved in
 1. If you are not already there, open your Okta administration UI, navigate to **Applications > Applications**, and select the **Salesforce.com** application.
 
 
-![alt_text](images/004/image31.png "image_tooltip")
+![](images/004/image31.png)
 
 
 2. Click on the **Provisioning** tab and click the **Configure API integration **button.
 
 TODO: ISTRUZIONI PER OTTENERE KEY E SECRET
 
-![alt_text](images/004/image32.png "image_tooltip")
+![](images/004/image32.png)
 
 
 3. Check the checkbox for **Enable API integration**.
@@ -282,21 +282,21 @@ TODO: ISTRUZIONI PER OTTENERE KEY E SECRET
     A browser pop-up opens:
 
 
-![alt_text](images/004/image33.png "image_tooltip")
+![](images/004/image33.png)
 
 
 6. Authenticate to your Salesforce tenant the administrative user. \
 A consent page is displayed asking you to grant permissions to your Okta org (which is connecting as the Connected App you created in the previous section):
 
 
-![alt_text](images/004/image34.png "image_tooltip")
+![](images/004/image34.png)
 
 
 7. Click **Allow** to grant the requested permissions. \
 The pop-up closes and you are returned to the Okta admin console:
 
 
-![alt_text](images/004/image35.png "image_tooltip")
+![](images/004/image35.png)
 
 
 
@@ -305,7 +305,7 @@ The pop-up closes and you are returned to the Okta admin console:
 8. Click **Save**.
 
 
-![alt_text](images/004/image36.png "image_tooltip")
+![](images/004/image36.png)
 
 
 
@@ -329,7 +329,7 @@ Note: In general, Okta does not delete accounts from applications - it only deac
 Follow these steps to enable provisioning:
 
 
-![alt_text](images/004/image37.png "image_tooltip")
+![](images/004/image37.png)
 
 
 
@@ -340,7 +340,7 @@ Follow these steps to enable provisioning:
 1. Click **Edit** to set the options for Okta provisioning to Salesforce.
 
 
-![alt_text](images/004/image38.png "image_tooltip")
+![](images/004/image38.png)
 
 
 2. Click the **Enable** checkbox for _Create Users_.
@@ -366,7 +366,7 @@ You will then assign a test user to that group.  This will result in the test us
 You will now create a group that will be assigned to the Salesforce application.
 
 
-![alt_text](images/004/image50.png "image_tooltip")
+![](images/004/image50.png)
 
 
 
@@ -375,7 +375,7 @@ You will now create a group that will be assigned to the Salesforce application.
 2. Click the **Add group **button.
 
 
-![alt_text](images/004/image51.png "image_tooltip")
+![](images/004/image51.png)
 
 
 3. Enter **SalesforceUsers **as the Name of the group.
@@ -395,26 +395,26 @@ You can assign a group to an application by either assigning the group within th
 1. If not already there, navigate to** Directory > Groups**.
 
 
-![alt_text](images/004/image52.png "image_tooltip")
+![](images/004/image52.png)
 
 
 2. Click on the link for the** SalesforceUsers** group.
 
 
-![alt_text](images/004/image53.png "image_tooltip")
+![](images/004/image53.png)
 
 
 3. Select the **Applications** tab in the group properties.
 4. Click **Assign applications**.
 
 
-![alt_text](images/004/image54.png "image_tooltip")
+![](images/004/image54.png)
 
 
 5. Click the **Assign** button next to the _Salesforce.com_ application.
 
 
-![alt_text](images/004/image55.png "image_tooltip")
+![](images/004/image55.png)
 
 
 6. Select **Chatter Free User **as the _Profile URL_. \
@@ -424,7 +424,7 @@ You can’t assign a role to a Chatter Free user.
 8. Scroll to the bottom of the page and click **Save and Go Back**.
 
 
-![alt_text](images/004/image56.png "image_tooltip")
+![](images/004/image56.png)
 
 
 9. Click **Done**.
@@ -441,14 +441,14 @@ You will now assign a test user to the_ SalesforceUsers_ group.  This will cause
 1. If not already there, navigate to **Directory > Groups**.
 
 
-![alt_text](images/004/image57.png "image_tooltip")
+![](images/004/image57.png)
 
 
 2. Select the **People** tab.
 3. Click **Assign people**.
 
 
-![alt_text](images/004/image58.png "image_tooltip")
+![](images/004/image58.png)
 
 
 4. Click the **+ icon** for a test user in your Okta org. \
@@ -457,7 +457,7 @@ This should not be the admin user (which is already directly assigned to the app
     The user is now shown as assigned:
 
 
-![alt_text](images/004/image59.png "image_tooltip")
+![](images/004/image59.png)
 
 
 
@@ -476,13 +476,13 @@ This could be a private browsing window, a different profile, or a different bro
 3. Authenticate as your test user: e.g. **_alex.anderson@yourdemodomain.com_** \
 You should end up on your Okta dashboard and see that a tile for Salesforce.com is shown:
 
-![alt_text](images/004/image60.png "image_tooltip")
+![](images/004/image60.png)
 
 4. Click the tile for **Salesforce.com**. \
 If single sign-on is successful you will see the Salesforce Chatter homepage:
 
  
-![alt_text](images/004/image61.png "image_tooltip")
+![](images/004/image61.png)
 
 
 5. Click the identity icon in the top-right of the page.
