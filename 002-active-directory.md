@@ -9,9 +9,6 @@ When these companies look to adopt a new identity platform, such as Okta, they n
 This guide provides step-by-step instructions for integrating an Active Directory into your Okta demonstration environment.  You will be able to show Delegated Authentication, Just-In-Time (JIT) provisioning from AD to Okta, and provisioning from AD to Okta via scheduled import.
 
 
-## 
-
-
 ---
 
 
@@ -24,6 +21,7 @@ In this workshop, you will be provided with a Virtual Infrastructure including a
 
 1. In the right column of the Lab website, under Virtual Desktop, Click **Launch**.
     This will open the Virtual Infrastructure tab in your browser.
+
     ![](images/002/image42.png)
 
 
@@ -482,6 +480,8 @@ Now that you have a user in Okta who has an assigned account in Active Directory
 
 5. Enter the Active Directory password for your AD user.
 
+    > Note: Password for all Active Directory users is   **`Tra!nme4321`**
+
 
 6. Click **Verify**.
 
@@ -503,3 +503,6 @@ Congratulations.  You have successfully imported groups, and a user, from Active
 * Manually add the AD-sourced user to an Okta group that is assigned to the application.
 * Create a group rule (based on user attributes or group membership) which adds the AD-sourced user to an Okta group that is assigned to the application.
 * Assign AD, as a *Directory*, to an Okta Group that is assigned to the application.
+
+
+

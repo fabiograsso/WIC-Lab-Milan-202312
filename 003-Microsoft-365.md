@@ -63,10 +63,7 @@ To complete this lab you will need :
 2. Have users on your tenant (imported from Active Directory or created manually in Okta) in order to assign the application and validate the user flow.
 
 
----
-
-
-## Create an Office 365 Dev (Free) Tenant
+### Create an Office 365 Dev (Free) Tenant
 
 1. Register for a free Microsoft Dev Account
 
@@ -167,7 +164,7 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 6.  Complete the *Microsoft Tenant Name* field. 
     > This must match the tenant name you chose when setting up your Microsoft tenant. If
     > your Microsoft tenant is **`mywiclabNAMESURNAME.onmicrosoft.com`** then
-    > your Microsoft tenant name is **`my{{idp.name}}`**.
+    > your Microsoft tenant name is **`mywiclabNAMESURNAME`**.
 
 7.  Click **Next**.
 ![](images/009/image04.png)
@@ -180,33 +177,36 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 
 9.  Enter the *username* and *password* for the administrator of your
      Microsoft tenant.
-> Your Microsoft Tenant Admin has this syntax "admin@mywiclabNAMESURNAME.onmicrosoft.com".
+> Your Microsoft Tenant Admin has this syntax **`admin@mywiclabNAMESURNAME.onmicrosoft.com`**.
 
 ![](images/009/image06.png)
-11. Click **Fetch and Select** next to Office 365 Domains.
 
+
+11. Click **Fetch and Select** next to Office 365 Domains.
 
 
 12. Select the custom DNS domain
 
-**IMPORTANT: you have to choose the domain that we added in the previous step. If you use the default one (the one that is created automaticaly with the tenant) it will not work!
-This is because default domain cannot be federated, due to a limitation imposed by Microsoft.
-If you followed the name convention, your domain should be **`wiclabNAMESURNAME.onmicrosoft.com`**
+    > **IMPORTANT:** you have to choose the domain that we added in the previous step. If you use the default one (the one that is created automaticaly with the tenant) it will not work!
+    This is because default domain cannot be federated, due to a limitation imposed by Microsoft.
+    If you followed the name convention, your domain should be **`wiclabNAMESURNAME.onmicrosoft.com`**
 
-![](images/009/image07.png)
+    ![](images/009/image07.png)
+
+
 13. Click **Select**.
-
-
-
 
 
 14. Set *Application username format* to **Custom**.
 
+
 15. Enter the following for the expression 
 
-> **String.substringBefore(user.login,\"@\") + \"@wiclab##.onmicrosoft.com\"**
+    **`String.substringBefore(user.login,\"@\") + \"@wiclabNAMESURNAME.onmicrosoft.com\"`**
 
-![](images/009/image08.png)
+  ![](images/009/image08.png)
+
+
 16. Click **Done**.
 
 Your Okta org and your Microsoft 365 tenant are now configured for
@@ -215,7 +215,11 @@ single sign-on from Okta to Azure AD.
 > Note: You can't test single sign-on until you have enabled provisioning
 > and assigned at least one user to this application in Okta.
 
-# Configure provisioning
+
+---
+
+
+## Configure provisioning
 
 The single sign-on configuration performed in the previous section
 allows your Okta org to assert identity information to your Microsoft
@@ -230,9 +234,8 @@ accounts in Azure AD. It will create accounts when users are assigned to
 the Office 365 application and deactivate these accounts when users are
 unassigned. It will also manage user attributes and licenses.
 
----
 
-## Enable integration
+### Enable integration
 
 Accounts in Azure AD can be managed via Microsoft APIs. To enable
 provisioning, Okta must be granted authority to call these APIs. Follow
@@ -240,35 +243,38 @@ the steps below to grant this access and enable integration:
 
 1.  If you are not already there, open your Okta administration UI, navigate to **Applications \> Applications**, and select the **Microsoft Office 365** application definition.
 
-![](images/009/image09.png)
+    ![](images/009/image09.png)
+
 
 2.  Click on the **Provisioning** tab and click the **Configure API
 
-![](images/009/image010.png)
+    ![](images/009/image010.png)
+
 
 3.  Check the checkbox for **Enable API integration**.
 
+
 4.  Click the **Authenticate with Microsoft Office 365** button.
+
 
 5.  Authenticate as the administrative user for your Microsoft tenant.
 
-![](images/009/image011.png)
+    ![](images/009/image011.png)
+
 
 6.  Click **Accept** to allow your Okta org to manage users in your O365 tenant
 
-![](images/009/image012.png)
+    ![](images/009/image012.png)
 
 7.  Click **Save**.
+
 
 The API connection for provisioning is now in place. Provisioning
 configuration is now shown under the Provisioning tab. The integration
 configuration you just created is under the Integration tab.
 
 
----
-
-
-## Enable provisioning to app
+### Enable provisioning to app
 
 In this section you will enable provisioning to Microsoft 365. This will
 include creation of accounts in Azure AD when users are assigned to the
@@ -284,18 +290,25 @@ account.
 Follow these steps to enable provisioning:
 
 1.  Click **Edit** to set the options for Okta provisioning to Azure AD.
-![](images/009/image015.png)
+    ![](images/009/image015.png)
+
+
 2.  Click the **Enable** checkbox for *Create Users*.
+
 
 3.  Click the **Enable** checkbox for *Update User Attributes*.
 
+
 4.  Click the **Enable** checkbox for *Deactivate Users*.
 
-![](images/009/image014.png)
+    ![](images/009/image014.png)
+
 
 5.  Click **Save**.
 
-## Configure attribute mapping
+
+
+### Configure attribute mapping
 
 When a user is assigned to an application, attribute mapping determines
 the default values that will be set for attributes in the application.
@@ -309,50 +322,47 @@ Follow these steps:
 
 
 1.  If not already there, open the **To App** settings under the **Provisioning** tab.
-![](images/009/image015.png)
-
+    ![](images/009/image015.png)
 
 
 2.  Scroll to the bottom of the page and click **Show Unmapped
-![](images/009/image016.png)
-
+    ![](images/009/image016.png)
 
 
 3.  Click the **Edit** icon for the *Licenses* attribute.
 
 
-
-
 4.  Select **Same value for all users** from the drop-down list.\
-![](images/009/image017.png)
+    ![](images/009/image017.png)
 
 
     > The available options are shown.
-![](images/009/image018.png)
+    
+    ![](images/009/image018.png)
 
 
 
 5.  Select the checkboxes for the following licenses:
 
     -   Sharepoint Online (Plan 2)
-
     -   Office Online
-
     -   Office 365 ProPlus
-
     -   Exchange Online (Plan 2)
-
     -   Exchange Online Advanced Threat Protection
-
     -   Microsoft Teams
 
 
 6.  Scroll to the bottom of the window and click on **Save**.
 ![](images/009/image020.png)
 
-> Provisioning is enabled and attribute mapping is done. You're ready to test.
 
-# Test provisioning and single sign-on
+Provisioning is enabled and attribute mapping is done. You're ready to test.
+
+
+---
+
+
+## Test provisioning and single sign-on
 
 Now that provisioning and single sign-on have both been configured, you
 can test them by assigning your Okta admin user to the Microsoft Office
@@ -364,10 +374,7 @@ test user. This user will be mapped to
 set up when configuring single sign-on.
 
 
----
-
-
-## Assign user to Microsoft Office 365 application
+### Assign user to Microsoft Office 365 application
 
 For this test you will directly assign your Okta admin user to the
 Office 365 application. You'll notice that it's also possible to assign
@@ -375,61 +382,63 @@ via group membership - you'll set that up later.
 
 1.  If not already there, navigate to **Applications \> Microsoft Office 365**
 
+
 2.  Select the **Assignments** tab.
 
-![](images/009/image021.png)
+    ![](images/009/image021.png)
+
 
 3.  Click the **Assign** button and select **Assign to People** from the **Assignments** tab
 
+
 4.  Select your admin user and click **Assign**.
 
-![](images/009/image022.png)
+    ![](images/009/image022.png)
 
->
-> The User Name has been set based on the custom expression you
-> specified during configuration of single sign-on.
->
-> The *Immutable ID* is blank. This would only be populated if the user
-> was AD sourced and already had an immutable ID synced from Azure AD
-> via Microsoft AD Connect or similar. In this case, the immutable ID
-> will be populated during provisioning to Azure AD.
->![](images/009/image023.png)
-> Licenses have been set based on the attribute mapping you created.
->
+    >
+    > The User Name has been set based on the custom expression you
+    > specified during configuration of single sign-on.
+    >
+    > The *Immutable ID* is blank. This would only be populated if the user
+    > was AD sourced and already had an immutable ID synced from Azure AD
+    > via Microsoft AD Connect or similar. In this case, the immutable ID
+    > will be populated during provisioning to Azure AD.
+    >
+    >![](images/009/image023.png)
+    >
+    > Licenses have been set based on the attribute mapping you created.
+    >
 
 5.  Scroll down to the *roles* and select the **Global Administrator**
-
-![](images/009/image024.png)
+    ![](images/009/image024.png)
 
 
 6.  Scroll to the bottom and click **Save and Go Back**.
-![](images/009/image025.png)
+    ![](images/009/image025.png)
 
 
 7.  Click **Done**.
-![](images/009/image026.png)
+    ![](images/009/image026.png)
 
->
-> In the background, Okta is now attempting to create this user in your
-> Microsoft 365 tenant and assign the selected roles licenses. This
-> should only take a few seconds to complete.
->
+    >
+    > In the background, Okta is now attempting to create this user in your
+    > Microsoft 365 tenant and assign the selected roles licenses. This
+    > should only take a few seconds to complete.
+    >
 
-![](images/009/image027.png)
+    ![](images/009/image027.png)
+
 
 8.  In the Okta Admin UI, navigate to **Reports \> System Log**.
 
-![](images/009/image028.png)
+    ![](images/009/image028.png)
+
 
 9.  Confirm that the records indicating successful provisioning are found.
 
 
 
----
-
-
-
-## Test single sign-on (SSO)
+### Test single sign-on (SSO)
 
 You can now test single sign-on to Microsoft 365 for the assigned user.
 
@@ -457,7 +466,11 @@ You can now test single sign-on to Microsoft 365 for the assigned user.
 7.  Click **Sign out** to clear the session. Close the browser you used
 ![](images/009/image031.png)
 
-# Configure group assignment
+
+---
+
+
+## Configure group assignment
 
 In the previous section, you assigned a user directly to the Microsoft
 365 application. It was useful to do this so that you could assign the
@@ -472,10 +485,8 @@ for an attribute, the mapping in the application definition will be
 applied instead.
 
 
----
 
-
-## Create a group
+### Create a group
 
 You will now create a group that will be assigned to the Microsoft
 Office 365 application.
@@ -495,10 +506,8 @@ Office 365 application.
 ![](images/009/image033.png)
 
 
----
 
-
-## Assign group to application
+### Assign group to application
 
 You can assign a group to an application by either assigning the group
 within the application definition or by adding the application to the
@@ -546,10 +555,8 @@ and select the checkboxes for the following licenses:
 ![](images/009/image039.png)
 
 
----
 
-
-## Assign user to group
+### Assign user to group
 
 You will now assign a test user to the *O365Users* group. This will
 cause the user to be assigned the Microsoft Office 365 application
