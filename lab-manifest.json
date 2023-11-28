@@ -1,0 +1,70 @@
+{
+    "id": "wic_emea_it",
+    "title": "Italian Okta Workforce Overview",
+    "state": "active",
+    "duration": "PT3H",
+    "description": "Unisciti a noi per un’esperienza pratica e coinvolgente in cui imparerai a padroneggiare i principi chiave dell’IAM attraverso il Workforce Identity Cloud di Okta, tra cui l’autenticazione adattiva, la protezione dell’accesso ai dispositivi, l’automazione dell’onboarding/offboarding e la governance delle identità.",
+    "idp_type": "workforce-identity",
+    "overview": "https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/000-overview.md",
+    "contributors": [
+      "vitaliy.siciliano@okta.com",
+      "fabio.grasso@okta.com",
+      "federico.cavallari@okta.com"
+    ],
+    "tags": [
+      "workforce"
+    ],
+    "applications": [
+      "1b187e8b-e90a-4469-829b-8051a02729a3"
+    ],
+    "resources": [
+    ],
+    "steps": [
+      {
+        "step": "Introduction",
+        "guide": "https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/001-introduction.md",
+        "applications": [],
+        "resources": []
+      },
+      {
+        "step": "Active Directory",
+        "guide": "https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/002-active-directory.md",
+        "applications": [
+          "1b187e8b-e90a-4469-829b-8051a02729a3"
+        ],
+        "resources": []
+      },
+      {
+        "step": "Microsoft 365",
+        "guide": "https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/003-Microsoft-365.md",
+        "applications": [],
+        "resources": [
+        ]
+      },
+      {
+        "step": "Security",
+        "guide": "https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/014-security.md",
+        "applications": [],
+        "resources": [
+        ]
+      },
+      {
+        "step": "Workflows",
+        "guide": "https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/004-workflows.md",
+        "applications": [],
+        "resources": []
+      },
+      {
+        "step": "Identity Governance",
+        "guide": "https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/005-oig.md",
+        "applications": [],
+        "resources": []
+      },
+      {
+        "step": "Conclusion",
+        "guide": "https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/099-conclusion.md",
+        "applications": [],
+        "resources": []
+      }
+    ]
+  }

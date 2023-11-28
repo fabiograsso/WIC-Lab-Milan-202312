@@ -7,6 +7,8 @@ Today we are going to learn the following topics:
 - How to customize complex identity requirements with Okta Workflows
 - How to ensure the right people have the right access to the right resources with the least amount of friction
 
+---
+
 ## Workshop structure
 
 This workshop is broken into the sections listed below. 
@@ -28,22 +30,28 @@ This workshop is broken into the sections listed below.
     - Access Requests
     - Access Certifications
 
+---
 
 ## Prerequisites
 
 **To ensure that the lab works properly and to access to Okta tenant, you will need to install Okta Verify on one of your mobile device.**
 
-<img src=images/Okta_Verify.jpg alt="drawing" width="100"/>
+![](images/Okta_Verify.png) 
 
 **Okta Verify** is available for free at
 
-<img src=images/Google_Play_Store.jpeg alt="drawing" width="50"/> *Google Store* 
-https://play.google.com/store/apps/details?id=com.okta.android.auth&hl=en&gl=US
 
-or
+* ![](images/Google_Play_Store.png) *Google Store* 
 
-<img src=images/Apple_Mac_Store.jpeg alt="drawing" width="50"/>*Apple Store*
- https://apps.apple.com/fr/app/okta-verify/id490179405
+    https://play.google.com/store/apps/details?id=com.okta.android.auth&hl=en&gl=US| or
+
+
+* ![](images/Apple_Mac_Store.png) *Apple Store* 
+
+    https://apps.apple.com/fr/app/okta-verify/id490179405
+
+
+---
 
 
 ### Register for a Microsoft account
@@ -130,6 +138,7 @@ In this guide, we will use a new *outlook.com* email address. You might prefer t
     3. Enter your First name and Last name.
 
     4. Complete the Captcha and click Save.
+
 
 
 
