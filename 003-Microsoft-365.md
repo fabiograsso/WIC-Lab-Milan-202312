@@ -365,6 +365,7 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 15. Enter the following for the expression 
 
     **`String.substringBefore(user.login,\"@\") + \"@wiclabNAMESURNAME.onmicrosoft.com\"`**
+    
 
   ![](images/009/image08.png)
 
