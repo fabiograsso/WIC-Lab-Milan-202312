@@ -103,38 +103,42 @@ For the workflows in the Okta Workflow Pack to work you will need:
 ### Additional prerequisites
 
 1. An existing user (that will represent the manager user) in Okta and Office 365 **where the username in Okta and in O365 are the same (the user’s email address)**. 
-The manager user’s email address needs to point to a valid email address and have the appropriate Office 365 licenses so that the manager can get the email notifications as part of the flow.
-In this lab we will use the manager account **Wes Chang**:
 
-Create a user with the following data:
-| | |
-|-|-|
-|Username   | wes.chang@wiclabNAMESURNAME.onmicrosoft.com |
-|Name       | Wes |
-|Surname    | Chang|
-|Email      | wes.chang@wiclabNAMESURNAME.onmicrosoft.com |
-|Department | Sales |
+   The manager user’s email address needs to point to a valid email address and have the appropriate Office 365 licenses so that the manager can get the email notifications as part of the flow.
+   
+   In this lab we will use the manager account **Wes Chang**:
 
-Remember to select **I will set password** and remove the check from **User must change password on first login**
+   Create a user with the following data:
+   | | |
+   |-|-|
+   |Username   | wes.chang@wiclabNAMESURNAME.onmicrosoft.com |
+   |Name       | Wes |
+   |Surname    | Chang|
+   |Email      | wes.chang@wiclabNAMESURNAME.onmicrosoft.com |
+   |Department | Sales |
+
+   Remember to select **I will set password** and remove the check from **User must change password on first login**
 
 
 2. An existing target user (that will represent the target user) in Okta where the **Okta Primary Email Address for that user is the same as the user’s Office 365 username**. The manager attribute in Okta Universal Directory will need to be the username of the Okta user that represents the manager and you created in the step above.
-**This target user must be assign to Office 365 application.**
-In this lab we will use the user account **Giorgia Rossi** created in Okta.
+   
+   **This target user must be assign to Office 365 application.**
+   
+   In this lab we will use the user account **Giorgia Rossi** created in Okta.
 
-Create a user with the following data:
+   Create a user with the following data:
 
-| | |
-|-|-|
-|Username   | giorgia.rossi@wiclabNAMESURNAME.onmicrosoft.com |
-|Name       | Giorgia |
-|Surname    | Rossi|
-|Email      | giorgia.rossi@wiclabNAMESURNAME.onmicrosoft.com |
-|Department | Sales |
-|Manager      | wes.chang@wiclabNAMESURNAME.onmicrosoft.com |
-|ManagerId     | wes.chang@wiclabNAMESURNAME.onmicrosoft.com |
+   | | |
+   |-|-|
+   |Username   | giorgia.rossi@wiclabNAMESURNAME.onmicrosoft.com |
+   |Name       | Giorgia |
+   |Surname    | Rossi|
+   |Email      | giorgia.rossi@wiclabNAMESURNAME.onmicrosoft.com |
+   |Department | Sales |
+   |Manager      | wes.chang@wiclabNAMESURNAME.onmicrosoft.com |
+   |ManagerId     | wes.chang@wiclabNAMESURNAME.onmicrosoft.com |
 
-Remember to select **I will set password** and remove the check from **User must change password on first login**
+   Remember to select **I will set password** and remove the check from **User must change password on first login**
 
 ---
 
