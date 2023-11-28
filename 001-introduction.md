@@ -16,7 +16,6 @@ This workshop is broken into the sections listed below.
     - Integrate Active Directory
 - **Integrationg Applications for secure Single-Sign-On and Lifecycle management**
     - Office 365
-    - Salesforce (optional)
 - **Security Policies**
     - Okta FastPass
     - Device Assurance
