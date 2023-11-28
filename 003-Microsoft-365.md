@@ -63,77 +63,6 @@ To complete this lab you will need :
 2. Have users on your tenant (imported from Active Directory or created manually in Okta) in order to assign the application and validate the user flow.
 
 
-### Create an Office 365 Dev (Free) Tenant
-
-1. Register for a free Microsoft Dev Account
-
-    1. Open the website https://developer.microsoft.com/en-us/microsoft-365/dev-program
-
-
-    2. Click on "Join Now"
-    ![](images/009/o365setup-001.png)
-
-
-    3. Create a new account by clicking on "Create One!"
-    ![](images/009/o365setup-002.png)
-
-
-    4. Click on "Get a new email address"
-    ![](images/009/o365setup-003.png)
-
-
-    5. Register for a new email address. Use as name convention `{{idp.name}}`. So your email will be `{{idp.name}}@outlook.com`.
-
-        > **Remember to save the password in a secure place, as you will need it later.**
-
-        ![](images/009/o365setup-004.png)
-
-
-    6. Complete the registration form by putting your information. We suggest to keep English as language.
-       ![](images/009/o365setup-005.png)
-
-
-    7. Click on "Set up E5 subscription"
-      ![](images/009/o365setup-006.png)
-
-
-    8. Select "Configurable Sandbox"
-      ![](images/009/o365setup-007.png)
-
-
-    9. Complete the Microsoft 365 E5 sandbox form.
-        
-        Use `admin` as username and `mywiclabNAMESURNAME` as domain.
-        
-        > **Remember to save the password in a secure place, as you will need it later.**
-     
-
-        ![](images/009/o365setup-008.png)
-
-
-    10. Complete the registration by inserting your phone number and complete the validation challenge using the OTP that you receive by SMS
-          ![](images/009/o365setup-009.png)
-
-          >  To resume:
-          >  - Your Office 365 Tenant:  mywiclabNAMESURNAME.onmicrosoft.com
-          >  - Your Admin Account:      admin@mywiclabNAMESURNAME.onmicrosoft.com
-          >  - Your Email Address:      my{{idp.name}}@outlook.com
-
-2. Configure you Microsof 365 Tenant
-    1. Open the website https://www.office.com/login?login_hint=admin@mywiclabNAMESURNAME.onmicrosoft.com and login using your password
-
-    2. Create a new domain **`wiclabNAMESURNAME.onmicrosoft.com`**
-    
-          > **NOTE: the name is the same of the O365 tenant, without the word `my` at the beginning.**
-
-           TODO: COMPLETE - subdomain registration
-
-        > To resume:
-        >  - Your Office 365 Tenant: mywiclabNAMESURNAME.onmicrosoft.com
-        >  - Your Admin Account:     admin@mywiclabNAMESURNAME.onmicrosoft.com
-        >  - Your Custom DNS Domain: wiclabNAMESURNAME.onmicrosoft.com
-
-
 ---
 
 
@@ -620,3 +549,13 @@ Congratulations! You have successfully configured Lifecycle Management
 and Single Sign-On to Microsoft Office 365. Your demo environment can
 now be used to demonstrate these capabilities to customers.
 
+
+
+## Keep your E5 sandbox active (optional)
+
+A Microsoft E5 sandbox is initially activated for 90 days.  If Microsoft doesn't see activity in the sandbox, it will be deactivated after that time. To make sure that your sandbox is renewed, you must exercise the APIs to generate activity.
+
+### Enable scheduled import
+The easiest way to generate activity is to add the sandbox as an application in your Okta tenant, set up provisioning, and schedule an import every 2 days.  Setting up provisioning is something you’ll be doing anyway as part of creating a demo environment so turning on the scheduled import is a small additional step. This configuration is covered in the demo integration guide for Microsoft Office 365.
+
+TODO

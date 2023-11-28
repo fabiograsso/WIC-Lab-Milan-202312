@@ -255,9 +255,8 @@ Device Integrations are used to link Okta with endpoint management systems such 
     ![image](images/013/add-device-integration.png)
 
 
-
-
 ---
+
 ## Dectecting & Responding to Phishing Attacks
 In this section, we will look at how you can enable Okta Fastpass to detect and respond to real-time phishing attacks caused by AiTM services like EvilGinX. **This guide will not cover setting up of EvilGinX.**
 
@@ -282,11 +281,18 @@ From an administrator level, the only task you need to do is to create a rule wi
     ![image](images/013/phish-policy-enforcement.png)
 4. Click **Save** and make sure the rule is ranked as one of the highest ranking of your authentication policy.
 
-You will be able to try this out in a different Okta environment that will be supplied during the actual workshop/event as this requires an EvilGinX instance mirroring your Okta instance. 
+
+> During this lab we will not setup an **EvilGinX** instance for demostrate the phishing resistance.
+>
+> You can watch this video for a demo: [Detect, Prevent and Protect Phishing Attempts through Phishing Resistant Authenticators by Okta](https://www.youtube.com/watch?v=25Ab5_zvbAM&t=2s)
+>
+> Or you can try at home to run an EvilGinX proxy and emulate an attacker!
+
 
 ### Adding Observability and Workflows (Information only)
-Okta logs every transaction and processed event within the platform. All of these logs are kept and accessible via Okta’s System Log. Okta also provides extensibility points within the platform through Hooks. One type of hook that we can leverage here is (Event Hooks[https://help.okta.com/oie/en-us/Content/Topics/automation-hooks/event-hooks-main.htm?cshid=ext-event-hooks]. 
+Okta logs every transaction and processed event within the platform. All of these logs are kept and accessible via Okta’s System Log. Okta also provides extensibility points within the platform through Hooks. One type of hook that we can leverage here is [Event Hooks](https://help.okta.com/oie/en-us/Content/Topics/automation-hooks/event-hooks-main.htm?cshid=ext-event-hooks). 
 You can define multiple Event Hooks within the Okta platform. Navigate to **Workflow -> Event Hooks**.
+
 ![image](images/013/event-hooks.png)
 
 You can do the following instructions at your own time or pace. You can create Event Hooks that will meet your requirements and specifications. The example Event Hooks workflow we will define below will intercept and Phishing Attacks declined by Okta Fastpass. 
