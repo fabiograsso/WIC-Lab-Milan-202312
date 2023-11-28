@@ -63,6 +63,285 @@ To complete this lab you will need :
 2. Have users on your tenant (imported from Active Directory or created manually in Okta) in order to assign the application and validate the user flow.
 
 
+
+---
+
+## Get Microsoft E5 sandbox
+
+In order to demonstrate integration with Microsoft 365, you will need a Microsoft account with enterprise services enabled.  Rather than paying for a production tenant, you can get an E5 sandbox by joining the Microsoft 365 developer program.
+
+This guide provides instructions for signing up for a Microsoft account and joining the Microsoft developer program.
+
+In this guide, we will use a new outlook.com email address. You might prefer to sign up with your Okta email address or even use an existing personal Microsoft account.
+
+
+### Join the developer program
+
+In this section you will join the Microsoft developer program.
+
+1. Open a browser and navigate to: https://developer.microsoft.com/en-us/microsoft-365/dev-program
+
+2. Click Join now
+
+    ![](images/009/o365setup-image26.png)
+
+3. The login page is displayed: 
+
+4. Enter your email address and click Next.
+    > **Remember to use the email address that you registered during at the beginning of the lab!**
+
+    ![](images/009/o365setup-image19.png)
+
+5. Enter your password and click Sign in.
+
+    ![](images/009/o365setup-image28.png)
+
+6. Click to decide if you want to stay signed in on this browser - it’s up to you.
+
+7. Enter your Company, select your Country/Region and Language preference.
+
+    > Please select *English* as language, it will make easier to follow the rest of the guide.
+    
+    Check the checkbox to accept the terms and conditions and clear the checkbox so you don’t get extra email.
+    
+    ![](images/009/o365setup-image16.png)
+
+
+8. Click Next.
+12. Select a primary focus for your tenant and click Next.
+
+    ![](images/009/o365setup-image3.png)
+
+13. Pick at least one development area and click Save.
+
+    ![](images/009/o365setup-image41.png)
+
+14. Select Configurable sandbox.
+    >You need to pick this option so that you can customize the domain for your sandbox. Although the description says this can take two days to provision, it is usually much quicker (can even be immediate).
+
+    ![](images/009/o365setup-image29.png)
+
+15. Click Next.
+
+16. Select the *Country/region* where your sandbox will be created.
+    
+    Enter a username for your super admin user.  This can be whatever you like. TODO Admin
+    
+    Set the domain for your sandbox. TODO: DOMAIN
+
+    Enter (and confirm) a password for your super admin user.
+    
+    > This password must be at least 15 characters so you might want to use a password manager and let it generate one.
+    > 
+    > **Remember to save or memorize the password, as it will be needed for next steps**
+    
+    ![](images/009/o365setup-image12.png)
+
+20. Check the details and then click Continue.
+
+21. Enter a phone number to validate your developer sandbox.
+    > You may see an error if you use a phone number that is already associated with a different Microsoft developer account.  You’ll have to use a different phone number. 
+    
+    ![](images/009/o365setup-image32.png)
+
+22. Click Send Code.
+    The code is sent to your phone via SMS.
+
+
+23. Enter the received code and click Set up.
+    
+    ![](images/009/o365setup-image36.png)
+
+24. Your developer subscription is created.  While it is working you see this screen:
+    ![](images/009/o365setup-image20.png)
+
+25. On completion, you will see this:
+    ![](images/009/o365setup-image42.png)
+
+Your Microsoft developer E5 sandbox is now ready to use.
+
+If you click Go to subscription you will be taken to https://office.com to login and access your system.
+
+
+
+### Sign into your M365 tenant
+
+
+Now that you have your new Microsoft E5 subscription
+
+1. Open https://office.com.
+
+    ![](images/009/o365setup-image27.png)
+
+1. Click Sign in.
+
+2. Enter your username.  You haven’t linked your custom domain yet so you’ll need to use the format:
+    **`admin@mywiclabNAMESURNAME.onmicrosoft.com`**.
+    
+    ![](images/009/o365setup-image23.png)
+
+3. Click Next.
+
+
+4. Enter password and click Sign in.
+    ![](images/009/o365setup-image1.png)
+
+5. You may see this screen.  If so, click Skip for now.
+    >You don’t want to set up Multi-factor authentication in Microsoft because you’re going to enable it in Okta instead.  In the next section, there are instructions on disabling MFA in M365 which will prevent this from showing again.
+
+    ![](images/009/o365setup-image9.png)
+
+6. A Stay signed in? Page is displayed.  You can decide if you want to stay signed in or not.
+Your home page is displayed:
+    ![](images/009/o365setup-image5.png)
+
+
+You are now signed into your M365 account.  You can see an Admin option on the menu which is where configuration is performed.
+
+## Disable native MFA
+In your demonstration environment, you will connect your Okta tenant with this M365 tenant.  All access to M365 will be via Okta and Okta will be responsible for user authentication, registration of additional authentication factors, and enforcing Multi-Factor Authentication in line with configured authentication policy.
+
+To stop M365 from ALSO trying to perform MFA registration, and enforce MFA at login, you need to disable Multi-Factor Authentication in the M365 Administration pages.
+
+1. If not already done, sign-in to your M365 tenant as an administrator user (see previous section).
+
+    You should be on the welcome page:
+    ![](images/009/o365setup-image13.png)
+
+2. Click the Admin button on the navigator bar.
+
+3. Click Skip for now if prompted to secure your account.
+(This is the message you’re about to disable).
+    ![](images/009/o365setup-image40.png)
+
+4. In the admin center, type identity into the search bar.
+
+5. Select Identity from the results.
+
+6. Click Skip for now if prompted to secure your account.
+    ![](images/009/o365setup-image45.png)
+
+7.You should already be on the Overview page.
+
+8. Select the Properties tab.
+
+9. Click Manage security defaults.
+
+10. Set Security defaults to Disabled.
+
+11. Select a reason (it doesn’t matter which one you pick)
+
+12. Click Save.
+    ![](images/009/o365setup-image33.png)
+
+13. Click the Disable button to confirm.
+
+OK, that’s done.  Users will no longer be prompted to register for Multi-Factor Authentication by M365.  This will be handled by Okta (once you have integration set up).
+
+
+
+### Add a custom DNS domain
+
+In a Microsoft 365 tenant, single sign-on using an Identity Provider, such as Okta, cannot be enabled for the default domain.  Before you can set up single sign-on, you must add a custom DNS domain to your M365 tenant.
+
+In this section, you will learn how to add a custom DNS domain to your M365 tenant.
+
+If you don’t have a custom DNS domain to use, you can add another *.onmicrosoft.com* domain instead and use this for federation.  This will save the cost of a custom DNS domain.
+
+#### Start M365 Add Domain wizard
+
+Follow these steps to add your DNS domain:
+
+1. Navigate to the Admin center of your M365 account.
+
+2. Type domains in the search bar
+
+    ![](images/009/o365setup-image37.png)
+
+3. Select Domains from the results.
+
+    On the *Domains page*, you can see the default *onmicrosoft.com* domain.
+
+4. Click **Add domain**.
+
+    ![](images/009/o365setup-image14.png)
+
+
+5. Enter your *Domain name*: **`wiclabNAMESURNAME.onmicrosoft.com`**
+
+    Click **Use this domain**.
+
+    ![](images/009/o365setup-image31.png)
+    
+    In most cases, it’s best to use a root domain but you can also register against a subdomain (e.g. ms.yourdemodomain.com) if you prefer.
+
+    TODO SCREENSHOT!
+
+    > *NOTE* Following instruction are an example if you decide to use a real DNS domain. For this lab you can use an *onmicrosoft.com* domain that not require additional steps!
+
+    1. Microsoft looks up the hosting service of the DNS domain you have provided.  If it is hosted by a supported provider (e.g. GoDaddy), automatic verification and configuration is offered:
+
+    ![](images/009/o365setup-image46.png)
+
+    2. Click Verify to start the verification process.
+        A pop up window is opened to your hosting provider.
+
+    3. Authenticate to your hosting provider (e.g. GoDaddy).
+    An authorization confirmation request is shown:
+        ![](images/009/o365setup-image2.png)
+
+    4. Click Connect to allow Microsoft to access your DNS domain at GoDaddy for the purposes of domain ownership verification.
+        The connection is used to obtain proof of ownership for your DNS domain.  When complete, the pop up window closes and you are returned to the Microsoft setup wizard:
+        ![](images/009/o365setup-image30.png)
+        On this page you can select how you will add the required DNS entries to your DNS provider.  The default option for GoDaddy domains is to have this done automatically.
+
+    5. Click Continue.
+        ![](images/009/o365setup-image22.png)
+
+    6. Click Add DNS Records.
+        A new browser pop-up is opened for GoDaddy.  You might need to authenticate again.  Once authenticated, you will see another authorization request:
+        ![](images/009/o365setup-image25.png)
+
+    7. Click Connect to allow Microsoft 365 to add required DNS entries to your DNS domain.
+
+        Setup is performed.  This may take a few seconds.  When complete, the GoDaddy pop-up closes and the M365 Add Domain wizard reports success:
+        ![](images/009/o365setup-image8.png)
+
+    8. Click Done.
+    The Domains page shows that your custom domain is the default domain for the M365 tenant and is Healthy.
+
+
+
+### Make onmicrosoft.com domain the default
+
+When your custom domain is created, it is automatically set as the default domain.  This is a problem because the default domain cannot be configured for Single Sign-On.  You must now configure the onmicrosoft.com domain as the default domain.
+
+![](images/009/o365setup-image10.png)
+
+1. Select the **`mywiclabNAMESURNAME.onmicrosoft.com`** domain.
+
+2. Click Set as default.
+ ![](images/009/o365setup-image39.png)
+
+3. Click **Set as default** in the confirmation dialog.
+    The **`mywiclabNAMESURNAME.onmicrosoft.com`** domain is now shown as the default:
+    ![](images/009/o365setup-image7.png)
+
+Your initial Microsoft 365 tenant configuration is now complete.  You are ready to configure integration with Okta for Single Sign-On and Provisioning.
+
+
+
+
+> To resume:
+>  - Your Email Address:     **`wiclabNAMESURNAME@outlook.com`**
+>  - Your Office 365 Tenant: **`mywiclabNAMESURNAME.onmicrosoft.com`**
+>  - Your Admin Account:     **`admin@mywiclabNAMESURNAME.onmicrosoft.com`**
+>  - Your Custom DNS Domain: **`wiclabNAMESURNAME.onmicrosoft.com`**
+
+
+
+
+
 ---
 
 
