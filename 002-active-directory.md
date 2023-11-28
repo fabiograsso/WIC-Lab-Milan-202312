@@ -66,7 +66,7 @@ The AD Agent installer is downloaded to your local machine.
 
     * Log in to your Okta tenant using a browser on the Windows Server instance and use steps 1-4 above to download the installer.
 
-    > It’s worth noting that the AD Agent can also be found, along with a lot of other downloadable assets, under Settings > Downloads in the Okta admin console.
+    > The AD Agent can also be found, along with a lot of other downloadable assets, under Settings > Downloads in the Okta admin console.
 
 
 ### Install agent on Windows Server
@@ -75,7 +75,7 @@ You will now install the AD Agent onto your Windows Server. In this demo environ
 
 
 
-1. Launch the AD Agent installer by double-clicking the executable. It should have a filename of the form:**OktaADAgentSetup-x.xx.x-xxx-xxxxxxx.exe**.
+1. Launch the AD Agent installer by double-clicking the executable. It should have a filename of the form: **OktaADAgentSetup-x.xx.x-xxx-xxxxxxx.exe**.
 
     ![](images/002/image5.png)
 
@@ -243,7 +243,7 @@ Your Active Directory is now integrated with your Okta org.  The Active Director
 
 3. Note the status of the agent.
 
-    It’s worth noting that each time Okta loses connectivity with the agent, and each time connectivity is restored, all admins in your Okta org will get an email notification.  If you want to prevent this email, you can deactivate the agent on this page.  You can also turn off notifications under **Settings > Account**.
+    > Each time Okta loses connectivity with the agent, and each time connectivity is restored, all admins in your Okta org will get an email notification.  If you want to prevent this email, you can deactivate the agent on this page.  You can also turn off notifications under **Settings > Account**.
 
 
 #### Test Delegated Authentication

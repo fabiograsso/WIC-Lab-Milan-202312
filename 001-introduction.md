@@ -41,12 +41,13 @@ This workshop is broken into the sections listed below.
 **Okta Verify** is available for free at
 
 
-* ![](images/Google_Play_Store.png) *Google Store* 
+![](images/Google_Play_Store.png) *Google Store* 
 
-    https://play.google.com/store/apps/details?id=com.okta.android.auth&hl=en&gl=US| or
+    https://play.google.com/store/apps/details?id=com.okta.android.auth&hl=en&gl=US
 
+or
 
-* ![](images/Apple_Mac_Store.png) *Apple Store* 
+![](images/Apple_Mac_Store.png) *Apple Store* 
 
     https://apps.apple.com/fr/app/okta-verify/id490179405
 
