@@ -201,3 +201,8 @@ On the new user (Elise Dupont) profil you will see :
 
 ![](images/006-1/image31.png)
 
+
+
+---
+
+Congratulations! You have successfully configured an onboarding Workflow!

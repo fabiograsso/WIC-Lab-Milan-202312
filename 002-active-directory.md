@@ -496,6 +496,11 @@ Now that you have a user in Okta who has an assigned account in Active Directory
     Your imported user has authenticated to Okta using their Active Directory credentials.
 
 
+
+---
+
+
+
 Congratulations.  You have successfully imported groups, and a user, from Active Directory.  You could now assign the user to applications just like any other Okta-sourced user.  Methods to assign to an application include:
 
 * Assign the application directly to the AD-sourced user.

@@ -524,35 +524,30 @@ group definition.
 3.  Select the **Applications** tab in the group properties.
 
 4.  Click **Assign applications**.
-![](images/009/image035.png)
+    ![](images/009/image035.png)
 
 
 5.  Click the **Assign** button next to the *Microsoft Office 365*
-![](images/009/image036.png)
+    ![](images/009/image036.png)
 
 
-and select the checkboxes for the following licenses:
+    and select the checkboxes for the following licenses:
 
     -   Sharepoint Online (Plan 2)
-
     -   Office Online
-
     -   Office 365 ProPlus
-
     -   Exchange Online (Plan 2)
-
     -   Exchange Online Advanced Threat Protection
-
     -   Microsoft Teams
 
 
 
 6.  Scroll to the bottom of the page and click **Save and Go Back**.
-![](images/009/image038.png)
+    ![](images/009/image038.png)
 
 
 7.  Click **Done**.
-![](images/009/image039.png)
+    ![](images/009/image039.png)
 
 
 
@@ -569,13 +564,14 @@ and select the Okta group called *O365Users* (different from the one that is AD 
 
 
 2.  Select the **People** tab.
-![](images/009/image040.png)
+    ![](images/009/image040.png)
+
+
 3.  Click **Assign people**.
 
 
-
 4.  Click the **+ icon** for a test user in your Okta org.\
-![](images/009/image041.png)
+    ![](images/009/image041.png)
 
 5.  Click the **Done** button to save the configuration.
 
@@ -606,11 +602,20 @@ You can now test single sign-on to Microsoft 365 for your test user.
 
 
 5.  Click **Yes** to stay signed in.
-![](images/009/image044.png)
+    ![](images/009/image044.png)
+
+
 6.  Click the identity icon in the top-right of the page.
 
 7.  Click **Sign out** to clear the session. Close the browser you used
-![](images/009/image045.png)
+    ![](images/009/image045.png)
+
+
+
+---
+
+
+
 Congratulations! You have successfully configured Lifecycle Management
 and Single Sign-On to Microsoft Office 365. Your demo environment can
 now be used to demonstrate these capabilities to customers.

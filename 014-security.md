@@ -1,5 +1,9 @@
 In this lab, you will unlock the combined power of Okta Verify and FastPass. You will enable an experience where passwordless authentication becomes an integral part of an employee’s workday, boosting employee productivity without the common password pitfalls. Not only will you discover an enhanced security posture resistant to phishing threats, but you’ll also appreciate the inherent protection it offers, sometimes even against our own human errors.
 
+
+---
+
+
 ## Setup Okta FastPass on the Virtual Desktop
 
 ### Install Okta Verify on your Virtual Desktop
@@ -27,11 +31,19 @@ This will open your Okta tenant's sign-in page.
 1. Sign in with your **New Employee** username and password.
 1. Close the Okta Verify window, and then close the browser.
 
+
+---
+
+
 ## Configure Security Policies and FastPass
 
 |||
    |:-----|:-----|
    |![Alt text](images/014/marc_r74_100.png "Marc says...")|*Did you know with Okta Adaptive MFA, you get personalized security that learns from your habits, making logging in a breeze while keeping intruders at bay? Think of it as the bouncer who always spots the VIP - that's you!*|
+
+
+---
+
 
 ## Enable Okta Verify for FastPass Authentication
 
@@ -78,6 +90,10 @@ This will open your Okta tenant's sign-in page.
      |:-----|:-----|
     |![Rule Priority 1](images/014/auth_policy_rule_drag_priority_400.png "Rule Priority 1")|
 
+
+---
+
+
 ## Experience an Employee Passwordless Login
 
 1. Return to your **Virtual Desktop**.
@@ -85,6 +101,10 @@ This will open your Okta tenant's sign-in page.
 1. You will  automatically be authenticated to your End-User Dashboard. No prompts, no typing, pure magic!
 1. Sign out of Okta.
 1. At the Okta login, click **Sign in with Okta FastPass**. Again, you will be signed in to the End-User Dashboard, no password required.
+
+
+---
+
 
 ## Set Up Device Assurance
 
@@ -128,6 +148,10 @@ With device assurance policies you can check security-related device attributes 
      |:-----|:-----|
     |![High Security Apps](images/014/auth_policy_high_security_apps_marketo_600.png "High Security Apps")|
 
+
+---
+
+
 ## Test the Device Assurance Policy
 
 1. Return to your **Virtual Desktop**.
@@ -143,6 +167,10 @@ With device assurance policies you can check security-related device attributes 
     |||
     |:-----|:-----|
     |![Device Denied](images/014/ov_device_assurance_denied_240.png "Device Denied")|
+
+
+---
+
 
 ### Switch the Authentication Policy for Marketo
 
@@ -163,6 +191,10 @@ With device assurance policies you can check security-related device attributes 
 
 **Note:** With the exception of BambooHR and Office 365, the apps in this lab are Bookmark apps. Bookmark apps are used to direct users to a specific web page. Real app integrations do exist in the Okta Integration Network for all of the apps shown in this lab.
 
+
+---
+
+
 ## Enable Okta ThreatInsight
 
 Okta ThreatInsight aggregates data about sign-in activity across the Okta customer base to analyze and detect potentially malicious IP addresses and to prevent credential-based attacks such as: password spraying, credential stuffing, and brute-force cryptographic attacks. Because ThreatInsight collects information about the origin of sign-in activity directed at Okta organizations and Okta endpoints, it provides a security baseline for all Okta customers.
@@ -175,6 +207,109 @@ To enable Okta ThreatInsight, proceed with the following steps:
 3. Select **Log and enforce security based on threat level**.
 This setting will make Okta automatically deny access to sign-in requests that come from potentially malicious IP addresses that ThreatInsight detects.
 4. Click **Save**.
+
+
+
+
+---
+
+
+## Contextual Access & Device Management (optional)
+
+If you have time please feel free to add network and behavior detection rules to your tenant.
+
+### Networks & Zones
+1. Navigate to **Security -> Networks**.
+2. There are two default Zones already configured. *BlockedIpZone* and *LegacyIpZone*.
+    ![image](images/013/networks.png)
+3. We are going to add a trusted IP Zone containing our computer address. To do this click **Add Zone -> IP** Zone as shown below.
+    ![image](images/013/add-zone.png)
+4. Name the new zone Trusted Enterprise Network or similar and click on the address next to **Add your current IP address**. This will add your computer's address to a trusted list and we can later use this in Authentication Policies.
+    ![image](images/013/add-zone-dialog.png)
+5. Next we can add a Dynamic Zone to block access from Tor proxies.  To do this click **Add Zone -> Dynamic Zone**. Check *Block access from IPs matching conditions listed in this zone* and from the **IP type** drop down select *Tor anonymizer proxy* as shown below.
+    ![image](images/013/add-dynamic-zone.png)
+6. Your *Networks* list should now look similar to the following.
+    ![image](images/013/networks-post.png)
+
+> #### Note
+> * Adaptive SSO or Adaptive MFA licenses are required to  leverage Dynamic Zones
+> * At a later stage if you would like to see what is added to Okta Logs when an IP is blocked you can add your computer IP to the BlockedIpZone by clicking on the pencil Icon at the end of the line and then clicking on your current IP address as shown below. Please ensure you remember to remove  this setting afterwards if you wish to test other policies in more detail.
+> ![image](images/013/edit-zone.png)
+
+### Behavior Detection
+TODO -> Policy Behavior detection
+1.  Navigate to **Security -> Behaviour Detection**.
+    ![image](images/013/behaviour.png)
+2. Here you can see and adjust a wide range of behaviors. These can be later used in authentication policies either leveraging the Risk level Okta assigns or specifically by evaluating specific behaviors in a custom expression. See the (Okta Expression language documentation)[https://developer.okta.com/docs/reference/okta-expression-language-in-identity-engine/] for more details.
+
+> #### Note
+> Location data is provided by a third-party geolocation service. Okta updates the geolocation IP data on a weekly basis.
+
+### Device Integrations (Information only)
+
+Device Integrations are used to link Okta with endpoint management systems such as InTune, JAMF etc. We will not be leveraging these device integrations during this workshop.
+1. Navigate to **Security -> Device Integrations**. Here you will see three tabs.
+2. The first and second tabs *Endpoint Management & Certificate Authority* allows you to add a device management platform, such as JAMF or Intune, and the associated trusted certificate chain. You can find more details on specific configuration in the (documentation)[https://help.okta.com/oie/en-us/Content/Topics/identity-engine/devices/managed-main.htm].
+    ![image](images/013/device-integrations.png)
+3. The third tab Endpoint Security allows you to integrate with CrowdStrike or Windows Security Center to leverage signals directly from the endpoints during authentication policy evaluation.
+    ![image](images/013/add-device-integration.png)
+
+
+
+
+---
+## Dectecting & Responding to Phishing Attacks
+In this section, we will look at how you can enable Okta Fastpass to detect and respond to real-time phishing attacks caused by AiTM services like EvilGinX. **This guide will not cover setting up of EvilGinX.**
+
+In the previous lab section, you’ve already learned how to enable Okta Fastpass as an Authenticator for your end-users.
+
+The next section will focus and discuss on how you can leverage Fastpass to detect and respond to Phishing attacks targeted by threat actors to your end users.
+
+One benefit of using Okta Fastpass is that by default it already inherits phishing resistant qualities meaning it is able to automatically detect if the site is a phishing site or legitimate site. If it is a phishing site, automatically, it will provide an end-user friendly message to your end users.
+
+![image](images/013/phish-prompt.png)
+
+The only prerequisite to have this feature/capability enabled is to make sure your end-users are running the latest version of Okta Fastpass and have their Okta account enrolled with it.
+From an administrator level, the only task you need to do is to create a rule within your Authentication Policy that leverages Fastpass as the authenticator of choice. Always remember that phishing sites will always try to farm your end-user’s password by imitating your identity provider’s authentication/login page/screen/service. The goal is to not allow your end-users to not use a password or non-phishing resistant authenticators as part of the authentication process such that nothing is shared or stored to your attacker’s service.
+
+### Create an Phishing proof Authentication Policy rule
+
+1. Navigate to any one of your Authentication policies and create a new rule.
+    ![image](images/013/phish-policy-rule.png)
+2. If we inspect the rule closely, this is what should be defined from a policy decision point perspective:
+    ![image](images/013/phish-policy-rule-dialog.png)
+3. From a policy enforcement point perspective, this is what should be defined:
+    ![image](images/013/phish-policy-enforcement.png)
+4. Click **Save** and make sure the rule is ranked as one of the highest ranking of your authentication policy.
+
+You will be able to try this out in a different Okta environment that will be supplied during the actual workshop/event as this requires an EvilGinX instance mirroring your Okta instance. 
+
+### Adding Observability and Workflows (Information only)
+Okta logs every transaction and processed event within the platform. All of these logs are kept and accessible via Okta’s System Log. Okta also provides extensibility points within the platform through Hooks. One type of hook that we can leverage here is (Event Hooks[https://help.okta.com/oie/en-us/Content/Topics/automation-hooks/event-hooks-main.htm?cshid=ext-event-hooks]. 
+You can define multiple Event Hooks within the Okta platform. Navigate to **Workflow -> Event Hooks**.
+![image](images/013/event-hooks.png)
+
+You can do the following instructions at your own time or pace. You can create Event Hooks that will meet your requirements and specifications. The example Event Hooks workflow we will define below will intercept and Phishing Attacks declined by Okta Fastpass. 
+
+1. Click Create Event Hook 
+    ![image](images/013/create-hook.png)
+2. Supply an Endpoint URL, Event Hook Name and description. 
+    ![image](images/013/hook-setup.png)
+3. Let’s leave the Customise Request as default.
+4. Let’s select a specific event.
+    ![image](images/013/hook-event.png)
+5. Click Next and let’s apply a filter.
+    ![image](images/013/hook-filter.png)
+6. Click the Use Okta Expression Language (advanced)
+    ![image](images/013/hook-el.png)
+7. Use the following filter `event.outcome.reason eq "FastPass declined phishing attempt"`. Click **Save**.
+![image](images/013/hook-el-filled.png)
+8. Make sure you also verify the Event hook you created by following the instructions here.
+
+
+
+
+---
 
 ## Conclusion
 

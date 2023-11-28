@@ -491,4 +491,8 @@ If single sign-on is successful you will see the Salesforce Chatter homepage:
 
 6. Click **Log out** to clear the session.  Close the browser you used for the test.
 
+
+---
+
+
 Congratulations! You have successfully configured Lifecycle Management and Single Sign-On to Salesforce. Your demo environment can now be used to demonstrate these capabilities to customers.
