@@ -1,9 +1,5 @@
 # Okta Workflows
 
-TODO: Istruzioni per creare le utenze Wes Chang e  **Giorgia Rossi** e metterli nel gruppo O365Users.
-
-
-
 Okta Workflows can be used to augment Lifecycle Management and provide custom logic for organization-specific use cases. Okta Workflows is a no-code automation platform that enables admins to modernize ever-more-sophisticated identity-centric processes without leaning on developers. It provides a graphical drag-and-drop interface that combines triggers, logic, and time-based actions to build powerful “if-this-then-that” flows. As a result, anyone can easily stitch together app-specific provisioning and deprovisioning tasks. For instance, with Okta Workflows, you can leverage Okta’s library of pre-built connectors for apps like Box, Slack, Salesforce, and more (or connect via public APIs) to tailor processes with deeper actions that meet your precise requirements.
 
 With out-of-the-box functions for flow control, branching, and data manipulation, Okta offers the power of code without code, and it is finally possible to orchestrate identity tasks that were previously just too hard to automate. By having this capability built-in to your identity architecture, your team will increase agility and decrease costs, all while facilitating constant business change and improving your company’s security posture.
@@ -119,6 +115,10 @@ For the workflows in the Okta Workflow Pack to work you will need:
 
    Remember to select **I will set password** and remove the check from **User must change password on first login**
 
+   Add this user to the **O365Users** group. This will provision an Office 365 license.
+
+
+
 
 2. An existing target user (that will represent the target user) in Okta where the **Okta Primary Email Address for that user is the same as the user’s Office 365 username**. The manager attribute in Okta Universal Directory will need to be the username of the Okta user that represents the manager and you created in the step above.
    
@@ -140,6 +140,11 @@ For the workflows in the Okta Workflow Pack to work you will need:
 
    Remember to select **I will set password** and remove the check from **User must change password on first login**
 
+   At this stage **DO NOT** add the user *Giorgia Rossi* to any group.
+
+   In order to put the manager, go to **Profile**, click **Edit** then scroll down to the manager ID attribute and enter the value **wes.chang@wiclabNAMESURNAME.onmicrosoft.com**, enter **Sales** in the **Department** attribute.
+
+   ![](images/006-1/image34.png)
 ---
 
 ## Okta Workflows - Flow Pack Setup Steps
@@ -190,7 +195,7 @@ https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/files/o3
 
    ![](images/006-1/image19.png)
 
-10. If you have not already done so, authorize the connections to Azure Active Directory, Microsoft Team, Office 365 Mail, Office 365 Calendar and Okta.
+10. If you have not already done so, authorize the connections to Azure Active Directory, Microsoft Teams, Office 365 Mail, Office 365 Calendar and Okta.
 
 11. **Make sure that the following Okta Workflow cards have valid connections assigned: open ALL THE FLOWS and verify that all the connections are correctly setup**
 
@@ -206,19 +211,17 @@ https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/files/o3
 
 ## Testing the Okta Workflow Flow
 
-Create or import a new user with a manager assign (in our case **Giorgia Rossi**) and assign her **Office 365 application**.
 
-In the example below, we have created the user **Elise Dupont** in Okta and assign **Wes Chang** as manager from the user profile.
+Add the user **Giorgia Rossi** to the group **O365Users** group. This will provision an Office 365 license.
 
-![](images/006-1/image62.png)
+In this example, we have created the user **Giorgia Rossi** in Okta with **Wes Chang** as manager from the user profile.
 
-In order to put the manager, go to **Profile**, click **Edit** then scroll down to the manager ID attribute and enter the value **wes.chang@wiclabNAMESURNAME.onmicrosoft.com**, enter **Sales** in the **Department** attribute.
-
-![](images/006-1/image34.png)
 
 You will be able to visualise the flow execution in real time by clicking on "Execution History" on the main flow.
 
 ![](images/006-1/image27.png)
+
+
 
 ### Expected Result
 
@@ -233,7 +236,7 @@ On the manager profile (**Wes Chang**) you will see :
    ![](images/006-1/image29.png)
 
 
-On the new user (Elise Dupont) profile you will see : 
+On the new user (Giorgia Rossi) profile you will see : 
 
 - A welcome email
 

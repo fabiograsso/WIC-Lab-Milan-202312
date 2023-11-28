@@ -2,7 +2,7 @@
     "id": "wic_emea_it",
     "title": "Italian Okta Workforce Overview",
     "state": "active",
-    "duration": "PT3H",
+    "duration": "PT4H",
     "description": "Unisciti a noi per un’esperienza pratica e coinvolgente in cui imparerai a padroneggiare i principi chiave dell’IAM attraverso il Workforce Identity Cloud di Okta, tra cui l’autenticazione adattiva, la protezione dell’accesso ai dispositivi, l’automazione dell’onboarding/offboarding e la governance delle identità.",
     "idp_type": "workforce-identity",
     "overview": "https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/000-overview.md",
@@ -43,7 +43,7 @@
       },
       {
         "step": "Security",
-        "guide": "https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/014-security.md",
+        "guide": "https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/006-security.md",
         "applications": [],
         "resources": [
         ]

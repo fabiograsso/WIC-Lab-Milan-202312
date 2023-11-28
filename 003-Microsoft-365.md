@@ -813,6 +813,4 @@ now be used to demonstrate these capabilities to customers.
 A Microsoft E5 sandbox is initially activated for 90 days.  If Microsoft doesn't see activity in the sandbox, it will be deactivated after that time. To make sure that your sandbox is renewed, you must exercise the APIs to generate activity.
 
 ### Enable scheduled import
-The easiest way to generate activity is to add the sandbox as an application in your Okta tenant, set up provisioning, and schedule an import every 2 days.  Setting up provisioning is something you’ll be doing anyway as part of creating a demo environment so turning on the scheduled import is a small additional step. This configuration is covered in the demo integration guide for Microsoft Office 365.
-
-TODO
+The easiest way to generate activity is to add the sandbox as an application in your Okta tenant, set up provisioning, and schedule an import every 2 days.  Setting up provisioning is something you’ll be doing anyway as part of creating a demo environment so turning on the scheduled import is a small additional step.
