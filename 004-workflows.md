@@ -1,6 +1,6 @@
 # Okta Workflows
 
-TODO: "An existing user (that will represent the manager user) in Okta and Office 365 where the username in Okta and in O365 are the same (the user’s email address). The manager user’s email address needs to point to a valid email address and have the appropriate Office 365 licenses so that the manager can get the email notifications as part of the flow. In this lab we will use the manager account Wes Chang imported from SAP SuccessFactor." > modificare togliendo i riferimenti a SuccessFactors, usare invece un utenza Active Directory esistente
+TODO: Istruzioni per creare le utenze Wes Chang e  **Giorgia Rossi** e metterli nel gruppo O365Users.
 
 
 
@@ -12,13 +12,17 @@ With out-of-the-box functions for flow control, branching, and data manipulation
 
 Here are a few ways Okta Workflows can automate complex identity scenarios:
 
-1\. Take granular actions during onboarding and offboarding
+1. Take granular actions during onboarding and offboarding
 
-2\. Resolve identity creation conflicts
+2. Resolve identity creation conflicts
 
-3\. Define identity processes based on time, role, and other factors
+3. Define identity processes based on time, role, and other factors
 
-4\. Distill and share identity insights
+4. Distill and share identity insights
+
+
+---
+
 
 ## Lab description
 
@@ -34,73 +38,105 @@ If the channel for that department does not exist, it will be created at the tim
   
 Additionally a welcome message is sent to that private channel welcoming the new hire user.  
 
+
+---
+
+
 ## Lab Prerequisites
 
 For the workflows in the Okta Workflow Pack to work you will need:
 
 ### You will need to configure the following Okta connectors in your Okta Tenant that has workflow enabled
 
-   * Configure Okta Connector
+#### Configure Okta Connector:
 
-   * From Okta Admin Console, go to Workflows console under Workflow section
+1. From Okta Admin Console, go to Workflows console under Workflow section
+   ![](images/006-1/image7.png)
 
-![](images/006-1/image7.png)
+2. Go to Connections tab and click New Connection
 
-1. Go to Connections tab and click New Connection
+   ![](images/006-1/image13.png)
 
-![](images/006-1/image13.png)
+3. Select Okta connection from the list
 
-2. Select Okta connection from the list
+   ![](images/006-1/image11.png)
 
-![](images/006-1/image11.png)
+4. Configure you Okta connection, you will need
 
-3. Configure you Okta connection, you will need
-
-   3.1. Okta domain name of your tenant (without the https)
+   3.1. Okta domain name of your tenant (without the https): **`{{idp.name}}.okta.com`**
 
    3.2. Okta Workflows App client ID and Client Secret, to get them, go to Okta Admin console under Applications > Applications and search for **Okta Workflows OAuth** application.
 
-![](images/006-1/image18.png)
+   ![](images/006-1/image18.png)
 
    3.3. The configuration will look like this, click on **Create** button
 
-![](images/006-1/image4.png)
+   ![](images/006-1/image4.png)
 
-4. Configure Office 365 Admin connector
+5. Configure Office 365 Admin connector
 
    4.1. Go to Connections tab and click **New Connection**
 
    4.2. Select Office 365 Admin from the list and click **Create**
 
-![](images/006-1/image20.png)
+   ![](images/006-1/image20.png)
 
    4.3. Log in with your Microsoft O365 Admin account if you are not already logged in.
 
    4.4. Check the box **Consent on behalf of your organization** and click on **Accept**
 
-![](images/006-1/image21.png)
+   ![](images/006-1/image21.png)
 
-5. Configure Office 365 Mail Connector: follow the same steps to configure it
+6. Configure Office 365 Mail Connector: follow the same steps to configure it
 
-![](images/006-1/image22.png)
+   ![](images/006-1/image22.png)
 
-6. Configure Office 365 Calendar Connector: follow the same steps to configure it
+7. Configure Office 365 Calendar Connector: follow the same steps to configure it
 
-![](images/006-1/image23.png)
+   ![](images/006-1/image23.png)
 
-7. Configure Microsoft Teams Connector: follow the same steps to configure it
+8. Configure Microsoft Teams Connector: follow the same steps to configure it
 
-![](images/006-1/image24.png)
+   ![](images/006-1/image24.png)
+
 
 ### Additional prerequisites
 
 1. An existing user (that will represent the manager user) in Okta and Office 365 **where the username in Okta and in O365 are the same (the user’s email address)**. 
 The manager user’s email address needs to point to a valid email address and have the appropriate Office 365 licenses so that the manager can get the email notifications as part of the flow.
-In this lab we will use the manager account **Giorgia Rossi** created in Okta.
+In this lab we will use the manager account **Wes Chang**:
+
+Create a user with the following data:
+| | |
+|-|-|
+|Username   | wes.chang@wiclabNAMESURNAME.onmicrosoft.com |
+|Name       | Wes |
+|Surname    | Chang|
+|Email      | wes.chang@wiclabNAMESURNAME.onmicrosoft.com |
+|Department | Sales |
+
+Remember to select **I will set password** and remove the check from **User must change password on first login**
+
 
 2. An existing target user (that will represent the target user) in Okta where the **Okta Primary Email Address for that user is the same as the user’s Office 365 username**. The manager attribute in Okta Universal Directory will need to be the username of the Okta user that represents the manager and you created in the step above.
 **This target user must be assign to Office 365 application.**
+In this lab we will use the user account **Giorgia Rossi** created in Okta.
 
+Create a user with the following data:
+
+| | |
+|-|-|
+|Username   | giorgia.rossi@wiclabNAMESURNAME.onmicrosoft.com |
+|Name       | Giorgia |
+|Surname    | Rossi|
+|Email      | giorgia.rossi@wiclabNAMESURNAME.onmicrosoft.com |
+|Department | Sales |
+|Manager      | wes.chang@wiclabNAMESURNAME.onmicrosoft.com |
+|ManagerId     | wes.chang@wiclabNAMESURNAME.onmicrosoft.com |
+
+Remember to select **I will set password** and remove the check from **User must change password on first login**
+
+---
 
 ## Okta Workflows - Flow Pack Setup Steps
 
@@ -112,52 +148,57 @@ https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/files/o3
 
 1. Go to the Okta Workflows Console from the Okta Admin Console
 
-![](images/006-1/image7.png)
+   ![](images/006-1/image7.png)
 
 2. Go to Flow Tab and click on Add new folder **(+)** icon positioned on top left of the screen
 
-![](images/006-1/image16.png)
+   ![](images/006-1/image16.png)
 
 3. Create a new folder called **Office 365 Onboarding Flow**
 
-![](images/006-1/image2.png)
+   ![](images/006-1/image2.png)
 
 4. Import the office365OnboardingFlow.folder into this newly created folder by clicking on the three dots at the right of the folder name
 
-![](images/006-1/image15.png)
+   ![](images/006-1/image15.png)
 
 5. The folder structure should look like the following one
 
-![](images/006-1/image10.png)
+   ![](images/006-1/image10.png)
 
-1. Open the first flow **MAIN FLOW** New Hire Information by clicking on its name
+6. Open the first flow **MAIN FLOW** New Hire Information by clicking on its name
 
-2. Scroll to the right, you will see the card Send Email inside the If/Else Card, click on the Choose Connection
+7. Scroll to the right, you will see the card Send Email inside the If/Else Card, click on the Choose Connection
 
-![](images/006-1/image9.png)
+   ![](images/006-1/image9.png)
 
 8. Select the connection you create in the previous steps
 
-![](images/006-1/image12.png)
+   ![](images/006-1/image12.png)
 
 9. Change the `personal_email` value. This email will be used to send an introduction email to the user and also as a 'cc' for the message to be sent to the manager.
-You can use your email address, or you can use a temporary one using services like [Mailinator](https://www.mailinator.com/) or [Maildrop](https://maildrop.cc/).
+   
+   > You can use your email address, or you can use a temporary one using services like [Mailinator](https://www.mailinator.com/) or [Maildrop](https://maildrop.cc/).
 
-![](images/006-1/image35.png)
+   ![](images/006-1/image35.png)
 
 10. Activate the flow
 
-![](images/006-1/image19.png)
+   ![](images/006-1/image19.png)
 
 10. If you have not already done so, authorize the connections to Azure Active Directory, Microsoft Team, Office 365 Mail, Office 365 Calendar and Okta.
 
 11. **Make sure that the following Okta Workflow cards have valid connections assigned: open ALL THE FLOWS and verify that all the connections are correctly setup**
 
-![](images/006-1/image25.png)
+   ![](images/006-1/image25.png)
 
 12. Toggle all the flows from Off to On
 
-![](images/006-1/image5.png)
+   ![](images/006-1/image5.png)
+
+
+---
+
 
 ## Testing the Okta Workflow Flow
 
@@ -167,42 +208,44 @@ In the example below, we have created the user **Elise Dupont** in Okta and assi
 
 ![](images/006-1/image62.png)
 
-In order to put the manager, go to **Profile**, click **Edit** then scroll down to the manager ID attribute and enter the value **wes.chang@wiclab56.onmicrosoft.com**, enter **Sales** in the **Department** attribute.
+In order to put the manager, go to **Profile**, click **Edit** then scroll down to the manager ID attribute and enter the value **wes.chang@wiclabNAMESURNAME.onmicrosoft.com**, enter **Sales** in the **Department** attribute.
+
 ![](images/006-1/image34.png)
 
 You will be able to visualise the flow execution in real time by clicking on "Execution History" on the main flow.
 
 ![](images/006-1/image27.png)
 
-### Resultat expected 
+### Expected Result
 
-On the manager profil (**Wes Chang**) you will see : 
+On the manager profile (**Wes Chang**) you will see : 
 
 - A new email auto generated
 
-![](images/006-1/image28.png)
+   ![](images/006-1/image28.png)
 
 - A new chat message in Teams
 
-![](images/006-1/image29.png)
+   ![](images/006-1/image29.png)
 
 
-On the new user (Elise Dupont) profil you will see : 
+On the new user (Elise Dupont) profile you will see : 
 
 - A welcome email
 
-![](images/006-1/image30.png)
+   ![](images/006-1/image30.png)
 
 - A channel in Teams "OKTA EMEA WIC Lab"
 
-![](images/006-1/image32.png)
+   ![](images/006-1/image32.png)
 
 - A new calendar invitation
 
-![](images/006-1/image31.png)
+   ![](images/006-1/image31.png)
 
 
 
 ---
+
 
 Congratulations! You have successfully configured an onboarding Workflow!

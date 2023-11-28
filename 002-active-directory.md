@@ -8,6 +8,10 @@ When these companies look to adopt a new identity platform, such as Okta, they n
 
 This guide provides step-by-step instructions for integrating an Active Directory into your Okta demonstration environment.  You will be able to show Delegated Authentication, Just-In-Time (JIT) provisioning from AD to Okta, and provisioning from AD to Okta via scheduled import.
 
+### Agent architecture
+
+![](images/002/ad-agent-infographic.png)
+
 
 ---
 

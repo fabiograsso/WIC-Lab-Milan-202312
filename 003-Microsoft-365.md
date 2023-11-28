@@ -22,7 +22,10 @@ This guide assumes that you have at least one test user (in addition to
 your admin user) defined in your Okta org.
 
 
-### Introduction
+---
+
+
+## Introduction
 
 Microsoft Office 365 uses Microsoft Azure AD as its user store and to
 manage federation for single sign-on. This means that when you're
@@ -63,8 +66,8 @@ To complete this lab you will need :
 2. Have users on your tenant (imported from Active Directory or created manually in Okta) in order to assign the application and validate the user flow.
 
 
-
 ---
+
 
 ## Get Microsoft E5 sandbox
 
@@ -125,9 +128,11 @@ In this section you will join the Microsoft developer program.
 
 16. Select the *Country/region* where your sandbox will be created.
     
-    Enter a username for your super admin user.  This can be whatever you like. TODO Admin
+    Enter **`admin`** as username for your super admin user.
     
-    Set the domain for your sandbox. TODO: DOMAIN
+    Set the domain for your sandbox:
+    **`mywiclabNAMESURNAME.onmicrosoft.com`**.
+
 
     Enter (and confirm) a password for your super admin user.
     
@@ -198,6 +203,10 @@ Your home page is displayed:
 
 You are now signed into your M365 account.  You can see an Admin option on the menu which is where configuration is performed.
 
+
+---
+
+
 ## Disable native MFA
 In your demonstration environment, you will connect your Okta tenant with this M365 tenant.  All access to M365 will be via Okta and Okta will be responsible for user authentication, registration of additional authentication factors, and enforcing Multi-Factor Authentication in line with configured authentication policy.
 
@@ -239,8 +248,10 @@ To stop M365 from ALSO trying to perform MFA registration, and enforce MFA at lo
 OK, that’s done.  Users will no longer be prompted to register for Multi-Factor Authentication by M365.  This will be handled by Okta (once you have integration set up).
 
 
+---
 
-### Add a custom DNS domain
+
+## Add a custom DNS domain
 
 In a Microsoft 365 tenant, single sign-on using an Identity Provider, such as Okta, cannot be enabled for the default domain.  Before you can set up single sign-on, you must add a custom DNS domain to your M365 tenant.
 
@@ -248,7 +259,7 @@ In this section, you will learn how to add a custom DNS domain to your M365 tena
 
 If you don’t have a custom DNS domain to use, you can add another *.onmicrosoft.com* domain instead and use this for federation.  This will save the cost of a custom DNS domain.
 
-#### Start M365 Add Domain wizard
+### Start M365 Add Domain wizard
 
 Follow these steps to add your DNS domain:
 
@@ -364,7 +375,7 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 
 15. Enter the following for the expression 
 
-    **`String.substringBefore(user.login,\"@\") + \"@wiclabNAMESURNAME.onmicrosoft.com\"`**
+    **`String.substringBefore(user.login,"@") + "@wiclabNAMESURNAME.onmicrosoft.com"`**
     
 
   ![](images/009/image08.png)
@@ -514,9 +525,19 @@ Follow these steps:
     -   Exchange Online Advanced Threat Protection
     -   Microsoft Teams
 
-
 6.  Scroll to the bottom of the window and click on **Save**.
-![](images/009/image020.png)
+    ![](images/009/image020.png)
+
+7.  Click the **Edit** icon for the *Mail* attribute.
+
+8. Insert the following expression in the *Attribute value*
+
+    **`String.substringBefore(user.login,"@") + "@wiclabNAMESURNAME.onmicrosoft.com"`**
+    
+    ![](images/009/image049.png)
+
+9. Click on **Save**
+
 
 
 Provisioning is enabled and attribute mapping is done. You're ready to test.
@@ -783,6 +804,8 @@ Congratulations! You have successfully configured Lifecycle Management
 and Single Sign-On to Microsoft Office 365. Your demo environment can
 now be used to demonstrate these capabilities to customers.
 
+
+---
 
 
 ## Keep your E5 sandbox active (optional)
