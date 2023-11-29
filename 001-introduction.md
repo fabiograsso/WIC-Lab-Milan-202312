@@ -47,7 +47,59 @@ This workshop is broken into the sections listed below.
 
 ## Activate your Okta tenant
 
-TODO
+1. Open the welcome email (*Your New Okta account*). Take note of the *temporary password* and click on **Sign On**
+    ![](images/001/image001.png)
+
+2. Enter the *temporary password* and click **Verify**
+    ![](images/001/image002.png)
+
+3. Digit a new password and click **Change Password**
+
+    > **Take note of this password as you will use it many times during this workshop!**
+
+    ![](images/001/image004.png)
+
+4. Click on **Set up** for start the enrollment of *MFA* with *Okta Verify*
+ 
+    ![](images/001/image005.png)
+
+5. Open **Okta Verify** on your mobile phone.
+    1. Tap **Add Account** (or the " **+** " on the top right corner )
+    2. Choose the type of account to add. Tap **Organization**.
+        > Note: 
+        > - *Organization*: Add a multifactor authentication (MFA) account for your work, school, or business that uses Okta as an authentication provider.
+        > - *Other*: Use Okta Verify to generate one-time passwords for your personal account such as a bank or brokerage account.
+        > 
+        > You can use Okta Verify for generate OTP Password, with support for TOTP, Google Authenticator, etc.
+    3. Choose **Skip** at the *Add Account from Another Device* prompt
+    4. Tap **Yes, Ready to Scan**, and point your camera at the QR code displayed in the browser
+        > If you don’t know how to obtain the QR code, tap Where do I get my QR code?
+        
+        > If you can’t scan the QR code, tap No, Sign In Instead. Follow the instructions in Set up Okta Verify on your iOS device by using your sign-in URL.
+    
+        ![](images/001/image006.png)
+
+    5. If prompted, **allow push notifications** on your device so that you can approve future sign-in notifications without opening the Okta Verify app.
+
+    6. If prompted, enable Face ID or Touch ID. Tap **Enable**.
+    
+    7. Tap **Done** to complete the account enrollment.
+
+6. You should see the *Okta Dashboard*. Click on **Admin** in the top-right corner
+
+    ![](images/001/image007.png)
+
+7. Click **Select** on the right of **Get a push notification**.
+    
+    Complete the MFA challenge on your phone.
+
+    ![](images/001/image008.png)
+
+    > Note: since the access to the Admin Dashboard is an high privilege operation, the default policy require an MFA authentication. Even if you can change this behaviour, we warmly suggest to use the highest level of security policy for the Admin access.
+
+8. You will land on the **Admin Dashboard**
+
+    ![](images/001/image009.png)
 
 
 ---
