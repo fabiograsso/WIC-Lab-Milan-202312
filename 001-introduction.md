@@ -145,18 +145,18 @@ In this guide, we will use a new *outlook.com* email address. You might prefer t
     
         ![](images/009/o365setup-004.png)
 
-5. Click Next
+5. Click **Next**
 
 6. Create a password for your new account.
     ![](images/009/o365setup-image43.png)
 
-7. Click Next
+7. Click **Next**
 
 8. Set your Country/region and Birthdate.
     ![](images/009/o365setup-image17.png)
 
 
-9. Click Next.
+9. Click **Next**.
 
 
 10. A validation code is sent to your email address and a challenge page is displayed
@@ -168,9 +168,9 @@ In this guide, we will use a new *outlook.com* email address. You might prefer t
     ![](images/009/o365setup-image4.png)
 
 
-11. Click Next.
+11. Click **Next**.
 
-13. Click Next and complete the “I am not a robot” checks.
+13. Click **Next** and complete the “I am not a robot” checks.
 
     ![](images/009/o365setup-image47.png)
  
