@@ -1,6 +1,6 @@
-### Integrate Active Directory
+# Integrate Active Directory
 
-## Overview
+# Overview
 
 Many companies, especially small- and medium-sized enterprises, use Microsoft Active Directory (AD) as their primary on-premises directory.  They typically manage their user’s account information, including identity attributes; passwords; and group memberships, in Active Directory.
 
@@ -16,10 +16,10 @@ This guide provides step-by-step instructions for integrating an Active Director
 ---
 
 
-## Add Active Directory
+# Add Active Directory
 
 
-### Initiate the Virtual Infrastructure
+## Initiate the Virtual Infrastructure
 
 In this workshop, you will be provided with a Virtual Infrastructure including a Windows Virtual Machine (VM). To initiate it, complete the following steps:
 
@@ -36,7 +36,7 @@ This will initiate the VM built which may take a few minutes to complete. You ca
 
 
 
-### Initiate integration and download agent installer
+## Initiate integration and download agent installer
 
 Active Directory is integrated with Okta as a Directory Integration. 
 
@@ -73,7 +73,7 @@ The AD Agent installer is downloaded to your local machine.
     > The AD Agent can also be found, along with a lot of other downloadable assets, under Settings > Downloads in the Okta admin console.
 
 
-### Install agent on Windows Server
+## Install agent on Windows Server
 
 You will now install the AD Agent onto your Windows Server. In this demo environment, this Windows Server is a domain controller.  In a real environment, the AD Agent can be installed on any Windows Server that is a member of the Active Directory domain.
 
@@ -159,7 +159,7 @@ This password can be whatever you like.  Since this is a demo environment, maybe
 
 
 
-### Complete integration configuration
+## Complete integration configuration
 
 The AD Agent running on your Windows Server is now registered with your Okta org.  You can now complete integration configuration back in your Okta admin console.
 
@@ -229,10 +229,10 @@ The AD Agent running on your Windows Server is now registered with your Okta org
 
 
 
-### Validate integration
+# Validate integration
 
 
-#### Check agent status
+## Check agent status
 
 Your Active Directory is now integrated with your Okta org.  The Active Directory agent is running and is maintaining a connection to Okta.  You can see the status of the agent in the Admin console:
 
@@ -250,7 +250,7 @@ Your Active Directory is now integrated with your Okta org.  The Active Director
     > Each time Okta loses connectivity with the agent, and each time connectivity is restored, all admins in your Okta org will get an email notification.  If you want to prevent this email, you can deactivate the agent on this page.  You can also turn off notifications under **Settings > Account**.
 
 
-#### Test Delegated Authentication
+## Test Delegated Authentication
 
 At this point, you can’t login to Okta as a user from Active Directory because no users have been syncrhonized and Just-In-Time (JIT) provisioning is not enabled.   However, you can test the credential check using the test facility in the admin console.
 
@@ -294,12 +294,12 @@ You have successfully configured and validated Active Directory integration.  Ne
 ---
 
 
-## Import from Active Directory 
+# Import from Active Directory 
 
 In this section you will configure provisioning from AD to Okta.  This will allow AD to act as a source for user and group information.  Once provisioning is enabled, user and group information can be pulled from AD by performing an import.  Imports can be scheduled or run on demand.
 
 
-### Configure provisioning to Okta
+## Configure provisioning to Okta
 
 Before running an import, you should configure provisioning so that users are created and matched correctly in Okta.  This step isn’t strictly necessary (since you don’t need to do matching here) but it’s good to make a conscious decision on how matching should behave.
 
@@ -329,7 +329,7 @@ Before running an import, you should configure provisioning so that users are cr
 6. Click **Save**.
 
 
-### Perform an import
+## Perform an import
 
 You will now perform an import.  When an import is started, Okta instructs the AD Agent to pull user and group information from AD and return it to Okta.
 
@@ -398,10 +398,10 @@ This will activate the new user account so that it can be used.
 ---
 
 
-## Validate Integration
+# Validate Integration
 
 
-### Check imported groups
+## Check imported groups
 
 You will now check that the imported groups have been created as groups in Okta.
 
@@ -426,7 +426,7 @@ You will now check that the imported groups have been created as groups in Okta.
 
 
 
-### Check imported user
+## Check imported user
 
 You will now view the user that you imported from Active Directory in Okta.
 
@@ -460,7 +460,7 @@ You will now view the user that you imported from Active Directory in Okta.
 
 
 
-### Test user login with Delegated Authentication
+## Test user login with Delegated Authentication
 
 Now that you have a user in Okta who has an assigned account in Active Directory, that use should be able to authenticate to Okta using their Active Directory credentials.
 
@@ -504,7 +504,7 @@ Now that you have a user in Okta who has an assigned account in Active Directory
 ---
 
 
-Congratulations.  You have successfully imported groups, and a user, from Active Directory.  You could now assign the user to applications just like any other Okta-sourced user.  Methods to assign to an application include:
+**Congratulations!** You have successfully imported groups, and a user, from Active Directory.  You could now assign the user to applications just like any other Okta-sourced user.  Methods to assign to an application include:
 
 * Assign the application directly to the AD-sourced user.
 * Assign the application to an AD-sourced group that the user is a member of.

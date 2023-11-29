@@ -799,8 +799,9 @@ You can now test single sign-on to Microsoft 365 for your test user.
 ---
 
 
+## Conclusion
 
-Congratulations! You have successfully configured Lifecycle Management
+**Congratulations!** You have successfully configured Lifecycle Management
 and Single Sign-On to Microsoft Office 365. Your demo environment can
 now be used to demonstrate these capabilities to customers.
 
@@ -808,9 +809,9 @@ now be used to demonstrate these capabilities to customers.
 ---
 
 
-## Keep your E5 sandbox active (optional)
+### Keep your E5 sandbox active (optional)
 
 A Microsoft E5 sandbox is initially activated for 90 days.  If Microsoft doesn't see activity in the sandbox, it will be deactivated after that time. To make sure that your sandbox is renewed, you must exercise the APIs to generate activity.
 
-### Enable scheduled import
+#### Enable scheduled import
 The easiest way to generate activity is to add the sandbox as an application in your Okta tenant, set up provisioning, and schedule an import every 2 days.  Setting up provisioning is something you’ll be doing anyway as part of creating a demo environment so turning on the scheduled import is a small additional step.
