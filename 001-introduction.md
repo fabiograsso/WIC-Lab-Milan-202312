@@ -52,10 +52,11 @@ This workshop is broken into the sections listed below.
 
 2. Enter your email address as username and click **Next**
 
-    ![](images/001/image003.png)
+    <img src="/images/001/image003.png" width="200"/>
+   
 
 3. Enter the *temporary password* and click **Verify**
-    ![](images/001/image002.png)
+     <img src="/images/001/image002.png" width="200"/>
 
 4. Digit a new password and click **Change Password**
 
