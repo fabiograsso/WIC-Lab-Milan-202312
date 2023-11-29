@@ -36,20 +36,10 @@ This workshop is broken into the sections listed below.
 
 **To ensure that the lab works properly and to access to Okta tenant, you will need to install Okta Verify on one of your mobile device.**
 
-![](images/Okta_Verify.png) 
-
-**Okta Verify** is available for free at
-
-
-![](images/Google_Play_Store.png) *Google Store* 
-
-https://play.google.com/store/apps/details?id=com.okta.android.auth&hl=en&gl=US
-
-or
-
-![](images/Apple_Mac_Store.png) *Apple Store* 
-
-https://apps.apple.com/fr/app/okta-verify/id490179405
+|![](images/Okta_Verify.png)          | **Okta Verify** is available for free at |
+|-|-|
+|![](images/Google_Play_Store.png)    | **Google Store** : https://play.google.com/store/apps/details?id=com.okta.android.auth&hl=en&gl=US |
+|![](images/Apple_Mac_Store.png)      | **Apple Store** : https://apps.apple.com/fr/app/okta-verify/id490179405 |
 
 
 ---
