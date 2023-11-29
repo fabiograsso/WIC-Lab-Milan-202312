@@ -192,7 +192,7 @@ In this guide, we will use a new *outlook.com* email address. You might prefer t
 
     3. Enter your First name and Last name.
 
-    4. Complete the Captcha and click Save.
+    4. Complete the Captcha and click **Save**.
 
 
 

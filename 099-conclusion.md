@@ -8,6 +8,8 @@ As a reminder, this lab will self-destruct in a few days, but we invite you to c
 
 We hope you enjoyed this workshop and look forward to seeing you again soon for more technical sessions! In the meantime, feel free to reach out to Okta Team for further information about our solutions.
 
+Your Okta tenant will remain active for 30 days, but the Windows VM will be deactivated in 24 hours.
+
 
 ## Survey
 

@@ -47,6 +47,7 @@ For the workflows in the Okta Workflow Pack to work you will need:
 ## Configure Okta Connector
 
 1. From Okta Admin Console, go to Workflows console under Workflow section
+
    ![](images/006-1/image7.png)
 
 2. Go to Connections tab and click New Connection
@@ -59,29 +60,29 @@ For the workflows in the Okta Workflow Pack to work you will need:
 
 4. Configure you Okta connection, you will need
 
-   3.1. Okta domain name of your tenant (without the https): **`{{idp.name}}.okta.com`**
+   4.1. Okta domain name of your tenant (without the https): **`{{idp.name}}.okta.com`**
 
-   3.2. Okta Workflows App client ID and Client Secret, to get them, go to Okta Admin console under Applications > Applications and search for **Okta Workflows OAuth** application.
+   4.2. Okta Workflows App client ID and Client Secret, to get them, go to Okta Admin console under Applications > Applications and search for **Okta Workflows OAuth** application.
 
-   ![](images/006-1/image18.png)
+      ![](images/006-1/image18.png)
 
-   3.3. The configuration will look like this, click on **Create** button
+   4.3. The configuration will look like this, click on **Create** button
 
-   ![](images/006-1/image4.png)
+      ![](images/006-1/image4.png)
 
 5. Configure Office 365 Admin connector
 
-   4.1. Go to Connections tab and click **New Connection**
+   5.1. Go to Connections tab and click **New Connection**
 
-   4.2. Select Office 365 Admin from the list and click **Create**
+   5.2. Select Office 365 Admin from the list and click **Create**
 
-   ![](images/006-1/image20.png)
+      ![](images/006-1/image20.png)
 
-   4.3. Log in with your Microsoft O365 Admin account if you are not already logged in.
+   5.3. Log in with your Microsoft O365 Admin account if you are not already logged in.
 
-   4.4. Check the box **Consent on behalf of your organization** and click on **Accept**
+   5.4. Check the box **Consent on behalf of your organization** and click on **Accept**
 
-   ![](images/006-1/image21.png)
+      ![](images/006-1/image21.png)
 
 6. Configure Office 365 Mail Connector: follow the same steps to configure it
 

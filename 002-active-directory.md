@@ -128,7 +128,7 @@ This password can be whatever you like.  Since this is a demo environment, maybe
     ![](images/002/image10.png)
 
 
-9. Enter the URL of your Okta org: **https://{{idp.name}}.okta.com**
+9. Enter the URL of your Okta org: **`https://{{idp.name}}.okta.com`**
 
     The installer is going to make a connection to this URL so that you can authenticate and authorize the AD Agent for your Okta org.
 
@@ -199,19 +199,22 @@ The AD Agent running on your Windows Server is now registered with your Okta org
 
 6. Check the checkboxes for the OUs containing your demo groups.
 
+7. At the bottom of the page you have the option to set the Okta username format.  This determines which attribute is matched against the username entered on the Okta login page when performing Delegated Authentication.
+
+    Select **Email address**
+
     ![](images/002/image16.png)
 
-    > At the bottom of the page you have the option to set the Okta username format.  This determines which attribute is matched against the username entered on the Okta login page when performing Delegated Authentication.   You don’t need to change it.
 
 
-7. Click **Next**.
+8. Click **Next**.
 
     > The agent is configured with the configuration you have provided.  When complete, a confirmation is shown:
 
     ![](images/002/image17.png)
 
 
-8. Click **Next**.
+9. Click **Next**.
 
     > The *Build User Profile* page is loaded.  This loads the attribute schema from your Active Directory so you can specify which attributes should be synced into Okta.
 
@@ -219,12 +222,12 @@ The AD Agent running on your Windows Server is now registered with your Okta org
 
     > The suggested attribute list is sufficient but you can add additional attributes if you like.  This is important if you have defined custom attributes in Active Directory.
 
-9. Click **Next**.
+10. Click **Next**.
     
     ![](images/002/image19.png)
 
 
-10. Click **Done**.
+11. Click **Done**.
 
     The AD integration settings are shown:
 
@@ -286,7 +289,9 @@ At this point, you can’t login to Okta as a user from Active Directory because
 
 
 5. Enter the *AD Username* and *AD Password* for a user in your Active Directory.
-The username must be the User Principal Name (UPN), e.g. emily.boone@oktaice.local, because that is what was configured.
+The username must be the Email, e.g. emily.boone@oktaice.com, because that is what was configured.
+
+    > Note: Password for all Active Directory users is   **`Tra!nme4321`**
 
 
 6. Click **Authenticate**.
@@ -308,35 +313,6 @@ You have successfully configured and validated Active Directory integration.  Ne
 
 In this section you will configure provisioning from AD to Okta.  This will allow AD to act as a source for user and group information.  Once provisioning is enabled, user and group information can be pulled from AD by performing an import.  Imports can be scheduled or run on demand.
 
-
-## Configure provisioning to Okta
-
-Before running an import, you should configure provisioning so that users are created and matched correctly in Okta.  This step isn’t strictly necessary (since you don’t need to do matching here) but it’s good to make a conscious decision on how matching should behave.
-
-
-
-1. If not already there, navigate to **Directory > Directory Integrations** in the Okta Admin console and select the **Active Directory** integration.
-
-    ![](images/002/image25.png)
-
-
-2. Select the **Provisioning** tab.
-
-
-3. Select **To Okta** under *Settings*.
-
-
-4. Click **Edit** in the *User Creation & Matching* section.
-
-
-    ![](images/002/image26.png)
-
-    The default is to match on Email address but, for the demo environment where UPN in AD will be used as the username format in Okta, it makes more sense to match on username format.
-
-5. Select radio-button for **Okta username format matches**.
-
-
-6. Click **Save**.
 
 
 ---
@@ -487,7 +463,7 @@ Now that you have a user in Okta who has an assigned account in Active Directory
     ![](images/002/image39.png)
 
 
-3. Enter the UPN of the user that you imported to Okta. \
+3. Enter the Email of the user that you imported to Okta. \
     e.g. **emily.boone@oktaice.com**
 
 

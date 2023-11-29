@@ -5,7 +5,7 @@ In this lab, you will unlock the combined power of Okta Verify and FastPass. You
 
 # Prerequisites
 
-## Create a Bookmark app
+### Create a Bookmark app
 
 We are going to create a "fake" application that will be used for demostrate security policies.
 
@@ -27,24 +27,50 @@ The application is a simple bookmark, but it's useful for try and test the polic
 
     |||
     |---|---|
-    | Application label | Marketo |
-    | URL | https://www.okta.com/products/adaptive-multi-factor-authentication/| 
+    | Application label | **`Marketo`** |
+    | URL | **`https://www.okta.com/products/adaptive-multi-factor-authentication/`** | 
 
     And click **Done**
 
     ![](images/014/bookmark04.png)
 
-5. (optional) Click on the star icon and upload the Marketo Logo
 
+5. Click on **Assign** and then on **Assign to Groups**
+
+    ![](images/014/bookmark07.png)
+
+6. Click on **Assign** on the right of *Everyone*
+
+    ![](images/014/bookmark08.png)
+
+    > Note: it's not a best practice to assign applications to Everyone. Instead is better to use Okta or Active Directory groups.
+
+7. Click **Done**
+
+8. (optional) Click on the star icon for upload the app logo
+    
     ![](images/014/bookmark05.png)
 
-    - Save the following image:
+    8.1. Save the following image:
 
-        ![](images/014/bookmark-marketo.png)
+    ![](images/014/bookmark-marketo.png)
 
-    - **Browse** for the saved image, click on **Update Logo** and then **Close**
+    8.2. **Browse** for the saved image, click on **Update Logo** and then **Close**
 
-        ![](images/014/bookmark06.png)
+    ![](images/014/bookmark06.png)
+
+
+
+
+
+### Disable secondary email
+
+On **Customization** / **Other** edit the **Optional User Account Fields**.
+
+Set the **Secondary Email** to **Disabled**
+
+![](images/014/secondaryemail.png)
+
 
 
 ---
@@ -82,6 +108,8 @@ This will open your Okta tenant's sign-in page.
 
 6. Sign in with the username and password of an existing user (e.g. **`emily.boone@oktaice.com`**).
 
+    > Note: Password for all Active Directory users is   **`Tra!nme4321`**
+    
 7. Close the Okta Verify window, and then close the browser.
 
 
@@ -104,11 +132,11 @@ This will open your Okta tenant's sign-in page.
 
 5. Scroll down and click **Save**.
 
-### Add a rule to the Standard Security Apps policy
+### Add a rule to the Default Policy
 
 1. In the Admin Console, select **Security** > **Authentication Policies**.
 
-2. Select the  **Standard Security Apps** authentication policy.
+2. Select the  **Any two factors** authentication policy.
 
 3. Click **Add Rule**.
 
@@ -120,10 +148,10 @@ This will open your Okta tenant's sign-in page.
     |---|---|
     |User's  type is| *Any user type* |
     |User's group membership includes|**At least one of the following groups:**|
-    | Enter groups to include: |  **Digital Marketing** and **Digital Sales**|
+    | Enter groups to include: |  **HR** and **Management**|
     | Device state is: |  **Registered**|'
 
-    ![Okta FastPass Rule](images/014/auth_policy_rule_fastpass_if_400.png "Okta FastPass Rule")
+    ![Okta FastPass Rule](images/014/auth_policy_rule_fastpass_if_800.png "Okta FastPass Rule") TODO CHANGE IMAGE
 
 6. Set the following **THEN** access and authentication settings for the rule:
 
@@ -132,12 +160,16 @@ This will open your Okta tenant's sign-in page.
     |User must authenticate with:| **Possession factor**|
     |If Okta FastPass is used |**The user is not required to approve a prompt in Okta Verify or provide biometrics**|
 
-    ![Okta FastPass Rule](images/014/auth_policy_rule_fastpass_then_400.png "Okta FastPass Rule")
+    ![Okta FastPass Rule](images/014/auth_policy_rule_fastpass_then.png "Okta FastPass Rule")
 
 7. Click **Save**.
 
-8. Click and drag the vertical dots control to move the **Okta FastPass** rule up to **Priority 1** in the list of rules for the policy.
-      ![Rule Priority 1](images/014/auth_policy_rule_drag_priority_400.png "Rule Priority 1")
+8. Verify that the **Okta FastPass** rule is up to **Priority 1** in the list of rules for the policy.
+      ![Rule Priority 1](images/014/auth_policy_rule_drag_priority.png "Rule Priority 1")
+
+9. Click on **Actions** in the top-right corner and then **Edit name and description**
+
+10. Change the name to **Standard Security Apps** and the description to **Default Passwordless access**
 
 
 ---
@@ -148,6 +180,8 @@ This will open your Okta tenant's sign-in page.
 1. Return to your **Virtual Desktop**.
 
 2. In the Virtual Desktop, launch a Chrome browser using the **Chrome** shortcut on the desktop.
+
+3. Open your Okta tenant: https://{{idp.name}}.okta.com
 
 3. You will  automatically be authenticated to your End-User Dashboard. No prompts, no typing, pure magic!
 
@@ -181,24 +215,54 @@ With device assurance policies you can check security-related device attributes 
 
 8. Click **Save**.
 
-    ![Device Assurance Policy](images/014/device_assurance_policy_add_win11_400.png "Device Assurance Policy")
+    ![Device Assurance Policy](images/014/device_assurance_policy_add_win11_800.png "Device Assurance Policy")
 
 
-### Modify High Security Apps Policy to include Device Assurance Policy
+### Add an "High Security Apps Policy" to include Device Assurance Policy
 
 1. In the Admin Console, select **Security** > **Authentication policies**.
 
-2. Click **High Security Apps**.
+3. Click **Add a policy**
 
-3. For the **Windows 11 or higher** Rule, click **Actions**, and then select **Edit**.
+4. Insert the following information:
+    |||
+    |---|---|
+    |Name|**High Security Apps**|
+    |Description|Policy for High Security Apps with Device Assurance|
 
-4. In the **IF** conditions, set **Device assurance policy is** to **Any of the following device assurance policies:**,  and then select **Windows 11**.
+3. Click **Add Rule**.
+
+4. Set the **Rule name** to **Windows 11 or higher**
+
+5. Set the following **IF** conditions for the rule:
+
+    |IF | Value|
+    |---|---|
+    |User's  type is| *Any user type* |
+    |User's group membership includes|**At least one of the following groups:**|
+    | Enter groups to include: |  **HR** and **Management**|
+    | Device state is: |  **Registered**|
+    |**Device assurance policy is**|**Any of the following device assurance policies:**|
+    |and then select **Windows 11**|
 
     ![Device Assurance Windows 11](images/014/auth_policy_high_security_device_assurance_600.png "Device Assurance Windows 11")
 
-5. Click **Save**.
+6. Set the following **THEN** access and authentication settings for the rule:
 
-6. For the **Windows 11 or higher** Rule, click **Actions**, and then select **Activate**.
+    |THEN| |
+    |---|---|
+    |User must authenticate with:| **Possession factor**|
+    |If Okta FastPass is used |**The user is not required to approve a prompt in Okta Verify or provide biometrics**|
+
+    ![Okta FastPass Rule](images/014/auth_policy_rule_fastpass_then.png "Okta FastPass Rule")
+
+7. Click **Save**.
+
+8. For the **Catch-all Rule** Rule, click **Actions**, and then select **Edit**.
+
+9. On the **THEN** section set **Access is** : **Denied**
+
+10. Click save
 
 ### Add Marketo to the High Security Apps Policy
 
@@ -209,6 +273,7 @@ With device assurance policies you can check security-related device attributes 
 3. Locate **Marketo** in the list of apps, and then click **Add**.
 
 4. Click **Close**.
+
     ![High Security Apps](images/014/auth_policy_high_security_apps_marketo_600.png "High Security Apps")
 
 
@@ -223,13 +288,13 @@ With device assurance policies you can check security-related device attributes 
 
 3. On the **Accounts** page, click the device health icon to verify that your OS version is version 10.
     
-    ![Okta Verify Health Check](images/014/fastpass_healthcheck_button_240.png "Okta Verify Health Check")
+    ![Okta Verify Health Check](images/014/fastpass_healthcheck_button.png "Okta Verify Health Check")
 
-4. In your Virtual Desktop, sign into your Okta tenant as your new employee.
+4. In your Virtual Desktop, sign into your Okta tenant as **`emily.boone@oktaice.com`**.
 
 5. Select the **Marketo** app. You will be denied access because your device does not meet the device assurance policy.
     
-    ![Device Denied](images/014/ov_device_assurance_denied_240.png "Device Denied")
+    ![Device Denied](images/014/ov_device_assurance_denied.png "Device Denied")
 
 
 ---
@@ -315,12 +380,15 @@ If you have time please feel free to add network and behavior detection rules to
 
 
 ### Behavior Detection (Information only)
+
 1.  Navigate to **Security -> Behaviour Detection**.
     ![image](images/013/behaviour.png)
+
 2. Here you can see and adjust a wide range of behaviors. These can be later used in authentication policies either leveraging the Risk level Okta assigns or specifically by evaluating specific behaviors in a custom expression. See the (Okta Expression language documentation)[https://developer.okta.com/docs/reference/okta-expression-language-in-identity-engine/] for more details.
 
 > #### Note
 > Location data is provided by a third-party geolocation service. Okta updates the geolocation IP data on a weekly basis.
+
 
 
 ### Device Integrations (Information only)
@@ -335,7 +403,8 @@ Device Integrations are used to link Okta with endpoint management systems such 
 
 ---
 
-# Dectecting & Responding to Phishing Attacks
+# Dectecting & Responding to Phishing Attacks (optional)
+
 In this section, we will look at how you can enable Okta Fastpass to detect and respond to real-time phishing attacks caused by AiTM services like EvilGinX. **This guide will not cover setting up of EvilGinX.**
 
 In the previous lab section, you’ve already learned how to enable Okta Fastpass as an Authenticator for your end-users.
@@ -353,10 +422,13 @@ From an administrator level, the only task you need to do is to create a rule wi
 
 1. Navigate to any one of your Authentication policies and create a new rule.
     ![image](images/013/phish-policy-rule.png)
+
 2. If we inspect the rule closely, this is what should be defined from a policy decision point perspective:
     ![image](images/013/phish-policy-rule-dialog.png)
+
 3. From a policy enforcement point perspective, this is what should be defined:
     ![image](images/013/phish-policy-enforcement.png)
+
 4. Click **Save** and make sure the rule is ranked as one of the highest ranking of your authentication policy.
 
 
