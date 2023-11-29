@@ -20,7 +20,7 @@ Here are a few ways Okta Workflows can automate complex identity scenarios:
 ---
 
 
-## Lab description
+# Lab description
 
 The purpose of this Workflow pack is to perform various tasks in Office 365 when a given target user is being onboarded from the HR System in the organization as a whole. This flow pack is triggered when a user is created.  The effects of this Workflow on the Office 365 account are as follows:
 
@@ -38,13 +38,13 @@ Additionally a welcome message is sent to that private channel welcoming the new
 ---
 
 
-## Lab Prerequisites
+# Lab Prerequisites
 
 For the workflows in the Okta Workflow Pack to work you will need:
 
 ### You will need to configure the following Okta connectors in your Okta Tenant that has workflow enabled
 
-#### Configure Okta Connector:
+## Configure Okta Connector
 
 1. From Okta Admin Console, go to Workflows console under Workflow section
    ![](images/006-1/image7.png)
@@ -96,7 +96,7 @@ For the workflows in the Okta Workflow Pack to work you will need:
    ![](images/006-1/image24.png)
 
 
-### Additional prerequisites
+## Additional prerequisites
 
 1. An existing user (that will represent the manager user) in Okta and Office 365 **where the username in Okta and in O365 are the same (the user’s email address)**. 
 
@@ -145,11 +145,12 @@ For the workflows in the Okta Workflow Pack to work you will need:
    In order to put the manager, go to **Profile**, click **Edit** then scroll down to the manager ID attribute and enter the value **wes.chang@wiclabNAMESURNAME.onmicrosoft.com**, enter **Sales** in the **Department** attribute.
 
    ![](images/006-1/image34.png)
+
+
 ---
 
-## Okta Workflows - Flow Pack Setup Steps
 
-### Initialisation instructions
+# Flow Pack Setup Steps
 
 **Please download the flowpack below (right click -> Save link as)**
 
@@ -209,7 +210,7 @@ https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/files/o3
 ---
 
 
-## Testing the Okta Workflow Flow
+# Testing the Okta Workflows Flow
 
 
 Add the user **Giorgia Rossi** to the group **O365Users** group. This will provision an Office 365 license.
@@ -223,7 +224,7 @@ You will be able to visualise the flow execution in real time by clicking on "Ex
 
 
 
-### Expected Result
+## Expected Result
 
 On the manager profile (**Wes Chang**) you will see : 
 

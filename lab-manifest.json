@@ -23,7 +23,9 @@
       {
         "step": "Introduction",
         "guide": "https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/001-introduction.md",
-        "applications": [],
+        "applications": [
+          "1b187e8b-e90a-4469-829b-8051a02729a3"
+        ],
         "resources": []
       },
       {
@@ -37,27 +39,35 @@
       {
         "step": "Microsoft 365",
         "guide": "https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/003-Microsoft-365.md",
-        "applications": [],
+        "applications": [
+          "1b187e8b-e90a-4469-829b-8051a02729a3"
+        ],
         "resources": [
         ]
       },
       {
         "step": "Security",
         "guide": "https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/006-security.md",
-        "applications": [],
+        "applications": [
+          "1b187e8b-e90a-4469-829b-8051a02729a3"
+        ],
         "resources": [
         ]
       },
       {
         "step": "Workflows",
         "guide": "https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/004-workflows.md",
-        "applications": [],
+        "applications": [
+          "1b187e8b-e90a-4469-829b-8051a02729a3"
+        ],
         "resources": []
       },
       {
         "step": "Identity Governance",
         "guide": "https://raw.githubusercontent.com/fabiograsso/WIC-Lab-Milan-202312/main/005-oig.md",
-        "applications": [],
+        "applications": [
+          "1b187e8b-e90a-4469-829b-8051a02729a3"
+        ],
         "resources": []
       },
       {

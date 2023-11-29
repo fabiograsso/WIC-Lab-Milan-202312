@@ -226,11 +226,7 @@ With device assurance policies you can check security-related device attributes 
      |:-----|:-----|
       |![Marketo Bookmark App](images/014/app_marketo_launched_500.png "Marketo Bookmark App")|
 
-<<<<<<< HEAD
 **Note:** With the exception of Office 365, the apps in this lab are Bookmark apps. Bookmark apps are used to direct users to a specific web page. Real app integrations do exist in the Okta Integration Network for all of the apps shown in this lab.
-=======
->**Note:** With the exception of BambooHR and Office 365, the apps in this lab are Bookmark apps. Bookmark apps are used to direct users to a specific web page. Real app integrations do exist in the Okta Integration Network for all of the apps shown in this lab.
->>>>>>> 03381ca8d903df1f1d996d1e22385f2207e88f17
 
 
 ---
