@@ -52,20 +52,21 @@ This workshop is broken into the sections listed below.
 
 2. Enter your email address as username and click **Next**
 
-    ![](images/001/image003.png)
+    <img src="/images/001/image003.png" width="200"/>
+   
 
 3. Enter the *temporary password* and click **Verify**
-    ![](images/001/image002.png)
+     <img src="/images/001/image002.png" width="200"/>
 
 4. Digit a new password and click **Change Password**
 
     > **Take note of this password as you will use it many times during this workshop!**
 
-    ![](images/001/image004.png)
+    <img src="/images/001/image004.png" width="200"/>
 
 5. Click on **Set up** for start the enrollment of *MFA* with *Okta Verify*
  
-    ![](images/001/image005.png)
+  <img src="/images/001/image005.png" width="200"/>
 
 6. Open **Okta Verify** on your mobile phone.
     1. Tap **Add Account** (or the " **+** " on the top right corner )
@@ -81,7 +82,7 @@ This workshop is broken into the sections listed below.
         
         > If you can’t scan the QR code, tap No, Sign In Instead. Follow the instructions in Set up Okta Verify on your iOS device by using your sign-in URL.
     
-        ![](images/001/image006.png)
+          <img src="/images/001/image006.png" width="200"/>
 
     5. If prompted, **allow push notifications** on your device so that you can approve future sign-in notifications without opening the Okta Verify app.
 
@@ -97,7 +98,7 @@ This workshop is broken into the sections listed below.
     
     Complete the MFA challenge on your phone.
 
-    ![](images/001/image008.png)
+      <img src="/images/001/image008.png" width="200"/>
 
     > Note: since the access to the Admin Dashboard is an high privilege operation, the default policy require an MFA authentication. Even if you can change this behaviour, we warmly suggest to use the highest level of security policy for the Admin access.
 
@@ -136,14 +137,14 @@ In this guide, we will use a new *outlook.com* email address. You might prefer t
 4. Enter the email address you want to associate with your developer account.
     You can use your email address or you can generate a new email address:
     
-    1. Click on "Get a new email address"
-        ![](images/009/o365setup-003.png)
+    1. Click on **Get a new email address**
+        <img src="/images/009/o365setup-003.png" width="300"/>
 
     2. Register for a new email address. Use as name convention `wiclabNAMESURNAME`. So your email will be `wiclabNAMESURNAME@outlook.com`.
         
         > **Remember to save the password in a secure place, as you will need it later.**
     
-        ![](images/009/o365setup-004.png)
+          <img src="/images/009/o365setup-004.png" width="300"/>
 
 5. Click Next
 
@@ -180,13 +181,13 @@ In this guide, we will use a new *outlook.com* email address. You might prefer t
 
     This message is seen because you have not entered your name as part of account creation and this is needed before you can join the developer program.
 
-    1. Click Close.
+    1. Click **Close**.
     
         You are taken to the profile page:
         
         ![](images/009/o365setup-image38.png)
 
-    2. Click Add a name.
+    2. Click **Add a name**.
 
         ![](images/009/o365setup-image35.png)
 
