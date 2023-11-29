@@ -1,5 +1,3 @@
-TODO: CREATE MARKETO APP!
-
 In this lab, you will unlock the combined power of Okta Verify and FastPass. You will enable an experience where passwordless authentication becomes an integral part of an employee’s workday, boosting employee productivity without the common password pitfalls. Not only will you discover an enhanced security posture resistant to phishing threats, but you’ll also appreciate the inherent protection it offers, sometimes even against our own human errors.
 
 
@@ -187,14 +185,17 @@ With device assurance policies you can check security-related device attributes 
 ## Test the Device Assurance Policy
 
 1. Return to your **Virtual Desktop**.
-1. In your Virtual Desktop, open the **Okta Verify** app.
-1. On the **Accounts** page, click the device health icon to verify that your OS version is version 10.
+
+2. In your Virtual Desktop, open the **Okta Verify** app.
+
+3. On the **Accounts** page, click the device health icon to verify that your OS version is version 10.
     |||
    |:-----|:-----|
     |![Okta Verify Health Check](images/014/fastpass_healthcheck_button_240.png "Okta Verify Health Check")|
 
-1. In your Virtual Desktop, sign into your Okta tenant as your new employee.
-1. Select the **Marketo** app. You will be denied access because your device does not meet the device assurance policy.
+4. In your Virtual Desktop, sign into your Okta tenant as your new employee.
+
+5. Select the **Marketo** app. You will be denied access because your device does not meet the device assurance policy.
 
     |||
     |:-----|:-----|
@@ -207,21 +208,25 @@ With device assurance policies you can check security-related device attributes 
 ### Switch the Authentication Policy for Marketo
 
 1. Return to your **Okta Admin Console** browser session.
-1. In the Admin Console, select **Security** > **Authentication Policies**.
-1. Select **High Security Apps** > **Applications** tab.
-1. For the **Marketo** app, click **Switch Policy**.
-1. Select the **Standard Security Apps** policy, and then click **Save**.
+
+2. In the Admin Console, select **Security** > **Authentication Policies**.
+
+3. Select **High Security Apps** > **Applications** tab.
+
+4. For the **Marketo** app, click **Switch Policy**.
+
+5. Select the **Standard Security Apps** policy, and then click **Save**.
     |||
      |:-----|:-----|
       |![Standard Security Apps](images/014/auth_policy_switch_marketo_600.png "Standard Security Apps Policy")|
 
-1. Return to your Virtual Desktop and verify that your new employee can now access the **Marketo** app.
+6. Return to your Virtual Desktop and verify that your new employee can now access the **Marketo** app.
 
     |||
      |:-----|:-----|
       |![Marketo Bookmark App](images/014/app_marketo_launched_500.png "Marketo Bookmark App")|
 
-**Note:** With the exception of BambooHR and Office 365, the apps in this lab are Bookmark apps. Bookmark apps are used to direct users to a specific web page. Real app integrations do exist in the Okta Integration Network for all of the apps shown in this lab.
+**Note:** With the exception of Office 365, the apps in this lab are Bookmark apps. Bookmark apps are used to direct users to a specific web page. Real app integrations do exist in the Okta Integration Network for all of the apps shown in this lab.
 
 
 ---

@@ -1,4 +1,4 @@
-## Learning Objectives
+# Learning Objectives
 Today we are going to learn the following topics: 
 
 - How to integrate Okta with Active Directory
@@ -9,7 +9,7 @@ Today we are going to learn the following topics:
 
 ---
 
-## Workshop structure
+# Workshop structure
 
 This workshop is broken into the sections listed below. 
 
@@ -32,7 +32,7 @@ This workshop is broken into the sections listed below.
 
 ---
 
-## Prerequisites
+# Prerequisites
 
 **To ensure that the lab works properly and to access to Okta tenant, you will need to install Okta Verify on one of your mobile device.**
 
@@ -55,7 +55,15 @@ https://apps.apple.com/fr/app/okta-verify/id490179405
 ---
 
 
-### Register for a Microsoft account
+## Activate your Okta tenant
+
+TODO
+
+
+---
+
+
+## Register for a Microsoft account
 
 In this section you will register for a Microsoft account. If you already have an existing account you can skip this section but it is probably better to create a dedicated account for use with your Okta demo environment.
 
