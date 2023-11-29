@@ -3,6 +3,52 @@ In this lab, you will unlock the combined power of Okta Verify and FastPass. You
 
 ---
 
+# Prerequisites
+
+## Create a Bookmark app
+
+We are going to create a "fake" application that will be used for demostrate security policies.
+
+The application is a simple bookmark, but it's useful for try and test the policies without the need of a real application.
+
+1. Go on **Applications** and click on **Browse App Catalog**
+
+    ![](images/014/bookmark01.png)
+
+2. Type `bookmark` in the search bar and click on **Bookmark App**
+    
+    ![](images/014/bookmark02.png)
+
+3. Click on **Add Integration**
+    
+    ![](images/014/bookmark03.png)
+
+4.  Compile the form with the following data:
+
+    |||
+    |---|---|
+    | Application label | Marketo |
+    | URL | https://www.okta.com/products/adaptive-multi-factor-authentication/| 
+
+    And click **Done**
+
+    ![](images/014/bookmark04.png)
+
+5. (optional) Click on the star icon and upload the Marketo Logo
+
+    ![](images/014/bookmark05.png)
+
+    - Save the following image:
+
+        ![](images/014/bookmark-marketo.png)
+
+    - **Browse** for the saved image, click on **Update Logo** and then **Close**
+
+        ![](images/014/bookmark06.png)
+
+
+---
+
 
 ## Setup Okta FastPass on the Virtual Desktop
 
@@ -28,9 +74,8 @@ In this lab, you will unlock the combined power of Okta Verify and FastPass. You
 3. Click **Next**.
 
 4. For **New Account**, enter `https://{{idp.name}}.okta.com`
-    |||
-     |:-----|:-----|
-     |![sign-in URL ](images/014/ov_sign_in_url_240.png "sign-in URL ")| |
+
+    ![sign-in URL ](images/014/ov_sign_in_url_240.png "sign-in URL ")
 
 5. Click **Next**.
 This will open your Okta tenant's sign-in page.
@@ -55,9 +100,7 @@ This will open your Okta tenant's sign-in page.
 3. For **Okta Verify**, click **Actions**, and then select **Edit**.
 
 4. For **Okta FastPass** select **Show the "Sign in with Okta FastPass" button**.
-    |||
-   |:-----|:-----|
-    |![Sign in with Okta FastPass](images/014/okta_verify_show_fastpass_button_600.png "Sign in with Okta FastPass")|
+    ![Sign in with Okta FastPass](images/014/okta_verify_show_fastpass_button_600.png "Sign in with Okta FastPass")
 
 5. Scroll down and click **Save**.
 
@@ -72,40 +115,35 @@ This will open your Okta tenant's sign-in page.
 4. Set the **Rule name** to **Okta FastPass**
 
 5. Set the following **IF** conditions for the rule:
-    | IF | Value|
-    |:-----|:-----|
+
+    |IF | Value|
+    |---|---|
     |User's  type is| *Any user type* |
     |User's group membership includes|**At least one of the following groups:**|
     | Enter groups to include: |  **Digital Marketing** and **Digital Sales**|
-     | Device state is: |  **Registered**|'
+    | Device state is: |  **Registered**|'
 
-    |||
-   |:-----|:-----|
-    |![Okta FastPass Rule](images/014/auth_policy_rule_fastpass_if_400.png "Okta FastPass Rule")|
+    ![Okta FastPass Rule](images/014/auth_policy_rule_fastpass_if_400.png "Okta FastPass Rule")
 
 6. Set the following **THEN** access and authentication settings for the rule:
 
-    |THEN||
-    |:-----|:-----|
+    |THEN| |
+    |---|---|
     |User must authenticate with:| **Possession factor**|
     |If Okta FastPass is used |**The user is not required to approve a prompt in Okta Verify or provide biometrics**|
 
-    |||
-     |:-----|:-----|
-    |![Okta FastPass Rule](images/014/auth_policy_rule_fastpass_then_400.png "Okta FastPass Rule")|
+    ![Okta FastPass Rule](images/014/auth_policy_rule_fastpass_then_400.png "Okta FastPass Rule")
 
 7. Click **Save**.
 
 8. Click and drag the vertical dots control to move the **Okta FastPass** rule up to **Priority 1** in the list of rules for the policy.
-    |||
-     |:-----|:-----|
-    |![Rule Priority 1](images/014/auth_policy_rule_drag_priority_400.png "Rule Priority 1")|
+      ![Rule Priority 1](images/014/auth_policy_rule_drag_priority_400.png "Rule Priority 1")
 
 
 ---
 
 
-## Experience an Employee Passwordless Login
+# Experience an Employee Passwordless Login
 
 1. Return to your **Virtual Desktop**.
 
@@ -121,7 +159,7 @@ This will open your Okta tenant's sign-in page.
 ---
 
 
-## Set Up Device Assurance
+# Set Up Device Assurance
 
 ### Add a Device Assurance Policy
 
@@ -143,9 +181,7 @@ With device assurance policies you can check security-related device attributes 
 
 8. Click **Save**.
 
-    |||
-   |:-----|:-----|
-    |![Device Assurance Policy](images/014/device_assurance_policy_add_win11_400.png "Device Assurance Policy")|
+    ![Device Assurance Policy](images/014/device_assurance_policy_add_win11_400.png "Device Assurance Policy")
 
 
 ### Modify High Security Apps Policy to include Device Assurance Policy
@@ -157,9 +193,8 @@ With device assurance policies you can check security-related device attributes 
 3. For the **Windows 11 or higher** Rule, click **Actions**, and then select **Edit**.
 
 4. In the **IF** conditions, set **Device assurance policy is** to **Any of the following device assurance policies:**,  and then select **Windows 11**.
-    |||
-   |:-----|:-----|
-    |![Device Assurance Windows 11](images/014/auth_policy_high_security_device_assurance_600.png "Device Assurance Windows 11")|
+
+    ![Device Assurance Windows 11](images/014/auth_policy_high_security_device_assurance_600.png "Device Assurance Windows 11")
 
 5. Click **Save**.
 
@@ -174,32 +209,27 @@ With device assurance policies you can check security-related device attributes 
 3. Locate **Marketo** in the list of apps, and then click **Add**.
 
 4. Click **Close**.
-    |||
-     |:-----|:-----|
-    |![High Security Apps](images/014/auth_policy_high_security_apps_marketo_600.png "High Security Apps")|
+    ![High Security Apps](images/014/auth_policy_high_security_apps_marketo_600.png "High Security Apps")
 
 
 ---
 
 
-## Test the Device Assurance Policy
+# Test the Device Assurance Policy
 
 1. Return to your **Virtual Desktop**.
 
 2. In your Virtual Desktop, open the **Okta Verify** app.
 
 3. On the **Accounts** page, click the device health icon to verify that your OS version is version 10.
-    |||
-   |:-----|:-----|
-    |![Okta Verify Health Check](images/014/fastpass_healthcheck_button_240.png "Okta Verify Health Check")|
+    
+    ![Okta Verify Health Check](images/014/fastpass_healthcheck_button_240.png "Okta Verify Health Check")
 
 4. In your Virtual Desktop, sign into your Okta tenant as your new employee.
 
 5. Select the **Marketo** app. You will be denied access because your device does not meet the device assurance policy.
-
-    |||
-    |:-----|:-----|
-    |![Device Denied](images/014/ov_device_assurance_denied_240.png "Device Denied")|
+    
+    ![Device Denied](images/014/ov_device_assurance_denied_240.png "Device Denied")
 
 
 ---
@@ -216,15 +246,10 @@ With device assurance policies you can check security-related device attributes 
 4. For the **Marketo** app, click **Switch Policy**.
 
 5. Select the **Standard Security Apps** policy, and then click **Save**.
-    |||
-     |:-----|:-----|
-      |![Standard Security Apps](images/014/auth_policy_switch_marketo_600.png "Standard Security Apps Policy")|
+
+   ![Standard Security Apps](images/014/auth_policy_switch_marketo_600.png "Standard Security Apps Policy")
 
 6. Return to your Virtual Desktop and verify that your new employee can now access the **Marketo** app.
-
-    |||
-     |:-----|:-----|
-      |![Marketo Bookmark App](images/014/app_marketo_launched_500.png "Marketo Bookmark App")|
 
 **Note:** With the exception of Office 365, the apps in this lab are Bookmark apps. Bookmark apps are used to direct users to a specific web page. Real app integrations do exist in the Okta Integration Network for all of the apps shown in this lab.
 
@@ -232,7 +257,7 @@ With device assurance policies you can check security-related device attributes 
 ---
 
 
-## Enable Okta ThreatInsight
+# Enable Okta ThreatInsight
 
 Okta ThreatInsight aggregates data about sign-in activity across the Okta customer base to analyze and detect potentially malicious IP addresses and to prevent credential-based attacks such as: password spraying, credential stuffing, and brute-force cryptographic attacks. Because ThreatInsight collects information about the origin of sign-in activity directed at Okta organizations and Okta endpoints, it provides a security baseline for all Okta customers.
 
@@ -255,7 +280,7 @@ This setting will make Okta automatically deny access to sign-in requests that c
 ---
 
 
-## Contextual Access & Device Management (optional)
+# Contextual Access & Device Management (optional)
 
 If you have time please feel free to add network and behavior detection rules to your tenant.
 
@@ -263,24 +288,31 @@ If you have time please feel free to add network and behavior detection rules to
 1. Navigate to **Security -> Networks**.
 
 2. There are two default Zones already configured. *BlockedIpZone* and *LegacyIpZone*.
+
     ![image](images/013/networks.png)
 
 3. We are going to add a trusted IP Zone containing our computer address. To do this click **Add Zone -> IP** Zone as shown below.
+    
     ![image](images/013/add-zone.png)
 
 4. Name the new zone Trusted Enterprise Network or similar and click on the address next to **Add your current IP address**. This will add your computer's address to a trusted list and we can later use this in Authentication Policies.
+    
     ![image](images/013/add-zone-dialog.png)
 
 5. Next we can add a Dynamic Zone to block access from Tor proxies.  To do this click **Add Zone -> Dynamic Zone**. Check *Block access from IPs matching conditions listed in this zone* and from the **IP type** drop down select *Tor anonymizer proxy* as shown below.
+    
     ![image](images/013/add-dynamic-zone.png)
 
 6. Your *Networks* list should now look similar to the following.
+    
     ![image](images/013/networks-post.png)
+
 
 > #### Note
 > * Adaptive SSO or Adaptive MFA licenses are required to  leverage Dynamic Zones
 > * At a later stage if you would like to see what is added to Okta Logs when an IP is blocked you can add your computer IP to the BlockedIpZone by clicking on the pencil Icon at the end of the line and then clicking on your current IP address as shown below. Please ensure you remember to remove  this setting afterwards if you wish to test other policies in more detail.
 > ![image](images/013/edit-zone.png)
+
 
 ### Behavior Detection (Information only)
 1.  Navigate to **Security -> Behaviour Detection**.
@@ -289,6 +321,7 @@ If you have time please feel free to add network and behavior detection rules to
 
 > #### Note
 > Location data is provided by a third-party geolocation service. Okta updates the geolocation IP data on a weekly basis.
+
 
 ### Device Integrations (Information only)
 
@@ -302,7 +335,7 @@ Device Integrations are used to link Okta with endpoint management systems such 
 
 ---
 
-## Dectecting & Responding to Phishing Attacks
+# Dectecting & Responding to Phishing Attacks
 In this section, we will look at how you can enable Okta Fastpass to detect and respond to real-time phishing attacks caused by AiTM services like EvilGinX. **This guide will not cover setting up of EvilGinX.**
 
 In the previous lab section, you’ve already learned how to enable Okta Fastpass as an Authenticator for your end-users.
@@ -334,6 +367,7 @@ From an administrator level, the only task you need to do is to create a rule wi
 > Or you can try at home to run an EvilGinX proxy and emulate an attacker!
 
 
+
 ### Adding Observability and Workflows (Information only)
 Okta logs every transaction and processed event within the platform. All of these logs are kept and accessible via Okta’s System Log. Okta also provides extensibility points within the platform through Hooks. One type of hook that we can leverage here is [Event Hooks](https://help.okta.com/oie/en-us/Content/Topics/automation-hooks/event-hooks-main.htm?cshid=ext-event-hooks). 
 You can define multiple Event Hooks within the Okta platform. Navigate to **Workflow -> Event Hooks**.
@@ -362,6 +396,6 @@ You can do the following instructions at your own time or pace. You can create E
 
 ---
 
-## Conclusion
+# Conclusion
 
 In this lab, we've journeyed beyond traditional barriers, tapping into the wonders of Okta Verify and FastPass. Goodbye, cumbersome passwords and hello, sleek passwordless wonders! Together, we’ve fortified our defenses against those sneaky phishers and, yes, even our own little mishaps. Here's raising a toast to a future of ease, enhanced security, and fewer facepalms!
