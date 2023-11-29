@@ -85,7 +85,9 @@ In this guide, we will use a new *outlook.com* email address. You might prefer t
     1. Click on "Get a new email address"
         ![](images/009/o365setup-003.png)
 
-    2. Register for a new email address. Use as name convention `wiclabNAMESURNAME`. So your email will be `wiclabNAMESURNAME@outlook.com`.
+    2. Register for a new email address. Use as name convention `wiclabNAMESURNAME`. 
+    So your email will be `wiclabNAMESURNAME@outlook.com`.
+
         
         > **Remember to save the password in a secure place, as you will need it later.**
     
