@@ -97,9 +97,9 @@ For the workflows in the Okta Workflow Pack to work you will need:
    ![](images/006-1/image24.png)
 
 
-## Additional prerequisites
+## Create Okta Users
 
-1. An existing user (that will represent the manager user) in Okta and Office 365 **where the username in Okta and in O365 are the same (the user’s email address)**. 
+1. Create a user (that will represent the manager user) in Okta and Office 365 **where the username in Okta and in O365 are the same (the user’s email address)**. 
 
    The manager user’s email address needs to point to a valid email address and have the appropriate Office 365 licenses so that the manager can get the email notifications as part of the flow.
    
@@ -121,7 +121,7 @@ For the workflows in the Okta Workflow Pack to work you will need:
 
 
 
-2. An existing target user (that will represent the target user) in Okta where the **Okta Primary Email Address for that user is the same as the user’s Office 365 username**. The manager attribute in Okta Universal Directory will need to be the username of the Okta user that represents the manager and you created in the step above.
+2. Create a target user (that will represent the target user) in Okta where the **Okta Primary Email Address for that user is the same as the user’s Office 365 username**. The manager attribute in Okta Universal Directory will need to be the username of the Okta user that represents the manager and you created in the step above.
    
    **This target user must be assign to Office 365 application.**
    
@@ -238,7 +238,7 @@ On the manager profile (**Wes Chang**) you will see :
    ![](images/006-1/image29.png)
 
 
-On the new user (Giorgia Rossi) profile you will see : 
+On the new user (**Giorgia Rossi**) profile you will see : 
 
 - A welcome email
 
