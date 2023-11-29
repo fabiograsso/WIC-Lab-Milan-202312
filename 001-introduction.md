@@ -50,20 +50,24 @@ This workshop is broken into the sections listed below.
 1. Open the welcome email (*Your New Okta account*). Take note of the *temporary password* and click on **Sign On**
     ![](images/001/image001.png)
 
-2. Enter the *temporary password* and click **Verify**
+2. Enter your email address as username and click **Next**
+
+    ![](images/001/image003.png)
+
+3. Enter the *temporary password* and click **Verify**
     ![](images/001/image002.png)
 
-3. Digit a new password and click **Change Password**
+4. Digit a new password and click **Change Password**
 
     > **Take note of this password as you will use it many times during this workshop!**
 
     ![](images/001/image004.png)
 
-4. Click on **Set up** for start the enrollment of *MFA* with *Okta Verify*
+5. Click on **Set up** for start the enrollment of *MFA* with *Okta Verify*
  
     ![](images/001/image005.png)
 
-5. Open **Okta Verify** on your mobile phone.
+6. Open **Okta Verify** on your mobile phone.
     1. Tap **Add Account** (or the " **+** " on the top right corner )
     2. Choose the type of account to add. Tap **Organization**.
         > Note: 
@@ -85,11 +89,11 @@ This workshop is broken into the sections listed below.
     
     7. Tap **Done** to complete the account enrollment.
 
-6. You should see the *Okta Dashboard*. Click on **Admin** in the top-right corner
+7. You should see the *Okta Dashboard*. Click on **Admin** in the top-right corner
 
     ![](images/001/image007.png)
 
-7. Click **Select** on the right of **Get a push notification**.
+8. Click **Select** on the right of **Get a push notification**.
     
     Complete the MFA challenge on your phone.
 
@@ -97,7 +101,7 @@ This workshop is broken into the sections listed below.
 
     > Note: since the access to the Admin Dashboard is an high privilege operation, the default policy require an MFA authentication. Even if you can change this behaviour, we warmly suggest to use the highest level of security policy for the Admin access.
 
-8. You will land on the **Admin Dashboard**
+9. You will land on the **Admin Dashboard**
 
     ![](images/001/image009.png)
 
