@@ -217,9 +217,9 @@ To stop M365 from ALSO trying to perform MFA registration, and enforce MFA at lo
     You should be on the welcome page:
     ![](images/009/o365setup-image13.png)
 
-2. Click the Admin button on the navigator bar.
+2. Click the **Admin** button on the navigator bar.
 
-3. Click Skip for now if prompted to secure your account.
+3. Click **Skip for now** if prompted to secure your account.
 (This is the message you’re about to disable).
     ![](images/009/o365setup-image40.png)
 
@@ -227,20 +227,20 @@ To stop M365 from ALSO trying to perform MFA registration, and enforce MFA at lo
 
 5. Select Identity from the results.
 
-6. Click Skip for now if prompted to secure your account.
+6. Click **Skip for now** if prompted to secure your account.
     ![](images/009/o365setup-image45.png)
 
 7.You should already be on the Overview page.
 
 8. Select the Properties tab.
 
-9. Click Manage security defaults.
+9. Click **Manage security defaults**.
 
 10. Set Security defaults to Disabled.
 
 11. Select a reason (it doesn’t matter which one you pick)
 
-12. Click Save.
+12. Click **Save**.
     ![](images/009/o365setup-image33.png)
 
 13. Click the Disable button to confirm.
@@ -361,7 +361,7 @@ Okta maintains a specific integration for Microsoft Office 365 in the Okta Integ
 12. Select the custom DNS domain
 
     > **IMPORTANT:** you have to choose the domain that we added in the previous step. If you use the default one (the one that is created automaticaly with the tenant) it will not work!
-    This is because default domain cannot be federated, due to a limitation imposed by Microsoft.
+    *This is because default domain cannot be federated, due to a limitation imposed by Microsoft.*
     If you followed the name convention, your domain should be **`wiclabNAMESURNAME.onmicrosoft.com`**
 
     ![](images/009/image07.png)
