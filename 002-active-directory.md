@@ -35,6 +35,8 @@ This will initiate the VM built which may take a few minutes to complete. You ca
    > **Note:** Please make sure to complete all subsequent  steps of the hands-on in this virtual environment, unless otherwise stated.
 
 
+---
+
 
 ## Initiate integration and download agent installer
 
@@ -71,6 +73,9 @@ The AD Agent installer is downloaded to your local machine.
     * Log in to your Okta tenant using a browser on the Windows Server instance and use steps 1-4 above to download the installer.
 
     > The AD Agent can also be found, along with a lot of other downloadable assets, under Settings > Downloads in the Okta admin console.
+
+
+---
 
 
 ## Install agent on Windows Server
@@ -157,6 +162,8 @@ This password can be whatever you like.  Since this is a demo environment, maybe
 
     The AD Agent is now running on your Windows Server and will make an outgoing connection to your Okta Org.  You will now see it within your Okta Admin console.
 
+
+---
 
 
 ## Complete integration configuration
@@ -250,6 +257,9 @@ Your Active Directory is now integrated with your Okta org.  The Active Director
     > Each time Okta loses connectivity with the agent, and each time connectivity is restored, all admins in your Okta org will get an email notification.  If you want to prevent this email, you can deactivate the agent on this page.  You can also turn off notifications under **Settings > Account**.
 
 
+---
+
+
 ## Test Delegated Authentication
 
 At this point, you can’t login to Okta as a user from Active Directory because no users have been syncrhonized and Just-In-Time (JIT) provisioning is not enabled.   However, you can test the credential check using the test facility in the admin console.
@@ -329,6 +339,9 @@ Before running an import, you should configure provisioning so that users are cr
 6. Click **Save**.
 
 
+---
+
+
 ## Perform an import
 
 You will now perform an import.  When an import is started, Okta instructs the AD Agent to pull user and group information from AD and return it to Okta.
@@ -398,9 +411,6 @@ This will activate the new user account so that it can be used.
 ---
 
 
-# Validate Integration
-
-
 ## Check imported groups
 
 You will now check that the imported groups have been created as groups in Okta.
@@ -424,6 +434,8 @@ You will now check that the imported groups have been created as groups in Okta.
 
     If you want to be able to manage group memberships of an AD group you should look into the *Push Group* functionality.  This allows the membership of an Okta group to be pushed down into a group in Active Directory.
 
+
+---
 
 
 ## Check imported user
@@ -458,6 +470,8 @@ You will now view the user that you imported from Active Directory in Okta.
 
     These attributes are controlled by the active_directory profile for your directory under Directory > Profile Sources.
 
+
+---
 
 
 ## Test user login with Delegated Authentication
@@ -498,7 +512,6 @@ Now that you have a user in Okta who has an assigned account in Active Directory
     ![](images/002/image41.png)
 
     Your imported user has authenticated to Okta using their Active Directory credentials.
-
 
 
 ---
