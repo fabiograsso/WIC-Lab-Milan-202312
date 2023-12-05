@@ -418,7 +418,7 @@ Now that you have a user in Okta who has an assigned account in Active Directory
 
 
 3. Enter the Email of the user that you imported to Okta. \
-    e.g. **emily.boone@oktaice.com**
+    e.g. **emily.boone@oktaice.local**
 
 
 4. Click **Next**.
