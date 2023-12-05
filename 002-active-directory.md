@@ -263,52 +263,6 @@ Your Active Directory is now integrated with your Okta org.  The Active Director
 ---
 
 
-## Test Delegated Authentication
-
-At this point, you can’t login to Okta as a user from Active Directory because no users have been syncrhonized and Just-In-Time (JIT) provisioning is not enabled.   However, you can test the credential check using the test facility in the admin console.
-
-
-1. If not already there, navigate to **Directory > Directory Integrations** in the Okta Admin console and select the **Active Directory** integration.
-
-
-    ![](images/002/image22.png)
-
-
-2. Select the **Provisioning** tab.
-
-
-3. Select **Integration** under *Settings*.
-
-    Notice that *Enable delegated authentication to Active Directory* is enabled.  This means that Okta can delegate authentication of user credentials (username and password) to Active Directory via the AD Agent.
-
-
-4. Click **Test Delegated Authentication**.
-    A pop-up window is shown:
-
-    ![](images/002/image23.png)
-
-
-5. Enter the *AD Username* and *AD Password* for a user in your Active Directory.
-The username must be the Email, e.g. emily.boone@oktaice.com, because that is what was configured.
-
-    > Note: Password for all Active Directory users is   **`Tra!nme4321`**
-
-
-6. Click **Authenticate**.
-
-    At this point Okta asks the AD Agent to check the credentials against AD.  The response from AD (success or failure) is returned to Okta.
-
-
-    ![](images/002/image24.png)
-
-
-7. Click **Close**.
-
-You have successfully configured and validated Active Directory integration.  Next you will provision AD users to Okta so that they can log in.
-
----
-
-
 # Import from Active Directory 
 
 In this section you will configure provisioning from AD to Okta.  This will allow AD to act as a source for user and group information.  Once provisioning is enabled, user and group information can be pulled from AD by performing an import.  Imports can be scheduled or run on demand.
